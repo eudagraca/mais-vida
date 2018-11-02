@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_white_1000"
+    android:padding="30dp"
+    tools:context=".LoginActivity"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imv_perfil"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/foto_perfil"
+        fancy:srcCompat="@drawable/ic_balloons" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_avatar"
+            android:hint="@string/eml"
+            android:textSize="18sp"
+            android:fontFamily="@font/product_r"
+            android:layout_marginTop="50dp"
+            android:inputType="textEmailAddress"
+            tools:ignore="RtlCompat" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_marginTop="10dp"
+            android:hint="@string/prompt_password"
+            android:fontFamily="@font/product_r"
+            android:drawablePadding="10dp"
+            android:layout_width="match_parent"
+            android:drawableStart="@drawable/ic_lock_outline_black_24dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="18sp"
+            android:inputType="textPassword"
+            tools:ignore="RtlCompat" />
+
+
+        <Button
+            android:id="@+id/bt_forgotPass"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:fontFamily="@font/product_r"
+            android:background="@color/fui_transparent"
+            android:shadowColor="@color/fui_transparent"
+            android:text="@string/f_pass"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textColor="@color/vermelho_padrao"/>
+
+        <Button
+            android:id="@+id/btn_entrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_shape"
+            android:fontFamily="@font/product_r"
+            android:padding="10dp"
+            android:shadowColor="@color/fui_transparent"
+            android:text="@string/action_sign"
+            android:textAllCaps="false"
+            android:textColor="@color/md_white_1000"
+            android:textSize="20sp">
+
+        </Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="324dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="0dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/product_r"
+                android:text="@string/pergunta"
+                android:textColor="@color/md_black_1000"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/bt_signUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/fui_transparent"
+                android:fontFamily="@font/product_r"
+                android:shadowColor="@color/fui_transparent"
+                android:text="@string/criar_conta"
+                android:textAllCaps="false"
+                android:textColor="@color/vermelho_padrao"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/signInButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+
+</LinearLayout>

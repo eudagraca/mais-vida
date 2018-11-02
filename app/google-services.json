@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "743861679719",
+    "firebase_url": "https://maisvida-fd7d3.firebaseio.com",
+    "project_id": "maisvida-fd7d3",
+    "storage_bucket": "maisvida-fd7d3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743861679719:android:4f9cc9816cc590cd",
+        "android_client_info": {
+          "package_name": "com.braga.steliobraga.MaisVida"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "743861679719-cubvk3pttjabf1ccap78hd9k7mj0m73l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.braga.steliobraga.MaisVida",
+            "certificate_hash": "871ec4a672ec30b77eeae066c21bb619fbf31661"
+          }
+        },
+        {
+          "client_id": "743861679719-mv1t1a879418hgv1kj31kajpljnqkc32.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA08uNI9OfRQECuJ5yGloewYwTdeJl3bPQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "743861679719-spav8ffgnl9100c3a476rua2jorsp5c9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743861679719:android:5d6b5a366bd4dd5a",
+        "android_client_info": {
+          "package_name": "mz.co.vida"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "743861679719-htkrv81bi61u70ogsv6ikegbfstuid00.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mz.co.vida",
+            "certificate_hash": "0fe0652fc0b70554758a46022b30f0546585d7bf"
+          }
+        },
+        {
+          "client_id": "743861679719-mv1t1a879418hgv1kj31kajpljnqkc32.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA08uNI9OfRQECuJ5yGloewYwTdeJl3bPQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "743861679719-spav8ffgnl9100c3a476rua2jorsp5c9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

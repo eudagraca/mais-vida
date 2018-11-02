@@ -1,0 +1,274 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl"
+    tools:context=".PerfilFragment">
+
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/dd"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/vermelho_padrao">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/vermelho_padrao">>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/fui_transparent"
+                    android:drawableStart="@drawable/ic_keyboard_arrow_left_24dp" />
+
+                <Button
+                    android:id="@+id/btn_backprf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/product_r"
+                    android:background="@color/fui_transparent"
+                    android:text="@string/editar"
+                    android:textAllCaps="false"
+                    android:textColor="@color/md_white_1000" />
+
+                <TextView
+                    android:id="@+id/tv_nome"
+                    android:layout_width="172dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="27dp"
+                    android:fontFamily="@font/product_r"
+                    android:text="Stelio Braga"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/tv_estado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/tv_nome"
+                    android:layout_marginTop="116dp"
+                    android:layout_marginBottom="37dp"
+                    android:fontFamily="@font/product_r"
+                    android:text="Requisitante"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <com.zcw.togglebutton.ToggleButton
+                    android:id="@+id/tv_disponibilidade"
+                    android:layout_width="54dp"
+                    android:layout_height="30dp"
+                    android:layout_alignEnd="@+id/iv_foto"
+                    android:layout_alignBottom="@+id/tv_estado"
+                    android:layout_marginEnd="119dp"
+                    android:layout_marginBottom="0dp"
+                    app:tbBorderWidth="2dp"
+                    app:tbOffBorderColor="@color/md_white_1000"
+                    app:tbOffColor="@color/md_white_1000"
+                    app:tbOnColor="@color/md_green_600"
+                    app:tbSpotColor="@color/vermelho_padrao" />
+
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_foto"
+                    android:layout_width="130dp"
+                    android:layout_height="110dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/tv_nome"
+                    android:src="@drawable/ic_user" />
+
+            </RelativeLayout>
+        </ScrollView>
+
+    </android.support.v7.widget.CardView>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/infop"
+            android:layout_width="358dp"
+            android:layout_height="30dp"
+            android:textStyle=""
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="27dp"
+            android:text="@string/informa_o_pesoal"
+            android:fontFamily="@font/product_r"
+            android:textColor="@color/md_black_1000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/blood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/infop"
+            android:layout_below="@+id/infop"
+            android:layout_marginTop="4dp"
+            android:drawableStart="@drawable/ic_blood"
+             />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/infop"
+            android:layout_alignTop="@+id/tv_Sexo"
+            android:layout_below="@id/blood"
+            android:layout_marginTop="4dp"
+            android:drawableStart="@drawable/ic_genero" />
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/textView15"
+            android:layout_marginTop="17dp"
+            android:background="@color/vermelho_padrao" />
+
+        <TextView
+            android:id="@+id/enderco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/infop"
+            android:fontFamily="@font/product_r"
+            android:layout_below="@id/textView15"
+            android:layout_marginTop="130dp"
+            android:textColor="@color/md_black_1000"
+            android:text="@string/endereco"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/infop"
+            android:layout_below="@+id/enderco"
+            android:layout_marginTop="160dp"
+            android:drawableStart="@drawable/ic_localizacao" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/infop"
+            android:layout_below="@id/textView5"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="14dp"
+            android:drawableStart="@drawable/ic_hospital" />
+
+
+        <TextView
+            android:id="@+id/tv_tiposanguineo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tv_contacto"
+            android:layout_below="@+id/infop"
+            android:fontFamily="@font/product_r"
+            android:text="O-"
+            android:textColor="@color/md_black_1000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_provincia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tv_contacto"
+            android:layout_alignTop="@+id/textView5"
+            android:text="Cabo de Legado"
+            android:fontFamily="@font/product_r"
+            android:textColor="@color/md_black_1000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_unidade_sanitaria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tv_contacto"
+            android:layout_alignTop="@+id/textView6"
+            android:text="Hospital de Maputo"
+            android:fontFamily="@font/product_r"
+            android:textColor="@color/md_black_1000"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/tv_Sexo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/tv_contacto"
+            android:layout_marginTop="68dp"
+            android:text="Masculino"
+            android:fontFamily="@font/product_r"
+            android:textColor="@color/md_black_1000"
+            android:textSize="15sp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/textView6"
+            android:layout_marginTop="16dp"
+            android:background="@color/vermelho_padrao" />
+
+        <TextView
+            android:id="@+id/ct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/infop"
+            android:layout_below="@+id/textView6"
+            android:layout_marginTop="30dp"
+            android:text="@string/Contacto"
+            android:fontFamily="@font/product_r"
+            android:textColor="@color/md_black_1000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_contacto"
+            android:layout_width="wrap_content"
+            android:textColor="@color/md_black_1000"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/textView7"
+            android:layout_marginEnd="136dp"
+            android:text="842323485"
+            android:fontFamily="@font/product_r"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/infop"
+            android:layout_below="@id/ct"
+            android:layout_marginTop="4dp"
+            android:drawableStart="@drawable/ic_celular" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>
