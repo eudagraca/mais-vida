@@ -82,12 +82,12 @@
                     app:tbSpotColor="@color/vermelho_padrao" />
 
 
-
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/iv_foto"
                     android:layout_width="130dp"
                     android:layout_height="110dp"
-                    android:layout_centerVertical="true"
+                    android:layout_alignBottom="@+id/tv_estado"
+                    android:layout_marginBottom="-2dp"
                     android:layout_toEndOf="@+id/tv_nome"
                     android:src="@drawable/ic_user" />
 
@@ -215,17 +215,17 @@
             android:textSize="15sp" />
 
 
-        <TextView
-            android:id="@+id/tv_Sexo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/tv_contacto"
-            android:layout_marginTop="68dp"
-            android:text="Masculino"
-            android:fontFamily="@font/product_r"
-            android:textColor="@color/md_black_1000"
-            android:textSize="15sp" />
+            <TextView
+                android:id="@+id/tv_Sexo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tv_contacto"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="68dp"
+                android:fontFamily="@font/product_r"
+                android:text="Masculino"
+                android:textColor="@color/md_black_1000"
+                android:textSize="15sp" />
 
 
         <View

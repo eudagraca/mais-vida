@@ -1,7 +1,9 @@
 package mz.co.vida;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,7 +20,7 @@ import mz.co.vida.entidades.Post;
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder> {
 
     private List<Post> mPostsList;
-    private Context mContext;
+    public Context mContext;
     private AdapterView.OnItemClickListener onItemClickListener;
 
 
@@ -30,21 +32,23 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
     @Override
     public PostViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater inflater = LayoutInflater.from(mContext);
-        final View view = inflater.inflate(R.layout.posts_list, viewGroup, false);
+        View view = inflater.inflate(R.layout.posts_list, viewGroup, false);
 //        status = ProfileActivity.status;
-        return new PostViewHolder(view, this);
+        return new PostViewHolder(view, mContext);
     }
 
     @Override
     public void onBindViewHolder(@NonNull PostViewHolder holder, final int position) {
-        Post post = mPostsList.get(position);
 
-        holder.tv_nome.setText(post.getName());
-        holder.tv_provincia.setText(post.getProvincia());
-        setChipTextAndBackground(holder.tv_estado, post.getEstado());
-        if (holder.tv_estado.equals("doador"))
-        holder.tv_data.setText(post.getData());
-        holder.mli_tipoSangue.setLetter(post.getTipodesangue());
+        if ((mPostsList != null) && (mPostsList.size() >0)) {
+            Post post = mPostsList.get(position);
+
+            holder.tv_nome.setText(post.getName());
+            holder.tv_provincia.setText(post.getProvincia());
+            setChipTextAndBackground(holder.tv_estado, post.getEstado());
+            holder.tv_data.setText(post.getData());
+            holder.mli_tipoSangue.setLetter(post.getTipodesangue());
+        }
     }
 
     @Override
@@ -63,25 +67,28 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
     }
 
     class PostViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-
         private PostAdapter mAdapter;
         MaterialLetterIcon mli_tipoSangue;
         TextView tv_nome, tv_data, tv_provincia;
         Chip tv_estado;
 
-
-
-
-        public PostViewHolder(View itemView, final PostAdapter mAdapter) {
+   public PostViewHolder(View itemView, final Context context) {
             super(itemView);
             this.mAdapter = mAdapter;
-
             mli_tipoSangue = itemView.findViewById(R.id.mli_tipoSangue);
             tv_nome = itemView.findViewById(R.id.tv_nome);
             tv_data = itemView.findViewById(R.id.tv_data);
             tv_estado = itemView.findViewById(R.id.tv_estado);
             tv_provincia = itemView.findViewById(R.id.tv_provincia);
 
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Intent intent = new Intent(context, PostDetailsActivity.class);
+                    ((AppCompatActivity) context).startActivityForResult(intent, 0);
+                }
+            });
 //            itemView.setOnClickListener(this);
 //            mRadio.setOnClickListener(this);
         }
@@ -97,27 +104,20 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
 //            mAdapter.onItemHolderClick(PostViewHolder.this);
         }
     }
-
     // Meus métodos:
     private void setChipTextAndBackground(Chip v, String estado){
         String est = estado.toLowerCase();
         v.setChipText(estado.toUpperCase());
-
-
         switch (est){
-            case "doador":
+            case "Doador":
                 v.setBackgroundResource(R.color.md_grey_800);
                 break;
-            case "requisitante":
+            case "Requisitante":
                 v.setBackgroundResource(R.color.md_grey_600);
                 break;
             default:
                 v.setBackgroundResource(R.color.md_blue_900);
                 break;
-
         }
-
     }
-
-
 }

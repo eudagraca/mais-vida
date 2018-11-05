@@ -11,6 +11,12 @@ public class Post {
     private String quantidade;
     private String description;
 
+
+
+    public Post(){
+
+    }
+
     public Post(String name, String tipodesangue,
                 String provincia, String data,
                 String disponibilidade, String estado,

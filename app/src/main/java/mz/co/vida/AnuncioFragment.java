@@ -60,7 +60,7 @@ public class AnuncioFragment extends Fragment {
         mComentario = view.findViewById(R.id.tid_comentario);
 
         tv_data = view.findViewById(R.id.tvSelectedDate);
-        mQuant.setText("Quantidade sanguínea: "+ seekBar.getProgress() + "/"+ seekBar.getMax());
+        mQuant.setText("Quantidade sanguínea: "+ seekBar.getProgress());
         mData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -85,7 +85,7 @@ public class AnuncioFragment extends Fragment {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 progresso = progress;
-                Toast.makeText(getContext(), "Definindo a quantidade sanguínea", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(), "Definindo a quantidade sanguínea", Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
@@ -94,7 +94,7 @@ public class AnuncioFragment extends Fragment {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
                 Toast.makeText(getContext(), "", Toast.LENGTH_SHORT).show();
-                mQuant.setText("Quantidade sanguínea: "+ progresso + "/"+seekBar.getMax());
+                mQuant.setText("Quantidade sanguínea: "+ progresso);
                 quantidade = progresso;
                // Toast.makeText(getContext(), "Progresso Parou", Toast.LENGTH_SHORT).show();
             }
@@ -104,7 +104,7 @@ public class AnuncioFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (seekBar.getProgress()<1 && TextUtils.isEmpty(tv_data.getText().toString())){
-                    Toast.makeText(getContext(), "Defina a quantidade sanguínea ", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getContext(), "Defina a quantidade sanguínea ", Toast.LENGTH_SHORT).show();
                     seekBar.requestFocus();
                 }
                 else{

@@ -20,7 +20,7 @@
             android:layout_height="46dp"
             android:layout_gravity="center_vertical"
             app:mli_letter_color="@color/md_white_1000"
-            app:mli_letter_size="22"
+            app:mli_letter_size="15"
             app:mli_letters_number="3"
             app:mli_shape_color="@color/md_red_900" />
 

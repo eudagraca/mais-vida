@@ -160,9 +160,15 @@ public class RegistoActivity extends AppCompatActivity {
 
                     if (String.valueOf(bt_estado.getSelectedTab()).equals("0")) {
                         usuario.setEstado("Doador");
+                        if (mDisponibilidade.isChecked()) {
+                            usuario.setDisponibilidade("Sim");
+                        } else{
+                            usuario.setDisponibilidade("Não");
+                        }
                     } else if (String.valueOf(bt_estado.getSelectedTab()).equals("1")) {
-                        usuario.setEstado("requistante");
-                        //mDisponibilidade.isVisibleToUserForAutofill(View.GONE);
+                        usuario.setEstado("Requistante");
+                        mDisponibilidade.setVisibility(View.INVISIBLE);
+                        usuario.setDisponibilidade(null);
                     }
                     if (!(mSenha.getText().toString().equals(mSenhaConf.getText().toString()))) {
                         Toast.makeText(RegistoActivity.this, "Senhas incopativeis", Toast.LENGTH_SHORT).show();
@@ -220,11 +226,7 @@ public class RegistoActivity extends AppCompatActivity {
                             usuario.setTipoSanguineo("O-");
                             break;
                     }
-                    if (mDisponibilidade.isChecked()) {
-                        usuario.setDisponibilidade("Sim");
-                    } else {
-                        usuario.setDisponibilidade("Não");
-                    }
+
                     uploadProfileImage();
                     registarUser();
 
@@ -299,9 +301,11 @@ public class RegistoActivity extends AppCompatActivity {
                         Toast.makeText(RegistoActivity.this, R.string.email_verification, Toast.LENGTH_LONG).show();
                         //String identificadorUsuario = Base64Custom.codificarBase64(usuario.getEmail());
                         fireUser = mAuth.getCurrentUser();
-                        usuario.setUidUser(fireUser.getUid());
-                        fireUser.sendEmailVerification();
-                        usuario.gravar();
+                        if (fireUser != null) {
+                            usuario.setUidUser(fireUser.getUid());
+                            fireUser.sendEmailVerification();
+                            usuario.gravar();
+                        }
 
                         proDialog.dismiss();
                         Preferencias preferencias = new Preferencias(RegistoActivity.this);

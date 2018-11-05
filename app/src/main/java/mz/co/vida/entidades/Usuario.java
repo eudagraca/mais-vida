@@ -30,6 +30,21 @@ public class Usuario {
 
     }
 
+    public Usuario(String uidUser, String nome, String telefone, String sexo, String email, String senha, String provincia, String unidadeProxima, String tipoSanguineo, String disponibilidade, String estado, String foto) {
+        this.uidUser = uidUser;
+        this.nome = nome;
+        this.telefone = telefone;
+        this.sexo = sexo;
+        this.email = email;
+        this.senha = senha;
+        this.provincia = provincia;
+        this.unidadeProxima = unidadeProxima;
+        this.tipoSanguineo = tipoSanguineo;
+        this.disponibilidade = disponibilidade;
+        this.estado = estado;
+        this.foto = foto;
+    }
+
     public void gravar(){
         DatabaseReference dbRef = ConfiguracaoFirebase.getFirebase();
         dbRef.child("Usuario").child(String.valueOf(getUidUser())).setValue(this);
@@ -42,7 +57,7 @@ public class Usuario {
        // hashMapUser.put("id", getUidUser());
         hashMapUser.put("nome", getNome());
         hashMapUser.put("email", getEmail());
-        hashMapUser.put("senha", getSenha());
+        //hashMapUser.put("senha", getSenha());
         hashMapUser.put("telefone", getTelefone());
         hashMapUser.put("sexo", getSexo());
         hashMapUser.put("localizacao", getProvincia());
