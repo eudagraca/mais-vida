@@ -1,4 +1,4 @@
-package Helper;
+package mz.co.vida.Helper;
 
 import android.util.Base64;
 

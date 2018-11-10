@@ -1,42 +1,54 @@
 package mz.co.vida.entidades;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Post {
 
-    private String name;
-    private String tipodesangue;
-    private String provincia;
-    private String data;
-    private String disponibilidade;
-    private String estado;
-    private String quantidade;
-    private String description;
+    public Post(){}
 
+    public String disponibilidade;
+    public String email;
+    public String estado;
+    public String foto;
+    public String nome;
+    public String provincia;
+    public String senha;
+    public String sexo;
+    public String telefone;
+    public String tipoSanguineo;
+    public String uidUser;
+    public String unidadeProxima;
 
-
-    public Post(){
-
-    }
-
-    public Post(String name, String tipodesangue,
-                String provincia, String data,
-                String disponibilidade, String estado,
-                String description) {
-        this.name = name;
-        this.tipodesangue = tipodesangue;
-        this.provincia = provincia;
-        this.data = data;
+    public Post(String disponibilidade, String email, String estado, String foto, String nome, String provincia, String senha, String sexo, String telefone, String tipoSanguineo, String uidUser, String unidadeProxima) {
         this.disponibilidade = disponibilidade;
+        this.email = email;
         this.estado = estado;
-        this.description = description;
-
+        this.foto = foto;
+        this.nome = nome;
+        this.provincia = provincia;
+        this.senha = senha;
+        this.sexo = sexo;
+        this.telefone = telefone;
+        this.tipoSanguineo = tipoSanguineo;
+        this.uidUser = uidUser;
+        this.unidadeProxima = unidadeProxima;
     }
 
-    public String getComment() {
-        return description;
+    public String getDisponibilidade() {
+        return disponibilidade;
     }
 
-    public void setComment(String comment) {
-        this.description = comment;
+    public void setDisponibilidade(String disponibilidade) {
+        this.disponibilidade = disponibilidade;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getEstado() {
@@ -47,20 +59,20 @@ public class Post {
         this.estado = estado;
     }
 
-    public String getName() {
-        return name;
+    public String getFoto() {
+        return foto;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFoto(String foto) {
+        this.foto = foto;
     }
 
-    public String getTipodesangue() {
-        return tipodesangue;
+    public String getNome() {
+        return nome;
     }
 
-    public void setTipodesangue(String tipodesangue) {
-        this.tipodesangue = tipodesangue;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getProvincia() {
@@ -71,20 +83,51 @@ public class Post {
         this.provincia = provincia;
     }
 
-    public String getData() {
-        return data;
+    public String getSenha() {
+        return senha;
     }
 
-    public void setData(String data) {
-        this.data = data;
-    }
-    public void setQuantidade(String quantidade){this.quantidade=quantidade;}
-
-    public String getDisponibilidade() {
-        return disponibilidade;
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
-    public void setDisponibilidade(String disponibilidade) {
-        this.disponibilidade = disponibilidade;
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public String getTipoSanguineo() {
+        return tipoSanguineo;
+    }
+
+    public void setTipoSanguineo(String tipoSanguineo) {
+        this.tipoSanguineo = tipoSanguineo;
+    }
+
+    public String getUidUser() {
+        return uidUser;
+    }
+
+    public void setUidUser(String uidUser) {
+        this.uidUser = uidUser;
+    }
+
+    public String getUnidadeProxima() {
+        return unidadeProxima;
+    }
+
+    public void setUnidadeProxima(String unidadeProxima) {
+        this.unidadeProxima = unidadeProxima;
     }
 }

@@ -15,19 +15,19 @@
 
     </FrameLayout>
 
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_above="@id/nav_main"
-        android:background="@color/md_red_A700"
-        />
+        android:background="@color/md_red_A700" />
 
-    <android.support.design.widget.BottomNavigationView
+    <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
         android:id="@+id/nav_main"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_alignParentBottom="true"
-        app:menu="@menu/navigation" />
+        app:menu="@menu/navigation"/>
 
 </RelativeLayout>
 

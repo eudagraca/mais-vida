@@ -6,7 +6,7 @@ import com.google.firebase.database.Exclude;
 import java.util.HashMap;
 import java.util.Map;
 
-import DAO.ConfiguracaoFirebase;
+import mz.co.vida.DAO.ConfiguracaoFirebase;
 
 public class Usuario {
 

@@ -11,7 +11,7 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import DAO.ConfiguracaoFirebase;
+import mz.co.vida.DAO.ConfiguracaoFirebase;
 
 public class ForgotPasswordActivity extends AppCompatActivity {
     private Button btVoltar;

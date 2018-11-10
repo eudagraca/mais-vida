@@ -40,7 +40,8 @@
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home" />
-        <activity android:name=".PostDetailsActivity"></activity>
+        <activity android:name=".PostDetailsActivity" />
+        <activity android:name=".CreateActivity"></activity>
     </application>
 
 </manifest>

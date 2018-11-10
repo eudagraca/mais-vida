@@ -40,8 +40,8 @@ import com.google.firebase.storage.UploadTask;
 import java.io.IOException;
 import java.util.UUID;
 
-import DAO.ConfiguracaoFirebase;
-import Helper.Preferencias;
+import mz.co.vida.DAO.ConfiguracaoFirebase;
+import mz.co.vida.Helper.Preferencias;
 import de.hdodenhof.circleimageview.CircleImageView;
 import lib.kingja.switchbutton.SwitchMultiButton;
 import mz.co.vida.entidades.Usuario;

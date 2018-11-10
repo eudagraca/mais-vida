@@ -15,9 +15,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import java.util.Calendar;
-import DAO.ConfiguracaoFirebase;
+import mz.co.vida.DAO.ConfiguracaoFirebase;
 import mz.co.vida.entidades.Anuncio;
-import mz.co.vida.entidades.Usuario;
 
 public class AnuncioFragment extends Fragment {
 

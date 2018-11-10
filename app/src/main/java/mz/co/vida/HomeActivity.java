@@ -1,33 +1,39 @@
 package mz.co.vida;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.SearchView;
-import android.widget.TextView;
+
+import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
 public class HomeActivity extends AppCompatActivity {
 
 
     int fl_framelayout;
-    BottomNavigationView main_nav;
+    BottomNavigationViewEx main_nav;
     FragmentManager fragmentManager;
     sobreFragment sobre_fragment;
     PerfilFragment perfil_fragment;
     HomeFragment homeFragment;
     AnuncioFragment anuncioFragment;
 
+    SharedPreferences sharedPreferences;
+    Menu menu;
+
+    boolean isRequisitante;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
-
-
         fragmentManager = getSupportFragmentManager();
+        sharedPreferences = getSharedPreferences(MyUtils.SP_NAME, MODE_PRIVATE);
 
         // Fragment init
         perfil_fragment  = new PerfilFragment();
@@ -36,7 +42,15 @@ public class HomeActivity extends AppCompatActivity {
         homeFragment = new HomeFragment();
 
 
-        main_nav = (BottomNavigationView) findViewById(R.id.nav_main);
+        main_nav = (BottomNavigationViewEx) findViewById(R.id.nav_main);
+        // main_nav.enableAnimation(false);
+        isRequisitante = sharedPreferences.getBoolean("isRequisitante", false);
+
+        menu = main_nav.getMenu();
+        if (!isRequisitante) {
+            menu.removeItem(R.id.navigation_anunciar);
+        }
+
         fl_framelayout = R.id.fl_framelayout;
 
         MyUtils.changeFragment(fl_framelayout, homeFragment, fragmentManager);
@@ -62,5 +76,4 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
     }
-
 }
