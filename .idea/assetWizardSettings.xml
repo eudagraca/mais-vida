@@ -19,8 +19,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_phone_contact" />
-                            <entry key="sourceFile" value="C:\Users\Euclidio G. Venâncio\Downloads\Compressed\110857-phone-icons\110857-phone-icons\svg\phone-contact.svg" />
+                            <entry key="outputName" value="ic_bell_ring" />
+                            <entry key="sourceFile" value="C:\Users\Euclidio G. Venâncio\Downloads\bell-ring.svg" />
                           </map>
                         </option>
                       </PersistentState>

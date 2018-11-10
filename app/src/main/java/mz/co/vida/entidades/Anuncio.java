@@ -4,7 +4,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Exclude;
 import java.util.HashMap;
 import java.util.Map;
-import DAO.ConfiguracaoFirebase;
+import mz.co.vida.DAO.ConfiguracaoFirebase;
 
 public class Anuncio {
     private int quantSanguinea;
@@ -19,7 +19,7 @@ public class Anuncio {
 
     public void gravar(){
         DatabaseReference dbRef = ConfiguracaoFirebase.getFirebase();
-        dbRef.child("anuncios").child(String.valueOf(getId())).push().setValue(this);
+        dbRef.child("anuncios").child(String.valueOf(getId())).setValue(this);
     }
     @Exclude
     public Map<String, Object> toMap(){

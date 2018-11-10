@@ -20,11 +20,11 @@ import mz.co.vida.entidades.Post;
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder> {
 
     private List<Post> mPostsList;
-    public Context mContext;
+    private Context mContext;
     private AdapterView.OnItemClickListener onItemClickListener;
 
 
-    public PostAdapter(Context context, List<Post> postsList) {
+    PostAdapter(Context context, List<Post> postsList) {
         mContext = context;
         mPostsList = postsList;
     }
@@ -43,11 +43,12 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
         if ((mPostsList != null) && (mPostsList.size() >0)) {
             Post post = mPostsList.get(position);
 
-            holder.tv_nome.setText(post.getName());
-            holder.tv_provincia.setText(post.getProvincia());
+            holder.tv_nome.setText(post.nome);
+            holder.tv_provincia.setText(post.provincia);
             setChipTextAndBackground(holder.tv_estado, post.getEstado());
-            holder.tv_data.setText(post.getData());
-            holder.mli_tipoSangue.setLetter(post.getTipodesangue());
+            //holder.tv_data.setText(post.));
+            //String cellPhone  = post.telefone;
+            holder.mli_tipoSangue.setLetter(post.getTipoSanguineo());
         }
     }
 
@@ -81,6 +82,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
             tv_estado = itemView.findViewById(R.id.tv_estado);
             tv_provincia = itemView.findViewById(R.id.tv_provincia);
 
+
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -107,16 +109,16 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
     // Meus métodos:
     private void setChipTextAndBackground(Chip v, String estado){
         String est = estado.toLowerCase();
-        v.setChipText(estado.toUpperCase());
+       v.setChipText(estado.toUpperCase());
         switch (est){
-            case "Doador":
-                v.setBackgroundResource(R.color.md_grey_800);
+            case "doador":
+                v.changeBackgroundColor(R.color.md_red_900);
                 break;
-            case "Requisitante":
-                v.setBackgroundResource(R.color.md_grey_600);
+            case "requisitante":
+                v.changeBackgroundColor(R.color.md_red_600);
                 break;
             default:
-                v.setBackgroundResource(R.color.md_blue_900);
+                v.changeBackgroundColor(R.color.md_red_600);
                 break;
         }
     }

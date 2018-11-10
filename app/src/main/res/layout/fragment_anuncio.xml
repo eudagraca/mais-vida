@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/md_white_1000"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".AnuncioFragment">
 
@@ -16,20 +17,21 @@
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/product_r"
-        android:paddingEnd="26dp"
-        android:paddingStart="26dp"
-        android:text="@string/anunciar"
-        android:textAlignment="center"
-        android:textColor="@color/vermelho_padrao"
-        android:textSize="35sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/courgette"
+            android:paddingStart="26dp"
+            android:paddingEnd="26dp"
+            android:text="@string/anunciar"
+            android:textAlignment="center"
+            android:textColor="@color/vermelho_padrao"
+            android:textSize="35sp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -71,7 +73,8 @@
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:max="5"
-                android:progressTint="@color/md_red_900" />
+                android:secondaryProgressTint="@color/md_red_600"
+                android:progressTint="@color/vermelho_padrao" />
             <TextView
                 android:id="@id/tv_quantidade"
                 android:layout_width="wrap_content"
@@ -106,7 +109,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
                 android:fontFamily="@font/product_r"
                 android:textAllCaps="false"
                 android:paddingTop="10dp"
