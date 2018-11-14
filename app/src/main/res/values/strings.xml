@@ -114,4 +114,7 @@
     <string name="endereco">Endereço</string>
     <string name="editar">Editar</string>
     <string name="notificacoes">Notificações</string>
+    <string name="data_para_doacao">Data para doação</string>
+    <string name="introduza_o_seu_email">Introduza o seu email</string>
+    <string name="meus_anuncios">Meus anúncios</string>
 </resources>

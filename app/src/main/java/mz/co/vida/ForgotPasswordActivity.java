@@ -14,19 +14,18 @@ import com.google.firebase.auth.FirebaseAuth;
 import mz.co.vida.DAO.ConfiguracaoFirebase;
 
 public class ForgotPasswordActivity extends AppCompatActivity {
-    private Button btVoltar;
-    private Button enviarRed;
     private EditText mEmail;
-    FirebaseAuth mAuth;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
 
-        btVoltar = (Button) findViewById(R.id.bt_voltar);
-        mEmail = (EditText) findViewById(R.id.et_email);
-        enviarRed = (Button) findViewById(R.id.bt_redifinir);
+        Button btVoltar  = (Button) findViewById(R.id.bt_voltar);
+        mEmail           = (EditText) findViewById(R.id.et_email);
+        Button enviarRed = (Button) findViewById(R.id.bt_redifinir);
+
         mAuth = ConfiguracaoFirebase.getFirebaseAuth();
 
         btVoltar.setOnClickListener(new View.OnClickListener() {

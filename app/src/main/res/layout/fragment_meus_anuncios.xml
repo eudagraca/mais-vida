@@ -1,45 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/md_white_1000"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_marginBottom="1dp">
+    xmlns:tools="http://schemas.android.com/tools">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:background="@color/md_white_1000"
         android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:fontFamily="@font/courgette"
         android:layout_gravity="center"
-        android:text="Meus anúncios"
+        android:text="@string/meus_anuncios"
         android:textAlignment="center"
         android:textColor="@color/vermelho_padrao"
         android:textSize="35sp" />
+        <VideoView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/vermelho_padrao"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:fontFamily="@font/product_r"
+                android:textColor="@color/vermelho_padrao"
+                android:layout_marginStart="40dp"
+                tools:text="Quantidade adquirida:" />
+
+            <com.github.ivbaranov.mli.MaterialLetterIcon
+                android:id="@+id/mli_tipoSangue"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center_vertical"
+                app:mli_letter_color="@color/md_white_1000"
+                app:mli_letter_size="14"
+                app:mli_letter="1"
+                app:mli_letters_number="1"
+                app:mli_shape_color="@color/vermelho_padrao" />
+
+        </LinearLayout>
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
     <android.support.v7.widget.RecyclerView
-        android:layout_marginTop="20dp"
         android:id="@+id/rv_anuncios"
         android:background="@color/md_white_1000"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:scrollbars="vertical"
-        android:layout_alignParentBottom="false"
-        android:layout_below="@+id/toolbar"
-        tools:listitem="@layout/anuncios_list" />
+        tools:listitem="@layout/notification_list" />
         </ScrollView>
     </LinearLayout>
 

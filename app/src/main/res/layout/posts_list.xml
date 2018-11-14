@@ -14,6 +14,12 @@
         android:orientation="horizontal"
         android:padding="16dp">
 
+        <TextView
+            android:id="@+id/tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
         <com.github.ivbaranov.mli.MaterialLetterIcon
             android:id="@+id/mli_tipoSangue"
             android:layout_width="46dp"
@@ -42,17 +48,10 @@
                     android:fontFamily="@font/product"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:textSize="18sp"
                     android:textColor="@color/md_black_1000"
                     android:text="Camilla Cabello"
                     android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tv_id"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="TextView"
-                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/tv_data"
@@ -61,7 +60,7 @@
                     android:fontFamily="@font/product_r"
                     android:text="12/09/2018"
                     android:textColor="@color/md_black_1000"
-                    android:textSize="12sp" />
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <RelativeLayout
@@ -77,6 +76,7 @@
                     app:mcv_chipText="Requisitante"
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
+                    app:mcv_cornerRadius="@dimen/google_1x"
                     app:mcv_textColor="@color/md_white_1000"
                     app:mcv_backgroundColor="@color/vermelho_padrao"/>
 
@@ -91,7 +91,7 @@
                     android:layout_centerVertical="true"
                     android:textColor="@color/md_black_1000"
                     android:text="Maputo Provincia"
-                    android:textSize="12sp" />
+                    android:textSize="14sp" />
 
             </RelativeLayout>
 

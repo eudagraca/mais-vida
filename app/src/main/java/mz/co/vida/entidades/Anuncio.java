@@ -72,4 +72,7 @@ public class Anuncio {
     public void setComentario(String comentario) {
         this.comentario = comentario;
     }
+
+    public void setQuantSanguinea(String quantSanguinea) {
+    }
 }

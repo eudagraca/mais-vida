@@ -24,65 +24,155 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6feacad7-285b-4ed8-9f8a-b794eb9ef2a5" name="Default" comment="NEW">
+    <list default="true" id="6feacad7-285b-4ed8-9f8a-b794eb9ef2a5" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_15_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_api_16_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_base_16_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_16_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_impl_16_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_auth_15_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_common_16_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_database_16_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_database_connection_16_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_16_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_storage_16_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_storage_common_16_0_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskJars.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskJars.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_ittianyu_BottomNavigationViewEx_2_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_identifier_15_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_identifier_16_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_15_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_16_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_api_phone_15_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_api_phone_16_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_base_15_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_base_16_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_15_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_16_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_15_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_flags_15_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_flags_16_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_api_16_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_base_16_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_stats_15_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_stats_16_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_15_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_16_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_16_0_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_impl_16_2_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_auth_15_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_common_16_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_core_16_0_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_core_16_0_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_database_16_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_database_collection_15_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_database_collection_16_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_database_connection_16_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_16_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_interop_16_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_interop_16_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_17_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_17_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_impl_17_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_impl_17_0_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_storage_16_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_storage_common_16_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_common_1_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_common_1_1_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_common_1_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_common_1_1_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_extensions_1_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_extensions_1_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_solver_1_1_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_solver_1_1_3_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customtabs_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customtabs_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_exifinterface_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_exifinterface_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_annotations_25_3_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_annotations_25_3_1_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_codesgood_justifiedtextview_1_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_codesgood_justifiedtextview_1_0_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_firebaseui_firebase_ui_auth_3_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_firebaseui_firebase_ui_auth_3_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_ivbaranov_materiallettericon_0_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_ivbaranov_materiallettericon_0_2_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_medyo_fancybuttons_1_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_medyo_fancybuttons_1_9_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_identifier_16_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_identifier_15_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_16_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_15_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_api_phone_16_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_api_phone_15_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_base_16_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_base_15_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_16_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_15_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_16_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_flags_16_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_flags_15_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_api_16_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_base_16_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_stats_16_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_stats_15_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_16_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_15_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_16_0_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_impl_16_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_auth_16_0_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_auth_interop_16_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_common_16_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_core_16_0_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_core_16_0_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_database_16_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_database_collection_16_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_database_collection_15_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_17_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_interop_16_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_interop_16_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_17_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_17_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_impl_17_0_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_impl_17_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_storage_16_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_hbb20_ccp_1_7_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_hbb20_ccp_1_7_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_phlox_widget_android_date_picker_0_2_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_phlox_widget_android_date_picker_0_2_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_robertlevonyan_view_MaterialChipView_1_2_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_robertlevonyan_view_MaterialChipView_1_2_4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_10_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_10_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_14_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_14_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_picasso_picasso_2_71828.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_picasso_picasso_2_71828.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_zcw_togglebutton_library_1_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_zcw_togglebutton_library_1_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__de_hdodenhof_circleimageview_2_2_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__de_hdodenhof_circleimageview_2_2_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__lib_kingja_switchbutton_switchbutton_1_1_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__lib_kingja_switchbutton_switchbutton_1_1_7.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/AnuncioFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/CreateActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/CreateActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/ForgotPasswordActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/ForgotPasswordActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/Fragments/AnuncioFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/Fragments/AnuncioFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/Fragments/HomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/Fragments/HomeFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/Fragments/MeusAnunciosFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/Fragments/NotificationFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/Fragments/NotificationFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/Fragments/PerfilFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/Fragments/PerfilFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/Fragments/SecondProFrag.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/Fragments/SecondProFrag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/Fragments/sobreFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/Fragments/sobreFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/Helper/Base64Custom.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/Helper/Base64Custom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/Helper/BottomNavigationViewHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/Helper/BottomNavigationViewHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/Helper/Preferencias.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/Helper/Preferencias.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/HomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/HomeActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/HomeFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/MeusAnunciosFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/Fragments/MeusAnunciosFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/LoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/MyUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/MyUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/NewNotification.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/NotificationFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/PerfilFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/NotificationAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/NotificationAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/PostAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/PostAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/PostDetailsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/PostDetailsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/sobreFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_stat_reply.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_stat_share.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_stat_new.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_action_stat_reply.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_action_stat_share.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_stat_new.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-nodpi/example_picture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_action_stat_reply.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_action_stat_share.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_stat_new.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_stat_new.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_stat_new.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/RegistoActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/RegistoActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/entidades/Anuncio.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/entidades/Anuncio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/entidades/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/entidades/Notification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/entidades/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mz/co/vida/entidades/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/edit_text.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/edit_text.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_back.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_back.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_care.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_care.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_insert_invitation_24px.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_insert_invitation_24px.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_create.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_create.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_forgot_password.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_forgot_password.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_post_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_post_details.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_registo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_registo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/anuncios_list.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_anuncio.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_anuncio.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_meus_anuncios.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_meus_anuncios.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_notification.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_notification.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_perfil.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_perfil.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_secundary_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_secundary_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_sobre.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_sobre.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/notification_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/notification_list.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/posts_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/posts_list.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/estados_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/estados_navigation.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -104,12 +194,58 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="PostDetailsActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/PostDetailsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="60" column="45" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
+            <state relative-caret-position="244">
+              <caret line="109" column="72" lean-forward="true" selection-start-line="109" selection-start-column="72" selection-end-line="109" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/Fragments/HomeFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1140">
+              <caret line="94" column="21" selection-start-line="94" selection-start-column="21" selection-end-line="94" selection-end-column="21" />
+              <folding>
+                <element signature="e#4122#5134#0" expanded="true" />
+                <element signature="e#5133#5134#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreateActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/CreateActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/HomeActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="580">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PostAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/PostAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2481,7 +2617,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/menu/navigation.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/mz/co/vida/AnuncioFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/anuncios_list.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/mz/co/vida/HomeActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/mz/co/vida/entidades/Usuario.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/Common/Common.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_meus_anuncios.xml" />
@@ -2499,10 +2634,13 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/posts_list.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/mz/co/vida/PostDetailsActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/mz/co/vida/MyUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/mz/co/vida/Fragments/SecondProFrag.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/mz/co/vida/Fragments/HomeFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/mz/co/vida/CreateActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/mz/co/vida/HomeActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/mz/co/vida/PostDetailsActivity.java" />
       </list>
     </option>
   </component>
@@ -2570,15 +2708,6 @@
               <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Fragments" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VIDA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VIDA" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="res" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -2603,7 +2732,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -2611,32 +2739,11 @@
               <item name="VIDA" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
             </path>
-            <path>
-              <item name="VIDA" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="VIDA" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="vida" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VIDA" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="VIDA" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2645,8 +2752,8 @@
     <property name="DEBUGGER_ID" value="Auto" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="android.sdk.path" value="C:/android-sdk" />
-    <property name="device.picker.selection" value="4_WVGA_Nexus_S_API_28" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="device.picker.selection" value="Galaxy_Nexus_API_23" />
+    <property name="last_opened_file_path" value="K:/mais vidaa" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
@@ -2806,7 +2913,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541422821001</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="NEW">
+      <created>1542202485776</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1542202485776</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2822,30 +2936,29 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="Android Profiler" order="7" show_stripe_button="false" weight="0.32843137" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" weight="0.32843137" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32843137" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Build Variants" order="2" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50075644" side_tool="true" weight="0.32843137" />
-      <window_info anchor="right" id="Preview" order="7" sideWeight="0.49673203" weight="0.28971255" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.5441176" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.5429043" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49924356" weight="0.32843137" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32843137" />
-      <window_info anchor="bottom" id="Logcat" order="7" weight="0.5375817" />
+      <window_info anchor="bottom" id="Logcat" order="7" weight="0.53630364" />
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18835099" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18835099" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.26732674" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.8828383" />
       <window_info anchor="right" id="Gradle" order="5" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Device File Explorer" order="9" sideWeight="0.503268" side_tool="true" weight="0.28971255" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.49673203" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" id="Preview" order="7" sideWeight="0.49673203" weight="0.28971255" />
       <window_info anchor="right" id="StringPreview" order="8" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.32803467" />
@@ -2854,6 +2967,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.8828383" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="StringPreview" order="8" />
@@ -2913,32 +3027,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/entidades/Anuncio.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="21" column="62" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-mgh-rMZ/strings.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/RegistoActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="162" column="26" selection-start-line="162" selection-start-column="26" selection-end-line="162" selection-end-column="26" />
-          <folding>
-            <element signature="e#3655#3898#0" expanded="true" />
-            <element signature="e#3897#3898#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/anuncios_list.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-194">
@@ -2980,26 +3068,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_stat_share.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_stat_new.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_stat_reply.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-nodpi/example_picture.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_stat_share.png" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_stat_new.png" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_stat_reply.png" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-nodpi/example_picture.png" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/DAO/ConfiguracaoFirebase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -3042,13 +3114,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/PerfilFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1700">
-          <caret line="112" column="69" lean-forward="true" selection-start-line="112" selection-start-column="69" selection-end-line="112" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/PerfilFragment.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/entidades/Usuario.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -3056,13 +3122,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/NewNotification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/NewNotification.java" />
     <entry file="file://$PROJECT_DIR$/app/google-services.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="888">
@@ -3074,54 +3134,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1116">
           <caret line="85" column="40" selection-start-line="85" selection-start-column="40" selection-end-line="85" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1243#1244#0" expanded="true" />
-            <element signature="e#1277#1278#0" expanded="true" />
-            <element signature="e#1321#1322#0" expanded="true" />
-            <element signature="e#1357#1358#0" expanded="true" />
-            <element signature="e#1397#1398#0" expanded="true" />
-            <element signature="e#1429#1430#0" expanded="true" />
-            <element signature="e#1469#1470#0" expanded="true" />
-            <element signature="e#1501#1502#0" expanded="true" />
-            <element signature="e#1551#1552#0" expanded="true" />
-            <element signature="e#1593#1594#0" expanded="true" />
-            <element signature="e#1635#1636#0" expanded="true" />
-            <element signature="e#1669#1670#0" expanded="true" />
-            <element signature="e#1709#1710#0" expanded="true" />
-            <element signature="e#1741#1742#0" expanded="true" />
-            <element signature="e#1789#1790#0" expanded="true" />
-            <element signature="e#1829#1830#0" expanded="true" />
-            <element signature="e#1887#1888#0" expanded="true" />
-            <element signature="e#1937#1938#0" expanded="true" />
-            <element signature="e#1983#1984#0" expanded="true" />
-            <element signature="e#2021#2022#0" expanded="true" />
-            <element signature="e#2081#2082#0" expanded="true" />
-            <element signature="e#2133#2134#0" expanded="true" />
-            <element signature="e#2213#2214#0" expanded="true" />
-            <element signature="e#2245#2246#0" expanded="true" />
-            <element signature="e#2273#2274#0" expanded="true" />
-            <element signature="e#2306#2307#0" expanded="true" />
-            <element signature="e#2335#2336#0" expanded="true" />
-            <element signature="e#2366#2367#0" expanded="true" />
-            <element signature="e#2393#2394#0" expanded="true" />
-            <element signature="e#2424#2425#0" expanded="true" />
-            <element signature="e#2451#2452#0" expanded="true" />
-            <element signature="e#2487#2488#0" expanded="true" />
-            <element signature="e#2519#2520#0" expanded="true" />
-            <element signature="e#2551#2552#0" expanded="true" />
-            <element signature="e#2579#2580#0" expanded="true" />
-            <element signature="e#2610#2611#0" expanded="true" />
-            <element signature="e#2637#2638#0" expanded="true" />
-            <element signature="e#2672#2673#0" expanded="true" />
-            <element signature="e#2703#2704#0" expanded="true" />
-            <element signature="e#2743#2744#0" expanded="true" />
-            <element signature="e#2779#2780#0" expanded="true" />
-            <element signature="e#2813#2814#0" expanded="true" />
-            <element signature="e#2843#2844#0" expanded="true" />
-            <element signature="e#2884#2885#0" expanded="true" />
-            <element signature="e#2921#2922#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3165,16 +3177,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/PostAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_sobre.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="177">
@@ -3201,13 +3203,6 @@
       </provider>
       <provider editor-type-id="android-designer2">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/HomeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="21" column="12" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="12" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/posts_list.xml">
@@ -3275,13 +3270,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/AnuncioFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/AnuncioFragment.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7">
@@ -3299,27 +3288,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/HomeFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="61" column="31" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/Fragments/HomeFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7">
-          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/Fragments/MeusAnunciosFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/HomeFragment.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -3334,10 +3303,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_create.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-98">
+          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/RegistoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="162" column="26" selection-start-line="162" selection-start-column="26" selection-end-line="162" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/ForgotPasswordActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/HomeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/CreateActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/PostAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/Fragments/MeusAnunciosFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/Fragments/HomeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="94" column="21" selection-start-line="94" selection-start-column="21" selection-end-line="94" selection-end-column="21" />
+          <folding>
+            <element signature="e#4122#5134#0" expanded="true" />
+            <element signature="e#5133#5134#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/mz/co/vida/PostDetailsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="60" column="45" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
+        <state relative-caret-position="244">
+          <caret line="109" column="72" lean-forward="true" selection-start-line="109" selection-start-column="72" selection-end-line="109" selection-end-column="72" />
         </state>
       </provider>
     </entry>

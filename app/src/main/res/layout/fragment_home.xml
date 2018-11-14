@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/md_white_1000"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.HomeFragment">
 
@@ -47,21 +46,17 @@
                     android:layout_marginEnd="26dp"
                     fancy:fb_iconPaddingRight="10dp"
                     android:paddingTop="10dp"
-                    android:paddingRight="20dp"
+                    android:paddingEnd="20dp"
                     android:paddingBottom="10dp" />
 
                 <SearchView
                     android:id="@+id/pesquisar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:background="@null"
-                    android:iconifiedByDefault="false"
-                    android:inputType="text"
                     android:maxWidth="190dp"
-                    android:queryHint="Localização"
-                    android:searchIcon="@drawable/ic_search" />
+                    android:background="@null"
+                    android:searchIcon="@drawable/ic_search"
+                    />
 
             </RelativeLayout>
 
@@ -70,6 +65,7 @@
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_posts"
+            android:background="@color/md_white_1000"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbars="vertical"

@@ -38,6 +38,7 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
+import java.util.Objects;
 import java.util.UUID;
 
 import mz.co.vida.DAO.ConfiguracaoFirebase;
@@ -45,7 +46,6 @@ import mz.co.vida.Helper.Preferencias;
 import de.hdodenhof.circleimageview.CircleImageView;
 import lib.kingja.switchbutton.SwitchMultiButton;
 import mz.co.vida.entidades.Usuario;
-
 
 public class RegistoActivity extends AppCompatActivity {
     private EditText mNome;
@@ -64,9 +64,8 @@ public class RegistoActivity extends AppCompatActivity {
     private CircleImageView imageProfile;
     private Usuario usuario;
     public final static int PICK_PHOTO_CODE = 1046;
-    private Button back;
     private static final String TAG = "RegisterActivity";
-    Uri imageUri;
+    private Uri imageUri;
     //Firebase
     private FirebaseAuth mAuth;
 
@@ -83,15 +82,13 @@ public class RegistoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registo);
 
-        back= (Button) findViewById(R.id.voltar_login);
+        Button back = (Button) findViewById(R.id.voltar_login);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 abrirLogin();
-
             }
         });
-
         storageref = FirebaseStorage.getInstance().getReference();
         final Spinner provincias = (Spinner) findViewById(R.id.sp_provincias);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
@@ -105,6 +102,7 @@ public class RegistoActivity extends AppCompatActivity {
         bt_estado.setOnSwitchListener(new SwitchMultiButton.OnSwitchListener() {
             @Override
             public void onSwitch(int position, String tabText) {
+
                 Toast.makeText(RegistoActivity.this, tabText, Toast.LENGTH_SHORT).show();
             }
         });
@@ -116,18 +114,18 @@ public class RegistoActivity extends AppCompatActivity {
                 Toast.makeText(RegistoActivity.this, tabText, Toast.LENGTH_SHORT).show();
             }
         });
-        //CAST
-        mNome = (EditText) findViewById(R.id.et_nome);
-        mEmail = (EditText) findViewById(R.id.et_mail);
-        mSenha = (EditText) findViewById(R.id.et_password);
-        mSenhaConf = (EditText) findViewById(R.id.et_passwordConfirm);
-        mTelefone = (EditText) findViewById(R.id.et_Phone);
-        mUnidade_Proxima = (EditText) findViewById(R.id.et_UnidadeProx);
-        mDisponibilidade = (Switch) findViewById(R.id.stc_disponibilidade);
-        rbFemenino = (RadioButton) findViewById(R.id.rbFemenino);
-        rbMasculino = (RadioButton) findViewById(R.id.rbMasculino);
-        rbOutro = (RadioButton) findViewById(R.id.rbOutro);
-        mSexo = (RadioGroup) findViewById(R.id.rg);
+        //Init Components
+        mNome                   = (EditText) findViewById(R.id.et_nome);
+        mEmail                  = (EditText) findViewById(R.id.et_mail);
+        mSenha                  = (EditText) findViewById(R.id.et_password);
+        mSenhaConf              = (EditText) findViewById(R.id.et_passwordConfirm);
+        mTelefone               = (EditText) findViewById(R.id.et_Phone);
+        mUnidade_Proxima        = (EditText) findViewById(R.id.et_UnidadeProx);
+        mDisponibilidade        = (Switch) findViewById(R.id.stc_disponibilidade);
+        rbFemenino              = (RadioButton) findViewById(R.id.rbFemenino);
+        rbMasculino             = (RadioButton) findViewById(R.id.rbMasculino);
+        rbOutro                 = (RadioButton) findViewById(R.id.rbOutro);
+        mSexo                   = (RadioGroup) findViewById(R.id.rg);
         Button btn_finalizarRegisto = (Button) findViewById(R.id.btn_resgistar);
         imageProfile = (CircleImageView) findViewById(R.id.profile_image);
 
@@ -153,21 +151,28 @@ public class RegistoActivity extends AppCompatActivity {
                     usuario.setTelefone(mTelefone.getText().toString());
                     usuario.setSenha(mSenha.getText().toString());
                     usuario.setUnidadeProxima(mUnidade_Proxima.getText().toString());
-                    usuario.setProvincia(provincias.getSelectedItem().toString());
 
+                    if (provincias.getSelectedItem().equals("Província")){
+                        Toast.makeText(RegistoActivity.this, "Seleccione uma província válida", Toast.LENGTH_SHORT).show();
+                    }else {
+                        usuario.setProvincia(provincias.getSelectedItem().toString());
+                    }
                     Log.i(TAG, "INFO " +usuario.getProvincia());
                     //Estado
 
                     if (String.valueOf(bt_estado.getSelectedTab()).equals("0")) {
                         usuario.setEstado("Doador");
                         if (mDisponibilidade.isChecked()) {
+                            mDisponibilidade.setVisibility(View.VISIBLE);
                             usuario.setDisponibilidade("Sim");
                         } else{
                             usuario.setDisponibilidade("Não");
                         }
                     } else if (String.valueOf(bt_estado.getSelectedTab()).equals("1")) {
+                        mDisponibilidade.setVisibility(View.GONE);
                         usuario.setEstado("Requistante");
-                        mDisponibilidade.setVisibility(View.INVISIBLE);
+                        mDisponibilidade.setEnabled(false);
+
                         usuario.setDisponibilidade(null);
                     }
                     if (!(mSenha.getText().toString().equals(mSenhaConf.getText().toString()))) {
@@ -262,7 +267,7 @@ public class RegistoActivity extends AppCompatActivity {
                 @Override
                 public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
                     if (!task.isSuccessful()) {
-                        throw task.getException();
+                        throw Objects.requireNonNull(task.getException());
                     }
 
                     return imageRef.getDownloadUrl();
@@ -315,7 +320,7 @@ public class RegistoActivity extends AppCompatActivity {
                         proDialog.dismiss();
                         String erro;
                         try {
-                            throw task.getException();
+                            throw Objects.requireNonNull(task.getException());
                         } catch (FirebaseAuthWeakPasswordException ex) {
 
                             erro = "Digite uma Senha mais forte, contendo no mínimo 8 caracteres de letras e números";

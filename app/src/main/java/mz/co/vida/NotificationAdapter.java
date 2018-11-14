@@ -8,79 +8,75 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import com.github.ivbaranov.mli.MaterialLetterIcon;
-import com.robertlevonyan.views.chip.Chip;
 import java.util.List;
-import mz.co.vida.entidades.Post;
+import mz.co.vida.entidades.Notification;
 
-public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder> {
+public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapter.NotificationViewHolder> {
 
-    private List<Post> mPostsList;
+    private List<Notification> mNotificationList;
     private Context mContext;
     //private AdapterView.OnItemClickListener onItemClickListener;
     private OnItemClickListener mListener;
-
     public interface OnItemClickListener {
         void onItemClick(int position);
     }
-
 
     public void setOnClickListener(OnItemClickListener listener){
         mListener = listener;
     }
 
-
-
-    public PostAdapter(Context context, List<Post> postsList) {
+    public NotificationAdapter(Context context, List<Notification> notificationList) {
         mContext = context;
-        mPostsList = postsList;
+        mNotificationList = notificationList;
     }
 
+
+
+
     @Override
-    public PostViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public NotificationViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater inflater = LayoutInflater.from(mContext);
-        View view = inflater.inflate(R.layout.posts_list, viewGroup, false);
+        View view = inflater.inflate(R.layout.notification_list, viewGroup, false);
 //        status = ProfileActivity.status;
-        return new PostViewHolder(view, mListener);
+        return new NotificationViewHolder(view, mListener);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PostViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull NotificationViewHolder holder, final int position) {
 
-        if ((mPostsList != null) && (mPostsList.size() >0)) {
-            Post post = mPostsList.get(position);
+        if ((mNotificationList != null) && (mNotificationList.size() >0)) {
+            Notification notification = mNotificationList.get(position);
 
-            holder.tv_id.setText(post.getUidUser());
-            holder.tv_nome.setText(post.getNome());
-            holder.tv_provincia.setText(post.getProvincia());
-            setChipTextAndBackground(holder.tv_estado, post.getEstado());
+            holder.tv_id.setText(notification.getUid());
+            holder.tv_nome.setText(notification.getNome());
+            holder.tv_descricao.setText(notification.getEstadoDescrito());
             // holder.tv_data.setText(post.getData());
-            holder.mli_tipoSangue.setLetter(post.getTipoSanguineo());
+            holder.ml_tipoSangue.setLetter(notification.getTipoSangue());
         }
     }
 
     @Override
     public int getItemCount() {
-        return mPostsList.size();
+        return mNotificationList.size();
     }
 
 //    public void setOnItemClickListener(AdapterView.OnItemClickListener onItemClickListener) {
 //        this.onItemClickListener = onItemClickListener;
 //    }
 
-    class PostViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        MaterialLetterIcon mli_tipoSangue;
-        TextView tv_nome, tv_data, tv_provincia, tv_id;
-        Chip tv_estado;
+    class NotificationViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        MaterialLetterIcon ml_tipoSangue;
+        TextView tv_nome, tv_data, tv_id, tv_descricao;
 
-   PostViewHolder(View itemView, final OnItemClickListener listener) {
+
+        NotificationViewHolder(View itemView, final OnItemClickListener listener) {
             super(itemView);
 
        tv_id = itemView.findViewById(R.id.tv_id);
-            mli_tipoSangue = itemView.findViewById(R.id.mli_tipoSangue);
-            tv_nome = itemView.findViewById(R.id.tv_nome);
-            tv_data = itemView.findViewById(R.id.tv_data);
-            tv_estado = itemView.findViewById(R.id.tv_estado);
-            tv_provincia = itemView.findViewById(R.id.tv_provincia);
+            ml_tipoSangue = itemView.findViewById(R.id.mL_tipoS);
+            tv_nome = itemView.findViewById(R.id.tv_nomeN);
+            tv_descricao = itemView.findViewById(R.id.actv_status_desc);
+
 
            itemView.setOnClickListener(new View.OnClickListener() {
                @Override
@@ -99,23 +95,8 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
         public void onClick(View v) {
 //            mSelectedItem = getAdapterPosition();
 //            notifyItemRangeChanged(0, mSingleCheckList.size());
-//            mAdapter.onItemHolderClick(PostViewHolder.this);
+//            mAdapter.onItemHolderClick(NotificationViewHolder.this);
         }
     }
-    // Meus métodos:
-    private void setChipTextAndBackground(Chip v, String estado){
-        String est = estado.toLowerCase();
-        v.setChipText(estado.toUpperCase());
-        switch (est){
-            case "doador":
-                v.setBackgroundResource(R.color.md_red_700);
-                break;
-            case "requisitante":
-                v.setBackgroundResource(R.color.md_red_400);
-                break;
-            default:
-                v.setBackgroundResource(R.color.md_red_300);
-                break;
-        }
-    }
+
 }

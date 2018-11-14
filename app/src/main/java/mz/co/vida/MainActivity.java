@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity /*implements GoogleApiClient
 
     private ProgressBar progressBar;*/
 
-    FirebaseAuth mAuth;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

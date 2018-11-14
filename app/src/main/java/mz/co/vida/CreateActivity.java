@@ -4,17 +4,19 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.FrameLayout;
+
+import mz.co.vida.Fragments.AnuncioFragment;
+import mz.co.vida.Fragments.NotificationFragment;
 
 public class CreateActivity extends AppCompatActivity {
 
     // Components
     TabLayout tl_an_not;
-    int fl_create;
+    private int fl_create;
 
     // Fragments
     FragmentManager      fragmentManager;
-    AnuncioFragment      anuncioFragment;
+    AnuncioFragment anuncioFragment;
     NotificationFragment notificationFragment;
 
     public static final int ANUNCIO = 0;

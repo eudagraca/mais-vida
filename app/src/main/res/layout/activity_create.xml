@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".AnuncioFragment"
+    tools:context=".Fragments.AnuncioFragment"
+    android:background="@color/md_white_1000"
     android:orientation="vertical">
 
 
@@ -19,12 +20,12 @@
         <android.support.design.widget.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Anunciar" />
+            android:text="@string/anunciar" />
 
         <android.support.design.widget.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Notificação" />
+            android:text="@string/notificacoes" />
     </android.support.design.widget.TabLayout>
 
     <FrameLayout

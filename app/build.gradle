@@ -29,27 +29,28 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    // Firebase
+    implementation 'com.google.firebase:firebase-auth:11.6.2'
+    implementation 'com.google.firebase:firebase-storage:16.0.1'
+    implementation 'com.google.android.gms:play-services-auth:11.6.2'
+    implementation 'com.firebaseui:firebase-ui-auth:3.3.1'
+    implementation 'com.google.firebase:firebase-database:16.0.1'
+    implementation 'com.google.firebase:firebase-core:16.0.3'
+
+    implementation 'com.phlox.widget:android-date-picker:0.2.1'
+    implementation 'com.zcw:togglebutton-library:1.0.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    //Button nav
     implementation 'com.hbb20:ccp:1.7.2'
+    //Circle text
     implementation 'com.github.ivbaranov:materiallettericon:0.2.3'
     implementation 'lib.kingja.switchbutton:switchbutton:1.1.7'
     implementation 'com.github.medyo:fancybuttons:1.9.0'
     implementation 'com.codesgood:justifiedtextview:1.0.2'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
+    //Chip chip
     implementation 'com.robertlevonyan.view:MaterialChipView:1.2.4'
-
-//Firebase
-    implementation 'com.google.firebase:firebase-auth:16.0.5'
-    implementation 'com.google.firebase:firebase-storage:16.0.4'
-    implementation 'com.google.android.gms:play-services-auth:16.0.1'
-    implementation 'com.firebaseui:firebase-ui-auth:3.3.1'
-    implementation 'com.google.firebase:firebase-database:16.0.4'
-    implementation 'com.google.firebase:firebase-core:16.0.5'
-
-    implementation 'com.phlox.widget:android-date-picker:0.2.1'
-    implementation 'com.zcw:togglebutton-library:1.0.0'
-
-    implementation 'com.squareup.picasso:picasso:2.71828'
-
 
 }
 configurations.all {

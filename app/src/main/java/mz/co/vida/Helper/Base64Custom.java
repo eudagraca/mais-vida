@@ -4,7 +4,7 @@ import android.util.Base64;
 
 import java.io.UnsupportedEncodingException;
 
-public class Base64Custom {
+class Base64Custom {
 
     public static String codificarBase64(String strToEncode){
         byte[] data = null;

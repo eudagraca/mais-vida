@@ -6,45 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-
-
     <FrameLayout
         android:id="@+id/fl_framelayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/md_white_1000"
         android:layout_above="@+id/nav_main">
+
+
     </FrameLayout>
 
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/estado"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        app:menu="@menu/estados_navigation">
-
-    </android.support.design.widget.BottomNavigationView>
-    <View
-        android:id="@+id/barrinha"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@id/estado"
-        android:background="@color/md_red_A700"
-        />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_above="@id/nav_main"
-        android:background="@color/md_red_A700"
-        />
+        android:background="@color/md_red_A700" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/nav_main"
         android:layout_width="match_parent"
         android:layout_height="56dp"
+        android:layout_gravity="bottom"
         android:layout_alignParentBottom="true"
-        app:menu="@menu/navigation" />
+        app:menu="@menu/navigation"/>
 
 </RelativeLayout>
 

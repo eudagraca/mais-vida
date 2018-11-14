@@ -9,7 +9,6 @@ public class Preferencias {
 
     private Context context;
     private SharedPreferences preferences;
-    private String NOME_ARQUIVO= "VIDA.Preferencias";
     private int MODE= 0;
     private SharedPreferences.Editor  editor;
 
@@ -20,9 +19,11 @@ public class Preferencias {
     public Preferencias(Context context) {
 
         this.context = context;
+        String NOME_ARQUIVO = "VIDA.Preferencias";
         preferences = context.getSharedPreferences(NOME_ARQUIVO,MODE);
 
         editor = preferences.edit();
+        editor.commit();
     }
 
 
