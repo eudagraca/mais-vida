@@ -7,8 +7,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.SearchView;
-import android.widget.TextView;
+
+import mz.co.vida.Fragments.MeusAnunciosFragment;
 
 public class HomeActivity extends AppCompatActivity {
 

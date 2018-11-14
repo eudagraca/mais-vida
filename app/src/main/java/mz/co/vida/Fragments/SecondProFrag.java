@@ -26,7 +26,7 @@ import mz.co.vida.MyUtils;
 import mz.co.vida.R;
 import mz.co.vida.entidades.Usuario;
 
-public class SecundaryProfileFragment extends Fragment {
+public class SecondProFrag extends Fragment {
 
     private TextView tNome, tSexo, tContacto,
             tSangue, tProvincia, tUnidadeSanitaria, tEstado;
@@ -36,7 +36,7 @@ public class SecundaryProfileFragment extends Fragment {
     private DatabaseReference mdataRef;
 
 
-    public SecundaryProfileFragment() {
+    public SecondProFrag() {
         // Required empty public constructor
     }
 
