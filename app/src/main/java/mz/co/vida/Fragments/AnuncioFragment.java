@@ -1,8 +1,9 @@
-package mz.co.vida.Fragments;
+package mz.co.vida;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,20 +13,16 @@ import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.firebase.auth.FirebaseAuth;
-
 import java.util.Calendar;
-
 import mz.co.vida.DAO.ConfiguracaoFirebase;
-import mz.co.vida.R;
 import mz.co.vida.entidades.Anuncio;
 
 public class AnuncioFragment extends Fragment {
 
     private TextView mQuant;
     private TextView tv_data;
-    private DatePickerDialog datePickerDialog;
+    DatePickerDialog datePickerDialog;
     int quantidade;
     private int year;
     private int month;
@@ -34,6 +31,8 @@ public class AnuncioFragment extends Fragment {
     private EditText mComentario;
     private FirebaseAuth mAuth;
     private SeekBar seekBar;
+    //Anuncio anuncio;
+
 
     public AnuncioFragment() {
         // Required empty public constructor
@@ -52,16 +51,15 @@ public class AnuncioFragment extends Fragment {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_anuncio, container, false);
 
-        mAuth              = ConfiguracaoFirebase.getFirebaseAuth();
-        mQuant             = view.findViewById(R.id.tv_quantidade);
-        seekBar            = view.findViewById(R.id.quantidade);
-        Button mData       = view.findViewById(R.id.btnDate);
+        mAuth = ConfiguracaoFirebase.getFirebaseAuth();
+        mQuant = view.findViewById(R.id.tv_quantidade);
+        seekBar = view.findViewById(R.id.quantidade);
+        Button mData = view.findViewById(R.id.btnDate);
         Button mBtanunciar = view.findViewById(R.id.btn_anunciar);
-        mComentario        = view.findViewById(R.id.tid_comentario);
-        tv_data            = view.findViewById(R.id.tvSelectedDate);
-        mQuant.setText("Quantidade sanguínea: "+ seekBar.getProgress());
+        mComentario = view.findViewById(R.id.tid_comentario);
 
-        //Setup Date
+        tv_data = view.findViewById(R.id.tvSelectedDate);
+        mQuant.setText("Quantidade sanguínea: "+ seekBar.getProgress());
         mData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -86,30 +84,27 @@ public class AnuncioFragment extends Fragment {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 progresso = progress;
+                //Toast.makeText(getContext(), "Definindo a quantidade sanguínea", Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-                }
+                //Toast.makeText(getContext(), "Progresso Iniciado", Toast.LENGTH_SHORT).show();
+            }
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
                 Toast.makeText(getContext(), "", Toast.LENGTH_SHORT).show();
                 mQuant.setText("Quantidade sanguínea: "+ progresso);
                 quantidade = progresso;
-               }
+               // Toast.makeText(getContext(), "Progresso Parou", Toast.LENGTH_SHORT).show();
+            }
         });
 
         mBtanunciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if ((seekBar.getProgress()==0)){
-                    Toast.makeText(getContext(), "Defina a quantidade sanguínea ", Toast.LENGTH_SHORT).show();
+                if (seekBar.getProgress()<1 && TextUtils.isEmpty(tv_data.getText().toString())){
+                    //Toast.makeText(getContext(), "Defina a quantidade sanguínea ", Toast.LENGTH_SHORT).show();
                     seekBar.requestFocus();
-                }
-                else if (tv_data.getText().toString().isEmpty()){
-                    tv_data.setError("Defina a data para doacao");
-                    Toast.makeText(getContext(), "Defina a data para doacao", Toast.LENGTH_SHORT).show();
-                    tv_data.requestFocus();
-
                 }
                 else{
                 Anuncio anuncio =new Anuncio();
@@ -117,12 +112,15 @@ public class AnuncioFragment extends Fragment {
                 anuncio.setDataDoacao(tv_data.getText().toString());
                 anuncio.setQuantSanguinea(quantidade);
                 anuncio.setId(mAuth.getUid());
-                    anuncio.gravar();
-                    Toast.makeText(getContext(), "Requisição anunciada", Toast.LENGTH_LONG).show();
-                    seekBar.setProgress(0);
-                    mQuant.setText("Quantidade sanguínea: "+ seekBar.getProgress());
-                    tv_data.setText("");
-                    mComentario.setText("");
+                if (anuncio != null){
+                anuncio.gravar();
+                Toast.makeText(getContext(), "Sucess", Toast.LENGTH_LONG).show();
+                }else {
+                    Toast.makeText(getContext(), "Ocorreu alguma falha", Toast.LENGTH_LONG).show();
+                }
+                seekBar.setProgress(0);
+                tv_data.setText("");
+                mComentario.setText("");
             }
             }
         });

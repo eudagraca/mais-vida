@@ -1,4 +1,4 @@
-package mz.co.vida.Fragments;
+package mz.co.vida;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -17,21 +18,19 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 import com.zcw.togglebutton.ToggleButton;
-import java.util.Objects;
-import de.hdodenhof.circleimageview.CircleImageView;
+
 import mz.co.vida.DAO.ConfiguracaoFirebase;
-import mz.co.vida.MyUtils;
-import mz.co.vida.R;
+import de.hdodenhof.circleimageview.CircleImageView;
 import mz.co.vida.entidades.Usuario;
 
 
 public class PerfilFragment extends Fragment {
 
-    private TextView tNome, tSexo, tContacto,
-            tSangue, tProvincia, tUnidadeSanitaria, tEstado;
-    private ToggleButton tDisponibilidade;
-    private CircleImageView imFoto;
-    private FrameLayout relativeLayout;
+    private TextView Tnome, Tsexo, Tcontacto,
+            Tsangue, Tprovincia, TunidadeSanitaria, Testado;
+    private ToggleButton Tdisponibilidade;
+    private CircleImageView ImFoto;
+    FrameLayout relativeLayout;
 
     FirebaseAuth mAuth;
     DatabaseReference profileUser;
@@ -42,31 +41,25 @@ public class PerfilFragment extends Fragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-    }
-
-    @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
         final View view = inflater.inflate(R.layout.fragment_perfil, container, false);
         mAuth = ConfiguracaoFirebase.getFirebaseAuth();
-        usuarioActual = Objects.requireNonNull(mAuth.getCurrentUser()).getUid();
+        usuarioActual = mAuth.getCurrentUser().getUid();
         profileUser = ConfiguracaoFirebase.getFirebase().child("Usuario").child(usuarioActual);
 
-        tNome              = view.findViewById(R.id.tv_nome);
-        tContacto          = view.findViewById(R.id.tv_contacto);
-        tSexo              = view.findViewById(R.id.tv_Sexo);
-        tProvincia         = view.findViewById(R.id.tv_provincia);
-        tUnidadeSanitaria  = view.findViewById(R.id.tv_unidade_sanitaria);
-        tEstado            = view.findViewById(R.id.tv_estado);
-        tDisponibilidade   = view.findViewById(R.id.tv_disponibilidade);
-        tSangue            = view.findViewById(R.id.tv_tiposanguineo);
-        imFoto             = view.findViewById(R.id.iv_foto);
-        relativeLayout     = view.findViewById(R.id.rl);
+        Tnome = view.findViewById(R.id.tv_nome);
+        Tcontacto = view.findViewById(R.id.tv_contacto);
+        Tsexo = view.findViewById(R.id.tv_Sexo);
+        Tprovincia = view.findViewById(R.id.tv_provincia);
+        TunidadeSanitaria = view.findViewById(R.id.tv_unidade_sanitaria);
+        Testado = view.findViewById(R.id.tv_estado);
+        Tdisponibilidade = view.findViewById(R.id.tv_disponibilidade);
+        Tsangue = view.findViewById(R.id.tv_tiposanguineo);
+        ImFoto = view.findViewById(R.id.iv_foto);
+        relativeLayout = view.findViewById(R.id.rl);
 
         profileUser.addValueEventListener(new ValueEventListener() {
             @Override
@@ -81,7 +74,7 @@ public class PerfilFragment extends Fragment {
                     if (dataSnapshot.child("foto").exists()){
                         String foto = dataSnapshot.child("foto").getValue(String.class);
                         usuario.setFoto(foto);
-                        Picasso.get().load(foto).placeholder(R.drawable.ic_user).into(imFoto);
+                        Picasso.get().load(foto).placeholder(R.drawable.ic_user).into(ImFoto);
                     }
 
                     usuario.setProvincia(dataSnapshot.child("provincia").getValue(String.class));
@@ -93,25 +86,25 @@ public class PerfilFragment extends Fragment {
                     usuario.setTelefone(dataSnapshot.child("telefone").getValue(String.class));
 
 
-                    tNome.setText(usuario.getNome());
-                    tContacto.setText(usuario.getTelefone());
+                    Tnome.setText(usuario.getNome());
+                    Tcontacto.setText(usuario.getTelefone());
                     if (usuario.getEstado().equals("Doador")) {
-                        tDisponibilidade.setVisibility(View.VISIBLE);
+                        Tdisponibilidade.setVisibility(View.VISIBLE);
                         if (usuario.getDisponibilidade().equals("Sim")){
-                            tDisponibilidade.setToggleOn();
+                            Tdisponibilidade.setToggleOn();
                             relativeLayout.setBackgroundResource(R.color.md_red_50);
                         }else if (usuario.getDisponibilidade().equals("Não")){
-                            tDisponibilidade.setToggleOff();
+                            Tdisponibilidade.setToggleOff();
                         }
                     }else if (usuario.getEstado().equals("Requisitante")) {
-                        tDisponibilidade.setVisibility(View.INVISIBLE);
+                        Tdisponibilidade.setVisibility(View.INVISIBLE);
 
                     }
-                    tEstado.setText(usuario.getEstado());
-                    tSexo.setText(usuario.getSexo());
-                    tProvincia.setText(usuario.getProvincia());
-                    tUnidadeSanitaria.setText(usuario.getUnidadeProxima());
-                    tSangue.setText(usuario.getTipoSanguineo());
+                    Testado.setText(usuario.getEstado());
+                    Tsexo.setText(usuario.getSexo());
+                    Tprovincia.setText(usuario.getProvincia());
+                    TunidadeSanitaria.setText(usuario.getUnidadeProxima());
+                    Tsangue.setText(usuario.getTipoSanguineo());
 
 
                 }
@@ -123,8 +116,8 @@ public class PerfilFragment extends Fragment {
             }
         });
 
-        //Saving Status on SPref
-        tDisponibilidade.setOnToggleChanged(new ToggleButton.OnToggleChanged() {
+
+        Tdisponibilidade.setOnToggleChanged(new ToggleButton.OnToggleChanged() {
             @Override
             public void onToggle(boolean isOn) {
                 SharedPreferences sharedPreferences = getActivity().getSharedPreferences(MyUtils.SP_NAME, Context.MODE_PRIVATE);
