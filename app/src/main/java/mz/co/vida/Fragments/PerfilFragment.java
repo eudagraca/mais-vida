@@ -35,7 +35,7 @@ public class PerfilFragment extends Fragment {
 
     FirebaseAuth mAuth;
     DatabaseReference profileUser;
-    String usuarioActual;
+    String USUARIOACTUAL;
     public PerfilFragment() {
         // Required empty public constructor
 
@@ -54,8 +54,8 @@ public class PerfilFragment extends Fragment {
 
         final View view = inflater.inflate(R.layout.fragment_perfil, container, false);
         mAuth = ConfiguracaoFirebase.getFirebaseAuth();
-        usuarioActual = Objects.requireNonNull(mAuth.getCurrentUser()).getUid();
-        profileUser = ConfiguracaoFirebase.getFirebase().child("Usuario").child(usuarioActual);
+        USUARIOACTUAL = Objects.requireNonNull(mAuth.getCurrentUser()).getUid();
+        profileUser = ConfiguracaoFirebase.getFirebase().child("Usuario").child(USUARIOACTUAL);
 
         tNome              = view.findViewById(R.id.tv_nome);
         tContacto          = view.findViewById(R.id.tv_contacto);

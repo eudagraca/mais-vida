@@ -19,12 +19,12 @@
         android:padding="10dp"        >
 
         <ImageView
-            android:layout_width="299dp"
-            android:layout_height="159dp"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             android:contentDescription="@string/logo"
-            app:srcCompat="@drawable/ic_balloons" />
+            app:srcCompat="@drawable/ic_mais_vida_logo" />
 
         <TextView
             android:contentDescription="@string/doacao"
@@ -32,17 +32,17 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:textSize="35sp"
-            android:textStyle="normal"
+            android:textSize="40sp"
+            android:textStyle="bold"
             android:textColor="@color/vermelho_padrao"
-            android:fontFamily="@font/product"
+            android:fontFamily="@font/courgette"
             android:text="@string/palavra_doacao"/>
 
         <com.codesgood.views.JustifiedTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="50dp"
             android:textAlignment="center"
             android:fontFamily="@font/product_r"
             android:padding="0.5sp"

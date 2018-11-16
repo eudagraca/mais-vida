@@ -15,7 +15,7 @@
 
         <View
             android:id="@+id/view"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="24dp"
             android:background="@color/vermelho_padrao"
@@ -23,26 +23,20 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
-        <View
-            android:id="@+id/view3"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="16dp"
-            android:background="@color/vermelho_padrao"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
-        <com.codesgood.views.JustifiedTextView
+        <TextView
             android:id="@+id/textView9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="5dp"
             android:fontFamily="@font/product_r"
-            android:textSize="20sp"
             android:justificationMode="inter_word"
-            android:text="+Vida é uma aplicação que liga os doadores de sangue (as pessoas disponíveis a fazer doações) e requisitantes de sangue (pessoas que precisam dessas doações )"
+            android:text="+vida é uma aplicação que visa facilitar na localização de doadores e requisitantes de sangue"
+            android:textAlignment="center"
             android:textColor="@color/md_black_1000"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="5"
             app:layout_constraintStart_toStartOf="parent"
@@ -50,14 +44,14 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="94dp"
-            android:layout_height="87dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="20dp"
-            android:src="@drawable/ic_balloons"
+            android:src="@drawable/ic_mais_vida_logo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2"
@@ -69,15 +63,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:fontFamily="@font/product_r"
+            android:fontFamily="@font/courgette"
             android:textColor="@color/vermelho_padrao"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:textStyle="bold"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="50dp"
             android:text="Sobre a aplicação"
-            android:textSize="22sp"
+            android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

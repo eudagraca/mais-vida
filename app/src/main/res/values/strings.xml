@@ -19,6 +19,7 @@
     <string name="disponibilidade">Disponibilidade para doar:</string>
     <string name="Contacto">Contacto Telefónico</string>
     <string name="photo_perfil">Seleccione a foto de perfil</string>
+    <string name="quant">Quantidade sanguínea: </string>
 
     <string name="seguinte">Seguinte</string>
 
@@ -46,12 +47,6 @@
         <item>Requisitante</item>
     </array>
 
-
-    <array name="switch_sexo">
-        <item>Femenino</item>
-        <item>Masculino</item>
-        <item>Outro</item>
-    </array>
 
     <array name="switch_sangue">
         <item>A+</item>
@@ -91,7 +86,7 @@
     <string name="logotipo">Logotipo</string>
     <string name="entrar">Entrar</string>
     <string name="palavra_doacao">Doação</string>
-    <string name="redifinicao_senha">Nós precisamos do seu e-mail de registro para enviar as instruções de redefinição de senha</string>
+    <string name="redifinicao_senha">Nós precisamos do seu e-mail de registo para enviar as instruções de redefinição de senha</string>
 
 
     <string name="redefinir_senha">Redefinir senha</string>

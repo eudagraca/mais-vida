@@ -51,7 +51,7 @@ public class SecondProFrag extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-         View view = inflater.inflate(R.layout.fragment_secundary_profile, container, false);
+         View view = inflater.inflate(R.layout.fragment_secondprof, container, false);
          Bundle bundle = getArguments();
          //Receving User Id
          final String id = bundle.getString("id");
@@ -78,7 +78,7 @@ public class SecondProFrag extends Fragment {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                HomeFragment fragment= new HomeFragment();
+                DoadoresFragment fragment= new DoadoresFragment();
                 MyUtils.changeFragment(fl_framelayout, fragment, fragmentManager);
             }
         });

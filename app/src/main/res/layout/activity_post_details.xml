@@ -20,6 +20,19 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_quuant_sang" />
 
     <TextView
+        android:id="@+id/tv_sas2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:drawableStart="@drawable/ic_localizacao"
+        android:fontFamily="@font/product_r"
+        android:textColor="@color/md_black_1000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sas" />
+
+    <TextView
         android:id="@+id/tv_quuant_sang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,18 +54,18 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="50dp"
-        android:fontFamily="@font/product_r"
+        android:fontFamily="@font/courgette"
         android:text="Nome"
         android:textColor="@color/md_black_1000"
-        android:textSize="18sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_voltar" />
 
-    <com.codesgood.views.JustifiedTextView
+    <TextView
         android:id="@+id/jtv_comentario"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
@@ -63,40 +76,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_sas" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_sas2" />
 
     <TextView
         android:id="@+id/tv_call"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
         android:drawableStart="@drawable/ic_phone_contact"
         android:drawablePadding="10dp"
         android:fontFamily="@font/product_r"
         android:text="Ligar"
         android:textColor="@color/md_black_1000"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jtv_comentario" />
-
-    <Button
-        android:id="@+id/bt_confirmarDoacao"
-        android:layout_width="wrap_content"
-        android:layout_height="26dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="40dp"
-        android:background="@color/fui_transparent"
-        android:drawableStart="@drawable/ic_care"
-        android:drawablePadding="5dp"
-        android:fontFamily="@font/product_r"
-        android:text="Vou doar"
-        android:textAllCaps="false"
-        android:textColor="@color/md_black_1000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/tv_call"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/jtv_comentario" />
 
     <TextView
@@ -105,21 +101,47 @@
         android:layout_height="28dp"
         android:layout_marginStart="20dp"
         android:fontFamily="@font/product_r"
-        android:text=""
+        android:textColor="@color/md_black_1000"
         android:textSize="18sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/tv_sas"
         app:layout_constraintStart_toEndOf="@+id/tv_sas" />
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/product_r"
+        android:textColor="@color/md_black_1000"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_sas2"
+        app:layout_constraintStart_toEndOf="@+id/tv_sas2" />
 
     <TextView
         android:id="@+id/tv_quant_S"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
         android:fontFamily="@font/product_r"
         android:text=""
+        android:textColor="@color/md_black_1000"
         android:textSize="18sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tv_quuant_sang"
+        app:layout_constraintBottom_toTopOf="@+id/tv_sas"
         app:layout_constraintStart_toEndOf="@+id/tv_quuant_sang" />
+
+    <TextView
+        android:id="@+id/tv_quant_S2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/product_r"
+        android:text="Litros"
+        android:textColor="@color/md_black_1000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_sas"
+        app:layout_constraintStart_toEndOf="@+id/tv_quant_S" />
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_anuncio"
@@ -139,7 +161,7 @@
         android:layout_marginStart="8dp"
         android:fontFamily="@font/courgette"
         android:gravity="center"
-        android:text="Anúncio"
+        android:text="Requisição sanguínea"
         android:textColor="@color/md_white_1000"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -153,15 +175,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
         android:background="@color/fui_transparent"
         android:drawableStart="@drawable/ic_back"
-        android:text="Voltar"
         android:fontFamily="@font/product_r"
+        android:text="Voltar"
         android:textAllCaps="false"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar_anuncio" />
+
+    <TextView
+        android:id="@+id/tSangue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/ic_blood_drop"
+        app:layout_constraintStart_toEndOf="@+id/tv_quant_S2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nome" />
+
+    <TextView
+        android:id="@+id/tv_bloodtype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/md_black_1000"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tSangue"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nome" />
 </android.support.constraint.ConstraintLayout>

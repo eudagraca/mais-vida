@@ -31,26 +31,35 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     // Firebase
-    implementation 'com.google.firebase:firebase-auth:11.6.2'
-    implementation 'com.google.firebase:firebase-storage:16.0.1'
-    implementation 'com.google.android.gms:play-services-auth:11.6.2'
+    implementation 'com.google.firebase:firebase-auth:16.0.5'
+    implementation 'com.google.firebase:firebase-storage:16.0.5'
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
     implementation 'com.firebaseui:firebase-ui-auth:3.3.1'
-    implementation 'com.google.firebase:firebase-database:16.0.1'
-    implementation 'com.google.firebase:firebase-core:16.0.3'
+    implementation 'com.google.firebase:firebase-database:16.0.5'
+    implementation 'com.google.firebase:firebase-core:16.0.5'
 
+    //Date picker
     implementation 'com.phlox.widget:android-date-picker:0.2.1'
+    //ToggloButton
     implementation 'com.zcw:togglebutton-library:1.0.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
     //Button nav
     implementation 'com.hbb20:ccp:1.7.2'
     //Circle text
     implementation 'com.github.ivbaranov:materiallettericon:0.2.3'
+    //Multi button
     implementation 'lib.kingja.switchbutton:switchbutton:1.1.7'
+    //Special button
     implementation 'com.github.medyo:fancybuttons:1.9.0'
     implementation 'com.codesgood:justifiedtextview:1.0.2'
+    //Circle image view
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     //Chip chip
     implementation 'com.robertlevonyan.view:MaterialChipView:1.2.4'
+    //call permission
+    implementation 'com.karumi:dexter:5.0.0'
+    //Dialog
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
 
 }
 configurations.all {

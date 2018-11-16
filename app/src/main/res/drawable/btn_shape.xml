@@ -5,6 +5,6 @@
         android:color="@color/vermelho_padrao"
         />
     <corners
-        android:radius="10dp"
+        android:radius="100dp"
         />
 </shape>

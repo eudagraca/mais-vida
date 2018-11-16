@@ -2,6 +2,7 @@ package mz.co.vida.Fragments;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.Calendar;
 
@@ -23,6 +28,7 @@ import mz.co.vida.entidades.Anuncio;
 
 public class AnuncioFragment extends Fragment {
 
+    //Components
     private TextView mQuant;
     private TextView tv_data;
     private DatePickerDialog datePickerDialog;
@@ -32,8 +38,22 @@ public class AnuncioFragment extends Fragment {
     private int dayOfMonth;
     private Calendar calendar;
     private EditText mComentario;
+    private Button btUpdate;
+    private Button btDelete;
+
+    //Firebase
     private FirebaseAuth mAuth;
+    private DatabaseReference mRef;
     private SeekBar seekBar;
+    int progresso = 0;
+
+    String id;
+    String nome;
+    String tipo;
+    String provincia;
+    String estado;
+
+    Anuncio anuncio =new Anuncio();
 
     public AnuncioFragment() {
         // Required empty public constructor
@@ -43,23 +63,106 @@ public class AnuncioFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
         final View view = inflater.inflate(R.layout.fragment_anuncio, container, false);
+
+
+
+        mAuth = ConfiguracaoFirebase.getFirebaseAuth();
+
+        id = mAuth.getCurrentUser().getUid();
+        mRef = ConfiguracaoFirebase.getFirebase().child("Usuario").child(id);
+
+        //Init Components
 
         mAuth              = ConfiguracaoFirebase.getFirebaseAuth();
         mQuant             = view.findViewById(R.id.tv_quantidade);
         seekBar            = view.findViewById(R.id.quantidade);
-        Button mData       = view.findViewById(R.id.btnDate);
-        Button mBtanunciar = view.findViewById(R.id.btn_anunciar);
+        final Button mData       = view.findViewById(R.id.btnDate);
+        final Button mBtanunciar = view.findViewById(R.id.btn_anunciar);
         mComentario        = view.findViewById(R.id.tid_comentario);
         tv_data            = view.findViewById(R.id.tvSelectedDate);
-        mQuant.setText("Quantidade sanguínea: "+ seekBar.getProgress());
+        btDelete           = view.findViewById(R.id.bt_delete);
+        btUpdate           = view.findViewById(R.id.bt_update);
+        mQuant.setText(R.string.quant+ seekBar.getProgress());
+
+
+
+
+
+            DatabaseReference mDataRef = ConfiguracaoFirebase.getFirebase();
+            mDataRef.child("anuncios").child(String.valueOf(id))
+                    .addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                            if (dataSnapshot.exists()){
+                                anuncio.setComentario(dataSnapshot.child("comentario").getValue(String.class));
+                                anuncio.setDataDoacao(dataSnapshot.child("dataDoacao").getValue(String.class));
+                                anuncio.setQuantSanguinea(dataSnapshot.child("quantSanguinea").getValue(Integer.class));
+
+
+                                mQuant.setText("Quantidade saguínea: "+ String.valueOf(anuncio.getQuantSanguinea()));
+                                tv_data.setText(anuncio.getDataDoacao());
+                                mComentario.setText(anuncio.getComentario());
+                                seekBar.setProgress(anuncio.getQuantSanguinea());
+
+                                seekBar.setEnabled(false);
+                                tv_data.setEnabled(false);
+                                mComentario.setEnabled(false);
+                                mData.setEnabled(false);
+                                mBtanunciar.setVisibility(View.GONE);
+
+                            }else {
+
+                                seekBar.setEnabled(true);
+                                tv_data.setEnabled(true);
+                                mComentario.setEnabled(true);
+                                mData.setEnabled(true);
+                                mBtanunciar.setVisibility(View.VISIBLE);
+                                btDelete.setVisibility(View.GONE);
+                                btUpdate.setVisibility(View.GONE);
+
+                            }
+
+
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+                    });
+
+
+
+        mRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                nome   = dataSnapshot.child("nome").getValue(String.class);
+                provincia = dataSnapshot.child("provincia").getValue(String.class);
+                estado = dataSnapshot.child("estado").getValue(String.class);
+                tipo   = dataSnapshot.child("tipoSanguineo").getValue(String.class);
+
+                anuncio.setNome(nome);
+                anuncio.setLocalizacao(provincia);
+                anuncio.setTipo_sangue(tipo);
+                anuncio.setEstado(estado);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
         //Setup Date
         mData.setOnClickListener(new View.OnClickListener() {
@@ -82,7 +185,7 @@ public class AnuncioFragment extends Fragment {
         });
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            int progresso = 0;
+
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 progresso = progress;
@@ -92,11 +195,12 @@ public class AnuncioFragment extends Fragment {
                 }
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                Toast.makeText(getContext(), "", Toast.LENGTH_SHORT).show();
                 mQuant.setText("Quantidade sanguínea: "+ progresso);
                 quantidade = progresso;
                }
         });
+
+
 
         mBtanunciar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,21 +216,26 @@ public class AnuncioFragment extends Fragment {
 
                 }
                 else{
-                Anuncio anuncio =new Anuncio();
-                anuncio.setComentario(mComentario.getText().toString());
-                anuncio.setDataDoacao(tv_data.getText().toString());
-                anuncio.setQuantSanguinea(quantidade);
-                anuncio.setId(mAuth.getUid());
+
+                    anuncio.setComentario(mComentario.getText().toString());
+                    anuncio.setDataDoacao(tv_data.getText().toString());
+                    anuncio.setQuantSanguinea(quantidade);
+                    anuncio.setId(mAuth.getUid());
                     anuncio.gravar();
                     Toast.makeText(getContext(), "Requisição anunciada", Toast.LENGTH_LONG).show();
                     seekBar.setProgress(0);
-                    mQuant.setText("Quantidade sanguínea: "+ seekBar.getProgress());
+                    mQuant.setText(R.string.quant+ seekBar.getProgress());
                     tv_data.setText("");
                     mComentario.setText("");
+
             }
             }
         });
      return view;
     }
+
+
+
+
 
 }

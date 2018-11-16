@@ -47,6 +47,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import lib.kingja.switchbutton.SwitchMultiButton;
 import mz.co.vida.entidades.Usuario;
 
+
 public class RegistoActivity extends AppCompatActivity {
     private EditText mNome;
     private EditText mEmail;
@@ -62,10 +63,10 @@ public class RegistoActivity extends AppCompatActivity {
     private EditText mUnidade_Proxima;
     private SwitchMultiButton bt_TipoSangue;
     private CircleImageView imageProfile;
-    private Usuario usuario;
     public final static int PICK_PHOTO_CODE = 1046;
+    private Button back;
     private static final String TAG = "RegisterActivity";
-    private Uri imageUri;
+    Uri imageUri;
     //Firebase
     private FirebaseAuth mAuth;
 
@@ -73,6 +74,8 @@ public class RegistoActivity extends AppCompatActivity {
     private Uri mainImageURI;
     private StorageReference storageref;
     private StorageReference imageRef;
+
+    Usuario usuario = new Usuario();
 
     // 1. Instantiate an AlertDialog.Builder with its constructor
     //AlertDialog.Builder builder = new AlertDialog.Builder(RegistoActivity.this);
@@ -82,13 +85,15 @@ public class RegistoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registo);
 
-        Button back = (Button) findViewById(R.id.voltar_login);
+        back= (Button) findViewById(R.id.voltar_login);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 abrirLogin();
+
             }
         });
+
         storageref = FirebaseStorage.getInstance().getReference();
         final Spinner provincias = (Spinner) findViewById(R.id.sp_provincias);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
@@ -102,7 +107,6 @@ public class RegistoActivity extends AppCompatActivity {
         bt_estado.setOnSwitchListener(new SwitchMultiButton.OnSwitchListener() {
             @Override
             public void onSwitch(int position, String tabText) {
-
                 Toast.makeText(RegistoActivity.this, tabText, Toast.LENGTH_SHORT).show();
             }
         });
@@ -114,18 +118,18 @@ public class RegistoActivity extends AppCompatActivity {
                 Toast.makeText(RegistoActivity.this, tabText, Toast.LENGTH_SHORT).show();
             }
         });
-        //Init Components
-        mNome                   = (EditText) findViewById(R.id.et_nome);
-        mEmail                  = (EditText) findViewById(R.id.et_mail);
-        mSenha                  = (EditText) findViewById(R.id.et_password);
-        mSenhaConf              = (EditText) findViewById(R.id.et_passwordConfirm);
-        mTelefone               = (EditText) findViewById(R.id.et_Phone);
-        mUnidade_Proxima        = (EditText) findViewById(R.id.et_UnidadeProx);
-        mDisponibilidade        = (Switch) findViewById(R.id.stc_disponibilidade);
-        rbFemenino              = (RadioButton) findViewById(R.id.rbFemenino);
-        rbMasculino             = (RadioButton) findViewById(R.id.rbMasculino);
-        rbOutro                 = (RadioButton) findViewById(R.id.rbOutro);
-        mSexo                   = (RadioGroup) findViewById(R.id.rg);
+        //CAST
+        mNome = (EditText) findViewById(R.id.et_nome);
+        mEmail = (EditText) findViewById(R.id.et_mail);
+        mSenha = (EditText) findViewById(R.id.et_password);
+        mSenhaConf = (EditText) findViewById(R.id.et_passwordConfirm);
+        mTelefone = (EditText) findViewById(R.id.et_Phone);
+        mUnidade_Proxima = (EditText) findViewById(R.id.et_UnidadeProx);
+        mDisponibilidade = (Switch) findViewById(R.id.stc_disponibilidade);
+        rbFemenino = (RadioButton) findViewById(R.id.rbFemenino);
+        rbMasculino = (RadioButton) findViewById(R.id.rbMasculino);
+        rbOutro = (RadioButton) findViewById(R.id.rbOutro);
+        mSexo = (RadioGroup) findViewById(R.id.rg);
         Button btn_finalizarRegisto = (Button) findViewById(R.id.btn_resgistar);
         imageProfile = (CircleImageView) findViewById(R.id.profile_image);
 
@@ -138,106 +142,99 @@ public class RegistoActivity extends AppCompatActivity {
             }
         });
 
+        //Tipo sanguíneo
+        switch (String.valueOf(bt_TipoSangue.getSelectedTab())) {
+            case "0":
+                usuario.setTipoSanguineo("A+");
+                break;
+            case "1":
+                usuario.setTipoSanguineo("B+");
+                break;
+            case "2":
+                usuario.setTipoSanguineo("AB+");
+                break;
+            case "3":
+                usuario.setTipoSanguineo("O+");
+                break;
+            case "4":
+                usuario.setTipoSanguineo("A-");
+                break;
+            case "5":
+                usuario.setTipoSanguineo("B-");
+                break;
+            case "6":
+                usuario.setTipoSanguineo("AB-");
+                break;
+            default:
+                usuario.setTipoSanguineo("O-");
+                break;
+        }
+
+
+
+
         btn_finalizarRegisto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mSenha.getText().toString().equals(mSenhaConf.getText().toString()) && !TextUtils.isEmpty(mNome.getText().toString())
-                        && !TextUtils.isEmpty(mEmail.getText().toString()) && !TextUtils.isEmpty(mTelefone.getText().toString())
-                        && !TextUtils.isEmpty(mUnidade_Proxima.getText())) {
 
-                    usuario = new Usuario();
-                    usuario.setNome(mNome.getText().toString());
-                    usuario.setEmail(mEmail.getText().toString().trim().toLowerCase());
-                    usuario.setTelefone(mTelefone.getText().toString());
-                    usuario.setSenha(mSenha.getText().toString());
-                    usuario.setUnidadeProxima(mUnidade_Proxima.getText().toString());
 
-                    if (provincias.getSelectedItem().equals("Província")){
-                        Toast.makeText(RegistoActivity.this, "Seleccione uma província válida", Toast.LENGTH_SHORT).show();
-                    }else {
-                        usuario.setProvincia(provincias.getSelectedItem().toString());
-                    }
-                    Log.i(TAG, "INFO " +usuario.getProvincia());
-                    //Estado
+                usuario.setNome(mNome.getText().toString());
+                usuario.setEmail(mEmail.getText().toString().trim().toLowerCase());
+                usuario.setTelefone(mTelefone.getText().toString());
+                usuario.setSenha(mSenha.getText().toString());
+                usuario.setUnidadeProxima(mUnidade_Proxima.getText().toString());
+                usuario.setProvincia(provincias.getSelectedItem().toString());
 
-                    if (String.valueOf(bt_estado.getSelectedTab()).equals("0")) {
-                        usuario.setEstado("Doador");
-                        if (mDisponibilidade.isChecked()) {
-                            mDisponibilidade.setVisibility(View.VISIBLE);
-                            usuario.setDisponibilidade("Sim");
-                        } else{
-                            usuario.setDisponibilidade("Não");
-                        }
-                    } else if (String.valueOf(bt_estado.getSelectedTab()).equals("1")) {
-                        mDisponibilidade.setVisibility(View.GONE);
-                        usuario.setEstado("Requistante");
-                        mDisponibilidade.setEnabled(false);
 
-                        usuario.setDisponibilidade(null);
-                    }
-                    if (!(mSenha.getText().toString().equals(mSenhaConf.getText().toString()))) {
-                        Toast.makeText(RegistoActivity.this, "Senhas incopativeis", Toast.LENGTH_SHORT).show();
-                    } else if (mNome.getText().toString().isEmpty()) {
-                        mNome.setError("Nome Inválido");
-                        mNome.requestFocus();
-                    } else if (mTelefone.getText().length() < 9) {
-                        mTelefone.setError("Telefone inválido");
-                        mTelefone.requestFocus();
-                    } else if (mEmail.getText().toString().isEmpty()) {
-                        mEmail.setError("Digite o email");
-                        mEmail.requestFocus();
-                    } else if (mSenha.getText().toString().isEmpty()) {
-                        mSenha.setError("Digite o email");
-                        mSenha.requestFocus();
-                    } else if (mSenhaConf.getText().length() < 1) {
-                        mSenhaConf.setError("Repita a senha");
-                        mSenhaConf.requestFocus();
-                    }
-                    //Sexo
-                    if (rbMasculino.isChecked()) {
-                        usuario.setSexo("Femenino");
-                    } else if (rbFemenino.isChecked()) {
-                        usuario.setSexo("Masculino");
-                    } else if (rbOutro.isChecked()) {
-                        usuario.setSexo("Outro");
+
+                Log.i(TAG, "INFO " + usuario.getProvincia());
+                //Estado
+
+                if (String.valueOf(bt_estado.getSelectedTab()).equals("0")) {
+                    usuario.setEstado("Doador");
+                    if (mDisponibilidade.isChecked()) {
+                        usuario.setDisponibilidade("Sim");
                     } else {
-                        mSexo.requestFocus();
-                        Toast.makeText(RegistoActivity.this, "Seleccione o sexo", Toast.LENGTH_LONG).show();
+                        usuario.setDisponibilidade("Não");
                     }
-                    //Tipo sanguíneo
-                    switch (String.valueOf(bt_TipoSangue.getSelectedTab())) {
-                        case "0":
-                            usuario.setTipoSanguineo("A+");
-                            break;
-                        case "1":
-                            usuario.setTipoSanguineo("B+");
-                            break;
-                        case "2":
-                            usuario.setTipoSanguineo("AB+");
-                            break;
-                        case "3":
-                            usuario.setTipoSanguineo("O+");
-                            break;
-                        case "4":
-                            usuario.setTipoSanguineo("A-");
-                            break;
-                        case "5":
-                            usuario.setTipoSanguineo("B-");
-                            break;
-                        case "6":
-                            usuario.setTipoSanguineo("AB-");
-                            break;
-                        default:
-                            usuario.setTipoSanguineo("O-");
-                            break;
-                    }
-
-                    uploadProfileImage();
-                    registarUser();
-
-                } else {
-                    Toast.makeText(RegistoActivity.this, "Preencha os espaços", Toast.LENGTH_LONG).show();
+                } else if (String.valueOf(bt_estado.getSelectedTab()).equals("1")) {
+                    usuario.setEstado("Requistante");
+                    mDisponibilidade.setVisibility(View.INVISIBLE);
+                    usuario.setDisponibilidade(null);
                 }
+                if (mNome.getText().toString().isEmpty()) {
+                    mNome.setError("Nome Inválido");
+                    mNome.requestFocus();
+                } else if (mTelefone.getText().length() < 9) {
+                    mTelefone.setError("Digite um número válido");
+                    mTelefone.requestFocus();
+                } else if (mEmail.getText().toString().isEmpty()) {
+                    mEmail.setError("Digite o email");
+                    mEmail.requestFocus();
+                } else if (mSenha.getText().toString().isEmpty()) {
+                    mSenha.setError("Digite a senha");
+                    mSenha.requestFocus();
+                } else if (mSenha.getText().length() < 8){
+                    mSenha.setError("A mínimo 8 digitos");
+                }
+                else if (!mSenhaConf.getText().toString().trim().equals(mSenha.getText().toString().trim())) {
+                        mSenhaConf.setError("Senhas incopatíveis");
+                        mSenhaConf.requestFocus();
+                }else if(provincias.getSelectedItem().equals("Províncias")){
+                    Toast.makeText(RegistoActivity.this, "Seleccione uma provincia válida", Toast.LENGTH_SHORT).show();
+
+                }//Sexo
+                else if (rbMasculino.isChecked()) {
+                    usuario.setSexo("Femenino");
+                } else if (rbFemenino.isChecked()) {
+                    usuario.setSexo("Masculino");
+                } else if (rbOutro.isChecked()) {
+                    usuario.setSexo("Outro");
+                }
+                else {
+                        uploadProfileImage();
+                        registarUser();
+                    }
             }
         });
     }
@@ -269,7 +266,6 @@ public class RegistoActivity extends AppCompatActivity {
                     if (!task.isSuccessful()) {
                         throw Objects.requireNonNull(task.getException());
                     }
-
                     return imageRef.getDownloadUrl();
                 }
             }).addOnCompleteListener(new OnCompleteListener<Uri>() {
@@ -290,60 +286,60 @@ public class RegistoActivity extends AppCompatActivity {
     }
 
     private void registarUser() {
-            mAuth = ConfiguracaoFirebase.getFirebaseAuth();
-            final ProgressDialog proDialog = new ProgressDialog(RegistoActivity.this);
-            proDialog.setTitle("Criando usuario aguarde...");
-            proDialog.show();
+        mAuth = ConfiguracaoFirebase.getFirebaseAuth();
+        final ProgressDialog proDialog = new ProgressDialog(RegistoActivity.this);
+        proDialog.setTitle("Criando usuario aguarde...");
+        proDialog.show();
 
-            mAuth.createUserWithEmailAndPassword(
-                    usuario.getEmail(),
-                    usuario.getSenha()
-            ).addOnCompleteListener(RegistoActivity.this, new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
+        mAuth.createUserWithEmailAndPassword(
+                usuario.getEmail(),
+                usuario.getSenha()
+        ).addOnCompleteListener(RegistoActivity.this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
 
-                    if (task.isSuccessful()) {
-                        Toast.makeText(RegistoActivity.this, R.string.email_verification, Toast.LENGTH_LONG).show();
-                        //String identificadorUsuario = Base64Custom.codificarBase64(usuario.getEmail());
-                        fireUser = mAuth.getCurrentUser();
-                        if (fireUser != null) {
-                            usuario.setUidUser(fireUser.getUid());
-                            fireUser.sendEmailVerification();
-                            usuario.gravar();
-                        }
-
-                        proDialog.dismiss();
-                        Preferencias preferencias = new Preferencias(RegistoActivity.this);
-                        preferencias.gravarUsuario(fireUser.getUid(), usuario.getNome());
-                        abrirLogin();
-                    } else {
-                        proDialog.dismiss();
-                        String erro;
-                        try {
-                            throw Objects.requireNonNull(task.getException());
-                        } catch (FirebaseAuthWeakPasswordException ex) {
-
-                            erro = "Digite uma Senha mais forte, contendo no mínimo 8 caracteres de letras e números";
-                        } catch (FirebaseAuthInvalidCredentialsException ex) {
-
-                            erro = "O e-mail digitado não é válido";
-                        } catch (FirebaseAuthUserCollisionException ex) {
-
-                            erro = "Este e-mail ja possui um registo";
-                        }catch (FirebaseNetworkException ex){
-
-                            erro = "Problemas de conexao";
-                        } catch (Exception ex) {
-                            erro = "Erro desconhecido";
-                            ex.printStackTrace();
-
-                        }
-
-                        Toast.makeText(RegistoActivity.this, erro, Toast.LENGTH_LONG).show();
+                if (task.isSuccessful()) {
+                    Toast.makeText(RegistoActivity.this, R.string.email_verification, Toast.LENGTH_LONG).show();
+                    //String identificadorUsuario = Base64Custom.codificarBase64(usuario.getEmail());
+                    fireUser = mAuth.getCurrentUser();
+                    if (fireUser != null) {
+                        usuario.setUidUser(fireUser.getUid());
+                        fireUser.sendEmailVerification();
+                        usuario.gravar();
                     }
+
+                    proDialog.dismiss();
+                    Preferencias preferencias = new Preferencias(RegistoActivity.this);
+                    preferencias.gravarUsuario(fireUser.getUid(), usuario.getNome());
+                    abrirLogin();
+                } else {
+                    proDialog.dismiss();
+                    String erro;
+                    try {
+                        throw Objects.requireNonNull(task.getException());
+                    } catch (FirebaseAuthWeakPasswordException ex) {
+
+                        erro = "Digite uma Senha mais forte, contendo no mínimo 8 caracteres de letras e números";
+                    } catch (FirebaseAuthInvalidCredentialsException ex) {
+
+                        erro = "O e-mail digitado não é válido";
+                    } catch (FirebaseAuthUserCollisionException ex) {
+
+                        erro = "Este e-mail ja possui um registo";
+                    }catch (FirebaseNetworkException ex){
+
+                        erro = "Problemas de conexao";
+                    } catch (Exception ex) {
+                        erro = "Erro desconhecido";
+                        ex.printStackTrace();
+
+                    }
+
+                    Toast.makeText(RegistoActivity.this, erro, Toast.LENGTH_LONG).show();
                 }
-            });
-        }
+            }
+        });
+    }
 
     public void abrirLogin() {
         Intent intent = new Intent(RegistoActivity.this, LoginActivity.class);

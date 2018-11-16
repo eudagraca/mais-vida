@@ -10,8 +10,11 @@ public class Anuncio {
     private int quantSanguinea;
     private String dataDoacao;
     private String comentario;
-    private Boolean feedback;
+    private String nome;
+    private String localizacao;
     private String id;
+    private String estado;
+    private String tipo_sangue;
 
 
     public Anuncio() {
@@ -21,32 +24,20 @@ public class Anuncio {
         DatabaseReference dbRef = ConfiguracaoFirebase.getFirebase();
         dbRef.child("anuncios").child(String.valueOf(getId())).setValue(this);
     }
+
     @Exclude
     public Map<String, Object> toMap(){
         HashMap<String, Object> hashMapUser = new HashMap<>();
 
+        hashMapUser.put("nome", getNome());
         hashMapUser.put("data", getDataDoacao());
         hashMapUser.put("quantidade", getQuantSanguinea());
         hashMapUser.put("comentario", getComentario());
+        hashMapUser.put("localizacao", getLocalizacao());
+        hashMapUser.put("estado", getEstado());
+        hashMapUser.put("tipo_sangue", getTipo_sangue());
 
         return hashMapUser;
-    }
-
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public Boolean getFeedback() {
-        return feedback;
-    }
-
-    public void setFeedback(Boolean feedback) {
-        this.feedback = feedback;
     }
 
     public int getQuantSanguinea() {
@@ -73,6 +64,43 @@ public class Anuncio {
         this.comentario = comentario;
     }
 
-    public void setQuantSanguinea(String quantSanguinea) {
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String getLocalizacao() {
+        return localizacao;
+    }
+
+    public void setLocalizacao(String localizacao) {
+        this.localizacao = localizacao;
+    }
+
+    public String getTipo_sangue() {
+        return tipo_sangue;
+    }
+
+    public void setTipo_sangue(String tipo_sangue) {
+        this.tipo_sangue = tipo_sangue;
     }
 }

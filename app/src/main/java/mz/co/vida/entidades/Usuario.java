@@ -47,17 +47,16 @@ public class Usuario {
 
     public void gravar(){
         DatabaseReference dbRef = ConfiguracaoFirebase.getFirebase();
-        dbRef.child("Usuario").child(String.valueOf(getUidUser())).setValue(this);
+        dbRef.child("Usuario").child(String.valueOf(getUidUser())).setValue(toMap());
        // dbRef.child("foto de perfil").setValue(getFoto());
     }
     @Exclude
     public Map <String, Object> toMap(){
         HashMap<String, Object> hashMapUser = new HashMap<>();
-
-       // hashMapUser.put("id", getUidUser());
+        hashMapUser.put("id", getUidUser());
         hashMapUser.put("nome", getNome());
         hashMapUser.put("email", getEmail());
-        //hashMapUser.put("senha", getSenha());
+        hashMapUser.put("senha", getSenha());
         hashMapUser.put("telefone", getTelefone());
         hashMapUser.put("sexo", getSexo());
         hashMapUser.put("localizacao", getProvincia());
