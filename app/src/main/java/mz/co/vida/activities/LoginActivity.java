@@ -1,4 +1,4 @@
-package mz.co.vida;
+package mz.co.vida.activities;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -21,7 +21,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 
 import mz.co.vida.DAO.ConfiguracaoFirebase;
-import mz.co.vida.entidades.Usuario;
+import mz.co.vida.R;
+import mz.co.vida.entities.Usuario;
+import mz.co.vida.utils.MyUtils;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -99,7 +101,7 @@ public class LoginActivity extends AppCompatActivity {
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                             SharedPreferences sharedPreferences = getSharedPreferences(MyUtils.SP_NAME, MODE_PRIVATE);
                             SharedPreferences.Editor editor = sharedPreferences.edit();
-                            editor.putBoolean("isRequisitante", dataSnapshot.getValue().equals("Requisitante"));
+                            editor.putBoolean("isDoador", dataSnapshot.getValue().equals("Requisitante"));
                             editor.apply();
 
                             Intent intent = new Intent(LoginActivity.this, HomeActivity.class);

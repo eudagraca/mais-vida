@@ -1,4 +1,4 @@
-package mz.co.vida.Fragments;
+package mz.co.vida.fragments;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
@@ -24,11 +24,11 @@ import java.util.Calendar;
 
 import mz.co.vida.DAO.ConfiguracaoFirebase;
 import mz.co.vida.R;
-import mz.co.vida.entidades.Anuncio;
+import mz.co.vida.entities.Anuncio;
 
 public class AnuncioFragment extends Fragment {
 
-    //Components
+    // Components
     private TextView mQuant;
     private TextView tv_data;
     private DatePickerDialog datePickerDialog;
@@ -37,11 +37,11 @@ public class AnuncioFragment extends Fragment {
     private int month;
     private int dayOfMonth;
     private Calendar calendar;
-    private EditText mComentario;
+    private EditText et_descricao;
     private Button btUpdate;
     private Button btDelete;
 
-    //Firebase
+    // Firebase
     private FirebaseAuth mAuth;
     private DatabaseReference mRef;
     private SeekBar seekBar;
@@ -72,24 +72,21 @@ public class AnuncioFragment extends Fragment {
 
         final View view = inflater.inflate(R.layout.fragment_anuncio, container, false);
 
-
-
         mAuth = ConfiguracaoFirebase.getFirebaseAuth();
-
         id = mAuth.getCurrentUser().getUid();
         mRef = ConfiguracaoFirebase.getFirebase().child("Usuario").child(id);
 
         //Init Components
 
-        mAuth              = ConfiguracaoFirebase.getFirebaseAuth();
-        mQuant             = view.findViewById(R.id.tv_quantidade);
-        seekBar            = view.findViewById(R.id.quantidade);
         final Button mData       = view.findViewById(R.id.btnDate);
         final Button mBtanunciar = view.findViewById(R.id.btn_anunciar);
-        mComentario        = view.findViewById(R.id.tid_comentario);
-        tv_data            = view.findViewById(R.id.tvSelectedDate);
-        btDelete           = view.findViewById(R.id.bt_delete);
-        btUpdate           = view.findViewById(R.id.bt_update);
+        mAuth                    = ConfiguracaoFirebase.getFirebaseAuth();
+        mQuant                   = view.findViewById(R.id.tv_quantidade);
+        seekBar                  = view.findViewById(R.id.quantidade);
+        et_descricao             = view.findViewById(R.id.et_descricao);
+        tv_data                  = view.findViewById(R.id.tvSelectedDate);
+        btDelete                 = view.findViewById(R.id.bt_delete);
+        btUpdate                 = view.findViewById(R.id.bt_update);
         mQuant.setText(R.string.quant+ seekBar.getProgress());
 
 
@@ -103,19 +100,19 @@ public class AnuncioFragment extends Fragment {
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                             if (dataSnapshot.exists()){
-                                anuncio.setComentario(dataSnapshot.child("comentario").getValue(String.class));
+                                anuncio.setDescricao(dataSnapshot.child("descricao").getValue(String.class));
                                 anuncio.setDataDoacao(dataSnapshot.child("dataDoacao").getValue(String.class));
                                 anuncio.setQuantSanguinea(dataSnapshot.child("quantSanguinea").getValue(Integer.class));
 
 
                                 mQuant.setText("Quantidade saguínea: "+ String.valueOf(anuncio.getQuantSanguinea()));
                                 tv_data.setText(anuncio.getDataDoacao());
-                                mComentario.setText(anuncio.getComentario());
+                                et_descricao.setText(anuncio.getDescricao());
                                 seekBar.setProgress(anuncio.getQuantSanguinea());
 
                                 seekBar.setEnabled(false);
                                 tv_data.setEnabled(false);
-                                mComentario.setEnabled(false);
+                                et_descricao.setEnabled(false);
                                 mData.setEnabled(false);
                                 mBtanunciar.setVisibility(View.GONE);
 
@@ -123,7 +120,7 @@ public class AnuncioFragment extends Fragment {
 
                                 seekBar.setEnabled(true);
                                 tv_data.setEnabled(true);
-                                mComentario.setEnabled(true);
+                                et_descricao.setEnabled(true);
                                 mData.setEnabled(true);
                                 mBtanunciar.setVisibility(View.VISIBLE);
                                 btDelete.setVisibility(View.GONE);
@@ -152,7 +149,7 @@ public class AnuncioFragment extends Fragment {
                 tipo   = dataSnapshot.child("tipoSanguineo").getValue(String.class);
 
                 anuncio.setNome(nome);
-                anuncio.setLocalizacao(provincia);
+                anuncio.setProvincia(provincia);
                 anuncio.setTipo_sangue(tipo);
                 anuncio.setEstado(estado);
 
@@ -217,7 +214,7 @@ public class AnuncioFragment extends Fragment {
                 }
                 else{
 
-                    anuncio.setComentario(mComentario.getText().toString());
+                    anuncio.setDescricao(et_descricao.getText().toString());
                     anuncio.setDataDoacao(tv_data.getText().toString());
                     anuncio.setQuantSanguinea(quantidade);
                     anuncio.setId(mAuth.getUid());
@@ -226,7 +223,7 @@ public class AnuncioFragment extends Fragment {
                     seekBar.setProgress(0);
                     mQuant.setText(R.string.quant+ seekBar.getProgress());
                     tv_data.setText("");
-                    mComentario.setText("");
+                    et_descricao.setText("");
 
             }
             }

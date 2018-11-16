@@ -9,7 +9,7 @@
 
 
     <LinearLayout
-        android:id="@+id/post"
+        android:id="@+id/doador"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -26,7 +26,7 @@
             android:layout_width="46dp"
             android:layout_height="46dp"
             android:layout_gravity="center_vertical"
-            app:mli_letter_color="@color/md_red_A700"
+            app:mli_letter_color="@color/md_white_1000"
             app:mli_letter_size="15"
             app:mli_letters_number="3"
             app:mli_shape_color="@color/md_red_900" />

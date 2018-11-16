@@ -17,7 +17,7 @@
     <string name="doacao">Doação</string>
     <string name="logo">Logotipo</string>
     <string name="disponibilidade">Disponibilidade para doar:</string>
-    <string name="Contacto">Contacto Telefónico</string>
+    <string name="contacto">Contacto Telefónico</string>
     <string name="photo_perfil">Seleccione a foto de perfil</string>
     <string name="quant">Quantidade sanguínea: </string>
 
@@ -105,7 +105,7 @@
     <string name="sobre">Sobre</string>
     <string name="anunciar">Anunciar</string>
     <string name="pesquisa">Pesquisar</string>
-    <string name="informa_o_pesoal">Informação Pessoal</string>
+    <string name="informacao_pesoal">Informação Pessoal</string>
     <string name="endereco">Endereço</string>
     <string name="editar">Editar</string>
     <string name="notificacoes">Notificações</string>

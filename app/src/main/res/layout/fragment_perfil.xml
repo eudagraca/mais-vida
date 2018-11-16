@@ -1,277 +1,219 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/rl"
     android:background="@color/md_white_1000"
-    tools:context=".Fragments.PerfilFragment">
-
-
-    <!-- TODO: Update blank fragment layout -->
-
+    tools:context=".fragments.PerfilFragment">
 
     <android.support.v7.widget.CardView
-        android:id="@+id/dd"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@color/vermelho_padrao">
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp">
 
-
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/vermelho_padrao"
+            android:minHeight="?attr/actionBarSize"
+            app:contentInsetStart="0dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/vermelho_padrao">>
-
-                <Button
-                    android:id="@+id/btn_backprf"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:fontFamily="@font/product_r"
-                    android:background="@color/fui_transparent"
-                    android:text="@string/editar"
-                    android:textAllCaps="false"
-                    android:visibility="gone"
-                    android:textColor="@color/md_white_1000" />
+                android:background="@color/vermelho_padrao"
+                android:padding="20dp">
 
                 <TextView
                     android:id="@+id/tv_nome"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="25dp"
-                    android:layout_marginTop="40dp"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentTop="false"
+                    android:layout_centerVertical="true"
                     android:fontFamily="@font/courgette"
                     android:text="Stélio Braga"
                     android:textColor="@color/md_white_1000"
-                    android:textSize="25sp" />
-
-                <TextView
-                    android:id="@+id/tv_estado"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="25dp"
-                    android:layout_marginTop="116dp"
-                    android:layout_marginBottom="37dp"
-                    android:fontFamily="@font/product_r"
-                    android:text="Requisitante"
-                    android:textColor="@color/md_white_1000"
-                    android:textSize="20sp"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
-
-                <com.zcw.togglebutton.ToggleButton
-                    android:id="@+id/tv_disponibilidade"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_alignBottom="@+id/tv_estado"
-                    android:layout_marginEnd="0dp"
-                    android:layout_marginBottom="0dp"
-                    android:layout_toStartOf="@+id/iv_foto"
-                    app:tbBorderWidth="2dp"
-                    app:tbOffBorderColor="@color/md_white_1000"
-                    app:tbOffColor="@color/md_white_1000"
-                    app:tbOnColor="@color/md_red_900"
-                    app:tbSpotColor="@color/vermelho_padrao" />
 
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/iv_foto"
-                    android:layout_width="140dp"
-                    android:layout_height="120dp"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
                     android:layout_alignBottom="@+id/tv_estado"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginBottom="10dp"
                     android:src="@drawable/ic_user" />
 
             </RelativeLayout>
 
+
+        </android.support.v7.widget.Toolbar>
     </android.support.v7.widget.CardView>
 
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:layout_marginTop="120dp">
-        <RelativeLayout
+        android:layout_gravity="center">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="32dp"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:paddingTop="32dp">
 
             <TextView
-                android:id="@+id/infop"
-                android:layout_width="358dp"
-                android:layout_height="30dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="0dp"
-                android:fontFamily="@font/product_r"
-                android:text="@string/informa_o_pesoal"
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="24dp"
+                android:text="O meu estado"
+                android:textAllCaps="true"
                 android:textColor="@color/md_black_1000"
-                android:textSize="18sp"
-                android:textStyle="" />
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/blood"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/infop"
-            android:layout_below="@+id/infop"
-            android:layout_marginTop="4dp"
-            android:drawableStart="@drawable/ic_blood"
-             />
-
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/infop"
-            android:layout_alignTop="@+id/tv_Sexo"
-            android:layout_below="@id/blood"
-            android:layout_marginTop="4dp"
-            android:drawableStart="@drawable/ic_genero" />
+            <lib.kingja.switchbutton.SwitchMultiButton
+                android:id="@+id/smb_estado"
+                android:layout_width="289dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp"
+                android:padding="10dp"
+                app:selectedColor="@color/vermelho_padrao"
+                app:selectedTab="-1"
+                app:strokeRadius="8dp"
+                app:strokeWidth="1dp"
+                app:switchTabs="@array/switch_tabs"
+                app:textSize="14sp" />
 
 
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="26dp"
+                android:layout_marginTop="26dp"
+                android:background="@color/vermelho_padrao" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_below="@+id/textView15"
-            android:layout_marginTop="17dp"
-            android:background="@color/vermelho_padrao" />
-
-        <TextView
-            android:id="@+id/enderco"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/infop"
-            android:fontFamily="@font/product_r"
-            android:layout_below="@id/textView15"
-            android:layout_marginTop="130dp"
-            android:textColor="@color/md_black_1000"
-            android:text="@string/endereco"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/infop"
-            android:layout_below="@+id/enderco"
-            android:layout_marginTop="160dp"
-            android:drawableStart="@drawable/ic_localizacao" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/infop"
-            android:layout_below="@id/textView5"
-            android:layout_centerVertical="true"
-            android:layout_marginTop="14dp"
-            android:drawableStart="@drawable/ic_hospital" />
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="24dp"
+                android:text="@string/informacao_pesoal"
+                android:textAllCaps="true"
+                android:textColor="@color/md_black_1000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv_tiposanguineo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/infop"
-                android:layout_alignStart="@+id/tv_contacto"
-                android:layout_alignBottom="@+id/blood"
-                android:layout_marginBottom="5dp"
-                android:fontFamily="@font/product_r"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="20dp"
+                android:drawablePadding="20dp"
+                android:drawableStart="@drawable/ic_blood_drop"
                 android:text="O-"
-                android:textColor="@color/md_black_1000"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/tv_provincia"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/tv_unidade_sanitaria"
-                android:layout_alignStart="@+id/tv_contacto"
-                android:layout_alignTop="@+id/textView5"
-                android:layout_marginBottom="15dp"
-                android:fontFamily="@font/product_r"
-                android:text="Cabo de Legado"
-                android:textColor="@color/md_black_1000"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/tv_unidade_sanitaria"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/tv_contacto"
-                android:layout_alignTop="@+id/textView6"
-                android:fontFamily="@font/product_r"
-                android:text="Hospital de Maputo"
                 android:textColor="@color/md_black_1000"
                 android:textSize="16sp" />
 
 
             <TextView
                 android:id="@+id/tv_Sexo"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/tv_contacto"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="68dp"
-                android:fontFamily="@font/product_r"
+                android:layout_marginStart="24dp"
+                android:drawablePadding="20dp"
+                android:drawableStart="@drawable/ic_genero"
                 android:text="Masculino"
                 android:textColor="@color/md_black_1000"
                 android:textSize="16sp" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="26dp"
+                android:layout_marginTop="26dp"
+                android:background="@color/vermelho_padrao" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_below="@id/textView6"
-            android:layout_marginTop="16dp"
-            android:background="@color/vermelho_padrao" />
 
-        <TextView
-            android:id="@+id/ct"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/infop"
-            android:layout_below="@+id/textView6"
-            android:layout_marginTop="30dp"
-            android:text="@string/Contacto"
-            android:fontFamily="@font/product_r"
-            android:textColor="@color/md_black_1000"
-            android:textSize="18sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="24dp"
+                android:text="@string/endereco"
+                android:textAllCaps="true"
+                android:textColor="@color/md_black_1000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_provincia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="24dp"
+                android:drawablePadding="20dp"
+                android:drawableStart="@drawable/ic_localizacao"
+                android:text="Maputo"
+                android:textColor="@color/md_black_1000"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/tv_unidade_sanitaria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:drawablePadding="20dp"
+                android:drawableStart="@drawable/ic_hospital"
+                android:text="Hospital de Maputo"
+                android:textColor="@color/md_black_1000"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="26dp"
+                android:layout_marginTop="26dp"
+                android:background="@color/vermelho_padrao" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="24dp"
+                android:text="@string/contacto"
+                android:textAllCaps="true"
+                android:textColor="@color/md_black_1000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv_contacto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/textView7"
-                android:layout_marginStart="118dp"
-                android:layout_toEndOf="@+id/textView7"
-                android:fontFamily="@font/product_r"
-                android:text="842323485"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="24dp"
+                android:drawablePadding="20dp"
+                android:drawableStart="@drawable/ic_phone_contact"
+                android:text="840000001"
                 android:textColor="@color/md_black_1000"
                 android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/infop"
-            android:layout_below="@id/ct"
-            android:layout_marginTop="4dp"
-            android:drawableStart="@drawable/ic_celular" />
-
-
-        </RelativeLayout>
+        </LinearLayout>
     </ScrollView>
-</FrameLayout>
+</LinearLayout>

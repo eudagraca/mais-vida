@@ -1,4 +1,4 @@
-package mz.co.vida;
+package mz.co.vida.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import mz.co.vida.DAO.ConfiguracaoFirebase;
+import mz.co.vida.R;
 
 public class ForgotPasswordActivity extends AppCompatActivity {
     private EditText mEmail;

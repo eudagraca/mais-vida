@@ -1,35 +1,32 @@
-package mz.co.vida.entidades;
+package mz.co.vida.entities;
 
-public class PostReq {
+public class Requisitante {
 
-    public String estado;
+    public String id;
     public String nome;
     public String provincia;
-    public String telefone;
-    public String uidUser;
+    public String tipo_sangue;
+    public String estado;
+    public String contacto;
     public String unidadeProxima;
     private int quantSanguinea;
     private String dataDoacao;
-    private String comentario;
-    private String localizacao;
-    private String id;
-    private String tipo_sangue;
+    private String descricao;
 
 
-    public PostReq() {
+    public Requisitante() {
 
     }
 
-    public PostReq(String estado, String nome,  String telefone, String uidUser, String unidadeProxima, int quantSanguinea, String dataDoacao, String comentario, String localizacao, String id, String tipo_sangue) {
+    public Requisitante(String estado, String nome, String telefone, String unidadeProxima, int quantSanguinea, String dataDoacao, String comentario, String localizacao, String id, String tipo_sangue) {
         this.estado = estado;
         this.nome = nome;
-        this.telefone = telefone;
-        this.uidUser = uidUser;
+        this.contacto = telefone;
         this.unidadeProxima = unidadeProxima;
         this.quantSanguinea = quantSanguinea;
         this.dataDoacao = dataDoacao;
-        this.comentario = comentario;
-        this.localizacao = localizacao;
+        this.descricao = comentario;
+        this.provincia = localizacao;
         this.id = id;
         this.tipo_sangue = tipo_sangue;
     }
@@ -51,20 +48,12 @@ public class PostReq {
         this.nome = nome;
     }
 
-    public String getTelefone() {
-        return telefone;
+    public String getContacto() {
+        return contacto;
     }
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-    public String getUidUser() {
-        return uidUser;
-    }
-
-    public void setUidUser(String uidUser) {
-        this.uidUser = uidUser;
+    public void setContacto(String contacto) {
+        this.contacto = contacto;
     }
 
     public String getUnidadeProxima() {
@@ -91,20 +80,20 @@ public class PostReq {
         this.dataDoacao = dataDoacao;
     }
 
-    public String getComentario() {
-        return comentario;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setComentario(String comentario) {
-        this.comentario = comentario;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
-    public String getLocalizacao() {
-        return localizacao;
+    public String getProvincia() {
+        return provincia;
     }
 
-    public void setLocalizacao(String localizacao) {
-        this.localizacao = localizacao;
+    public void setProvincia(String provincia) {
+        this.provincia = provincia;
     }
 
     public String getId() {

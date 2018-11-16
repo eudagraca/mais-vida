@@ -10,7 +10,7 @@
               android:paddingRight="20dp"
               android:paddingLeft="20dp"
               android:paddingBottom="5dp"
-              tools:context=".RegistoActivity">
+              tools:context=".activities.RegistoActivity">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -90,7 +90,7 @@
                     android:layout_height="wrap_content"
                     android:maxLength="9"
                     android:fontFamily="@font/product_r"
-                    android:hint="@string/Contacto"
+                    android:hint="@string/contacto"
                     android:inputType="phone"
                     android:textSize="15sp"
                     android:paddingStart="10dp" />

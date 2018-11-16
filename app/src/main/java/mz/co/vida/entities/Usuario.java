@@ -1,4 +1,4 @@
-package mz.co.vida.entidades;
+package mz.co.vida.entities;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Exclude;
@@ -13,33 +13,29 @@ public class Usuario {
     private String uidUser;
     private String nome;
 
-    private String telefone;
+    private String contacto;
     private String sexo;
     private String email;
     private String senha;
     private String provincia;
     private String unidadeProxima;
-    private String tipoSanguineo;
+    private String tipo_sangue;
     private String disponibilidade;
     private String estado;
     private String foto;
 
-
-
-    public Usuario() {
-
-    }
+    public Usuario() { }
 
     public Usuario(String uidUser, String nome, String telefone, String sexo, String email, String senha, String provincia, String unidadeProxima, String tipoSanguineo, String disponibilidade, String estado, String foto) {
         this.uidUser = uidUser;
         this.nome = nome;
-        this.telefone = telefone;
+        this.contacto = telefone;
         this.sexo = sexo;
         this.email = email;
         this.senha = senha;
         this.provincia = provincia;
         this.unidadeProxima = unidadeProxima;
-        this.tipoSanguineo = tipoSanguineo;
+        this.tipo_sangue = tipoSanguineo;
         this.disponibilidade = disponibilidade;
         this.estado = estado;
         this.foto = foto;
@@ -50,6 +46,7 @@ public class Usuario {
         dbRef.child("Usuario").child(String.valueOf(getUidUser())).setValue(toMap());
        // dbRef.child("foto de perfil").setValue(getFoto());
     }
+
     @Exclude
     public Map <String, Object> toMap(){
         HashMap<String, Object> hashMapUser = new HashMap<>();
@@ -57,11 +54,11 @@ public class Usuario {
         hashMapUser.put("nome", getNome());
         hashMapUser.put("email", getEmail());
         hashMapUser.put("senha", getSenha());
-        hashMapUser.put("telefone", getTelefone());
+        hashMapUser.put("contacto", getContacto());
         hashMapUser.put("sexo", getSexo());
         hashMapUser.put("localizacao", getProvincia());
         hashMapUser.put("unidadeProxima", getUnidadeProxima());
-        hashMapUser.put("tipoSanguineo", getTipoSanguineo());
+        hashMapUser.put("tipo_sangue", getTipo_sangue());
         hashMapUser.put("disponibilidade", getDisponibilidade());
         hashMapUser.put("estado", getEstado());
         hashMapUser.put("fotoPerfil", getFoto());
@@ -92,12 +89,12 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public String getTelefone() {
-        return telefone;
+    public String getContacto() {
+        return contacto;
     }
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
+    public void setContacto(String contacto) {
+        this.contacto = contacto;
     }
 
     public String getSexo() {
@@ -140,12 +137,12 @@ public class Usuario {
         this.unidadeProxima = unidadeProxima;
     }
 
-    public String getTipoSanguineo() {
-        return tipoSanguineo;
+    public String getTipo_sangue() {
+        return tipo_sangue;
     }
 
-    public void setTipoSanguineo(String tipoSanguineo) {
-        this.tipoSanguineo = tipoSanguineo;
+    public void setTipo_sangue(String tipo_sangue) {
+        this.tipo_sangue = tipo_sangue;
     }
 
     public String getDisponibilidade() {

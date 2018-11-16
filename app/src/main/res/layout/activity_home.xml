@@ -1,49 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
-
-    <android.support.design.widget.TabLayout
-        android:id="@+id/tl_donnor_reqq"
-        android:layout_width="match_parent"
-        android:layout_height="57dp"
-        android:layout_alignParentTop="true"
-        app:tabTextColor="@color/md_black_1000"
-        android:background="@color/md_white_1000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tabGravity="center"
-        app:tabIndicatorColor="@color/vermelho_padrao"
-        app:tabSelectedTextColor="@color/vermelho_padrao">
-
-        <android.support.design.widget.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Doadores" />
-
-        <android.support.design.widget.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Requisitantes" />
-
-
-        <android.support.design.widget.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/ic_search" />
-
-    </android.support.design.widget.TabLayout>
-
+    android:orientation="vertical"
+    tools:context=".activities.HomeActivity">
 
     <FrameLayout
         android:id="@+id/fl_framelayout"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:layout_above="@+id/nav_main"
+        android:layout_weight="1"
         android:background="@color/md_white_1000"
         app:layout_constraintBottom_toTopOf="@+id/nav_main"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,6 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_above="@id/nav_main"
+        android:layout_weight="0"
         android:background="@color/md_red_A700"
         app:layout_constraintBottom_toTopOf="@+id/nav_main" />
 
@@ -63,10 +33,11 @@
         android:layout_height="56dp"
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
+        android:layout_weight="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/navigation" />
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

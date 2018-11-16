@@ -1,4 +1,4 @@
-package mz.co.vida;
+package mz.co.vida.activities;
 
 
 import android.content.Intent;
@@ -10,6 +10,7 @@ import android.widget.Button;
 import com.google.firebase.auth.FirebaseAuth;
 
 import mz.co.vida.DAO.ConfiguracaoFirebase;
+import mz.co.vida.R;
 
 public class MainActivity extends AppCompatActivity /*implements GoogleApiClient.OnConnectionFailedListener*/ {
 

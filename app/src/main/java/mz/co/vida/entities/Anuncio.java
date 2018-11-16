@@ -1,4 +1,4 @@
-package mz.co.vida.entidades;
+package mz.co.vida.entities;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Exclude;
@@ -9,9 +9,9 @@ import mz.co.vida.DAO.ConfiguracaoFirebase;
 public class Anuncio {
     private int quantSanguinea;
     private String dataDoacao;
-    private String comentario;
+    private String descricao;
     private String nome;
-    private String localizacao;
+    private String provincia;
     private String id;
     private String estado;
     private String tipo_sangue;
@@ -22,7 +22,7 @@ public class Anuncio {
 
     public void gravar(){
         DatabaseReference dbRef = ConfiguracaoFirebase.getFirebase();
-        dbRef.child("anuncios").child(String.valueOf(getId())).setValue(this);
+        dbRef.child("anuncios").child(String.valueOf(getId())).setValue(toMap());
     }
 
     @Exclude
@@ -32,8 +32,8 @@ public class Anuncio {
         hashMapUser.put("nome", getNome());
         hashMapUser.put("data", getDataDoacao());
         hashMapUser.put("quantidade", getQuantSanguinea());
-        hashMapUser.put("comentario", getComentario());
-        hashMapUser.put("localizacao", getLocalizacao());
+        hashMapUser.put("descricao", getDescricao());
+        hashMapUser.put("provincia", getProvincia());
         hashMapUser.put("estado", getEstado());
         hashMapUser.put("tipo_sangue", getTipo_sangue());
 
@@ -56,12 +56,12 @@ public class Anuncio {
         this.dataDoacao = dataDoacao;
     }
 
-    public String getComentario() {
-        return comentario;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setComentario(String comentario) {
-        this.comentario = comentario;
+    public void setDescricao(String comentario) {
+        this.descricao = descricao;
     }
 
     public String getNome() {
@@ -88,12 +88,12 @@ public class Anuncio {
         this.estado = estado;
     }
 
-    public String getLocalizacao() {
-        return localizacao;
+    public String getProvincia() {
+        return provincia;
     }
 
-    public void setLocalizacao(String localizacao) {
-        this.localizacao = localizacao;
+    public void setProvincia(String provincia) {
+        this.provincia = provincia;
     }
 
     public String getTipo_sangue() {

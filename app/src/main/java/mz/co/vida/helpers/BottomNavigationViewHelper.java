@@ -1,4 +1,4 @@
-package mz.co.vida.Helper;
+package mz.co.vida.helpers;
 
 import android.annotation.SuppressLint;
 import android.support.design.internal.BottomNavigationItemView;

@@ -1,4 +1,4 @@
-package mz.co.vida.Helper;
+package mz.co.vida.helpers;
 
 
 import android.content.Context;

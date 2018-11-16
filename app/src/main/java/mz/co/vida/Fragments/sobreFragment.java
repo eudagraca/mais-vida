@@ -1,4 +1,4 @@
-package mz.co.vida.Fragments;
+package mz.co.vida.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,9 +8,9 @@ import android.view.ViewGroup;
 
 import mz.co.vida.R;
 
-public class sobreFragment extends Fragment {
+public class SobreFragment extends Fragment {
 
-    public sobreFragment() {
+    public SobreFragment() {
         // Required empty public constructor
     }
 

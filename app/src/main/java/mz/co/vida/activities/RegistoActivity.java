@@ -1,4 +1,4 @@
-package mz.co.vida;
+package mz.co.vida.activities;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -11,7 +11,6 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -42,10 +41,11 @@ import java.util.Objects;
 import java.util.UUID;
 
 import mz.co.vida.DAO.ConfiguracaoFirebase;
-import mz.co.vida.Helper.Preferencias;
+import mz.co.vida.helpers.Preferencias;
 import de.hdodenhof.circleimageview.CircleImageView;
 import lib.kingja.switchbutton.SwitchMultiButton;
-import mz.co.vida.entidades.Usuario;
+import mz.co.vida.R;
+import mz.co.vida.entities.Usuario;
 
 
 public class RegistoActivity extends AppCompatActivity {
@@ -145,28 +145,28 @@ public class RegistoActivity extends AppCompatActivity {
         //Tipo sanguíneo
         switch (String.valueOf(bt_TipoSangue.getSelectedTab())) {
             case "0":
-                usuario.setTipoSanguineo("A+");
+                usuario.setTipo_sangue("A+");
                 break;
             case "1":
-                usuario.setTipoSanguineo("B+");
+                usuario.setTipo_sangue("B+");
                 break;
             case "2":
-                usuario.setTipoSanguineo("AB+");
+                usuario.setTipo_sangue("AB+");
                 break;
             case "3":
-                usuario.setTipoSanguineo("O+");
+                usuario.setTipo_sangue("O+");
                 break;
             case "4":
-                usuario.setTipoSanguineo("A-");
+                usuario.setTipo_sangue("A-");
                 break;
             case "5":
-                usuario.setTipoSanguineo("B-");
+                usuario.setTipo_sangue("B-");
                 break;
             case "6":
-                usuario.setTipoSanguineo("AB-");
+                usuario.setTipo_sangue("AB-");
                 break;
             default:
-                usuario.setTipoSanguineo("O-");
+                usuario.setTipo_sangue("O-");
                 break;
         }
 
@@ -180,7 +180,7 @@ public class RegistoActivity extends AppCompatActivity {
 
                 usuario.setNome(mNome.getText().toString());
                 usuario.setEmail(mEmail.getText().toString().trim().toLowerCase());
-                usuario.setTelefone(mTelefone.getText().toString());
+                usuario.setContacto(mTelefone.getText().toString());
                 usuario.setSenha(mSenha.getText().toString());
                 usuario.setUnidadeProxima(mUnidade_Proxima.getText().toString());
                 usuario.setProvincia(provincias.getSelectedItem().toString());
@@ -190,51 +190,55 @@ public class RegistoActivity extends AppCompatActivity {
                 Log.i(TAG, "INFO " + usuario.getProvincia());
                 //Estado
 
-                if (String.valueOf(bt_estado.getSelectedTab()).equals("0")) {
+//                if (String.valueOf(bt_estado.getSelectedTab()).equals("0")) {
                     usuario.setEstado("Doador");
                     if (mDisponibilidade.isChecked()) {
                         usuario.setDisponibilidade("Sim");
                     } else {
                         usuario.setDisponibilidade("Não");
                     }
-                } else if (String.valueOf(bt_estado.getSelectedTab()).equals("1")) {
+//                } else if (String.valueOf(bt_estado.getSelectedTab()).equals("1")) {
                     usuario.setEstado("Requistante");
                     mDisponibilidade.setVisibility(View.INVISIBLE);
                     usuario.setDisponibilidade(null);
-                }
-                if (mNome.getText().toString().isEmpty()) {
+//                }
+
+//                if (mNome.getText().toString().isEmpty()) {
                     mNome.setError("Nome Inválido");
                     mNome.requestFocus();
-                } else if (mTelefone.getText().length() < 9) {
+//                }
+//
+//                if (mTelefone.getText().length() < 9) {
                     mTelefone.setError("Digite um número válido");
                     mTelefone.requestFocus();
-                } else if (mEmail.getText().toString().isEmpty()) {
+//                }
+//
+//                if (mEmail.getText().toString().isEmpty()) {
                     mEmail.setError("Digite o email");
                     mEmail.requestFocus();
-                } else if (mSenha.getText().toString().isEmpty()) {
+//                } else if (mSenha.getText().toString().isEmpty()) {
                     mSenha.setError("Digite a senha");
                     mSenha.requestFocus();
-                } else if (mSenha.getText().length() < 8){
+//                } else if (mSenha.getText().length() < 8){
                     mSenha.setError("A mínimo 8 digitos");
-                }
-                else if (!mSenhaConf.getText().toString().trim().equals(mSenha.getText().toString().trim())) {
+//                }
+//                else if (!mSenhaConf.getText().toString().trim().equals(mSenha.getText().toString().trim())) {
                         mSenhaConf.setError("Senhas incopatíveis");
                         mSenhaConf.requestFocus();
-                }else if(provincias.getSelectedItem().equals("Províncias")){
+//                }else if(provincias.getSelectedItem().equals("Províncias")){
                     Toast.makeText(RegistoActivity.this, "Seleccione uma provincia válida", Toast.LENGTH_SHORT).show();
 
-                }//Sexo
-                else if (rbMasculino.isChecked()) {
+//                }//Sexo
+//                else if (rbMasculino.isChecked()) {
                     usuario.setSexo("Femenino");
-                } else if (rbFemenino.isChecked()) {
+//                } else if (rbFemenino.isChecked()) {
                     usuario.setSexo("Masculino");
-                } else if (rbOutro.isChecked()) {
+//                } else if (rbOutro.isChecked()) {
                     usuario.setSexo("Outro");
-                }
-                else {
-                        uploadProfileImage();
-                        registarUser();
-                    }
+//                }
+
+                uploadProfileImage();
+                registarUser();
             }
         });
     }
@@ -258,6 +262,7 @@ public class RegistoActivity extends AppCompatActivity {
         if (mainImageURI != null) {
             imageRef = storageref.child("imagens/").child("perfil" + UUID.randomUUID().toString());
             //final ProgressDialog progressDialog = new ProgressDialog(this);
+
             UploadTask uploadTask = imageRef.putFile(mainImageURI);
             //Log.i(TAG, "Referencia" + mainImageURI);
             Task<Uri> urlTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {

@@ -1,25 +1,27 @@
-package mz.co.vida;
+package mz.co.vida.utils;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import com.github.ivbaranov.mli.MaterialLetterIcon;
 import com.robertlevonyan.views.chip.Chip;
-
 import java.util.List;
 
-import mz.co.vida.entidades.Post;
-import mz.co.vida.entidades.PostReq;
+import mz.co.vida.R;
+import mz.co.vida.entities.Doador;
+import mz.co.vida.entities.Requisitante;
 
-public class PostAdapterResquisitantes extends RecyclerView.Adapter<PostAdapterResquisitantes.PostViewHolder> {
+public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder> {
 
-    private List<PostReq> mPostsList;
     private Context mContext;
+    private List<Doador> mDoadorList;
+    private List<Requisitante> mRequisitanteList;
+
     //private AdapterView.OnItemClickListener onItemClickListener;
     private OnItemClickListener mListener;
 
@@ -27,51 +29,59 @@ public class PostAdapterResquisitantes extends RecyclerView.Adapter<PostAdapterR
         void onItemClick(int position);
     }
 
-
     public void setOnClickListener(OnItemClickListener listener){
         mListener = listener;
     }
 
 
-
-    public PostAdapterResquisitantes(Context context, List<PostReq> postsList) {
+    public PostAdapter(Context context, @Nullable List<Doador> doadorList, @Nullable List<Requisitante> requisitanteList) {
         mContext = context;
-        mPostsList = postsList;
+        mDoadorList = doadorList;
+        mRequisitanteList = requisitanteList;
     }
 
     @Override
     public PostViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater inflater = LayoutInflater.from(mContext);
-        View view = inflater.inflate(R.layout.doadores_list, viewGroup, false);
-//        status = ProfileActivity.status;
+        View view = inflater.inflate(R.layout.anuncios_list, viewGroup, false);
         return new PostViewHolder(view, mListener);
     }
 
     @Override
     public void onBindViewHolder(@NonNull PostViewHolder holder, final int position) {
 
-        if ((mPostsList != null) && (mPostsList.size() >0)) {
-            PostReq post = mPostsList.get(position);
+        if (mDoadorList != null && mDoadorList.size() > 0) {
+            Doador doador = mDoadorList.get(position);
 
-            holder.tv_id.setText(post.getUidUser());
-            holder.tv_nome.setText(post.getNome());
-            holder.tv_estado.setChipText(post.getEstado());
-            holder.tv_provincia.setText(post.getLocalizacao());
-            holder.tv_data.setText(post.getDataDoacao());
-            holder.mli_tipoSangue.setLetter(post.getTipo_sangue());
+            holder.tv_id.setText(doador.getUidUser());
+            holder.tv_nome.setText(doador.getNome());
+            holder.tv_provincia.setText(doador.getProvincia());
+            holder.mli_tipoSangue.setLetter(doador.getTipo_sangue());
+            holder.tv_estado.setChipText("Doador");
+
+        } else if (mRequisitanteList != null && mRequisitanteList.size() > 0){
+            Requisitante requisitante = mRequisitanteList.get(position);
+
+            holder.tv_id.setText(requisitante.getId());
+            holder.tv_nome.setText(requisitante.getNome());
+            holder.tv_provincia.setText(requisitante.getProvincia());
+            holder.mli_tipoSangue.setLetter(requisitante.getTipo_sangue());
+            holder.tv_data.setText(requisitante.getDataDoacao());
+            holder.tv_estado.setChipText("Requisitante");
         }
     }
 
     @Override
     public int getItemCount() {
-        return mPostsList.size();
+        if (mDoadorList != null){
+            return mDoadorList.size();
+        } else {
+            return mRequisitanteList.size();
+        }
     }
 
-//    public void setOnItemClickListener(AdapterView.OnItemClickListener onItemClickListener) {
-//        this.onItemClickListener = onItemClickListener;
-//    }
 
-    class PostViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    class PostViewHolder extends RecyclerView.ViewHolder {
         MaterialLetterIcon mli_tipoSangue;
         TextView tv_nome, tv_data, tv_provincia, tv_id;
         Chip tv_estado;
@@ -97,13 +107,6 @@ public class PostAdapterResquisitantes extends RecyclerView.Adapter<PostAdapterR
                    }
                }
            });
-        }
-
-        @Override
-        public void onClick(View v) {
-//            mSelectedItem = getAdapterPosition();
-//            notifyItemRangeChanged(0, mSingleCheckList.size());
-//            mAdapter.onItemHolderClick(PostViewHolder.this);
         }
     }
 }
