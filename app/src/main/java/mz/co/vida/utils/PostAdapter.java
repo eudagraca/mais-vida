@@ -11,7 +11,6 @@ import android.widget.TextView;
 import com.github.ivbaranov.mli.MaterialLetterIcon;
 import com.robertlevonyan.views.chip.Chip;
 import java.util.List;
-
 import mz.co.vida.R;
 import mz.co.vida.entities.Doador;
 import mz.co.vida.entities.Requisitante;
@@ -22,7 +21,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
     private List<Doador> mDoadorList;
     private List<Requisitante> mRequisitanteList;
 
-    //private AdapterView.OnItemClickListener onItemClickListener;
     private OnItemClickListener mListener;
 
     public interface OnItemClickListener {
@@ -32,7 +30,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
     public void setOnClickListener(OnItemClickListener listener){
         mListener = listener;
     }
-
 
     public PostAdapter(Context context, @Nullable List<Doador> doadorList, @Nullable List<Requisitante> requisitanteList) {
         mContext = context;
@@ -53,11 +50,11 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
         if (mDoadorList != null && mDoadorList.size() > 0) {
             Doador doador = mDoadorList.get(position);
 
-            holder.tv_id.setText(doador.getUidUser());
+            holder.tv_id.setText(doador.getUser_id());
             holder.tv_nome.setText(doador.getNome());
             holder.tv_provincia.setText(doador.getProvincia());
             holder.mli_tipoSangue.setLetter(doador.getTipo_sangue());
-            holder.tv_estado.setChipText("Doador");
+            holder.tv_estado.setChipText(MyUtils.DOADOR);
 
         } else if (mRequisitanteList != null && mRequisitanteList.size() > 0){
             Requisitante requisitante = mRequisitanteList.get(position);
@@ -66,8 +63,8 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
             holder.tv_nome.setText(requisitante.getNome());
             holder.tv_provincia.setText(requisitante.getProvincia());
             holder.mli_tipoSangue.setLetter(requisitante.getTipo_sangue());
-            holder.tv_data.setText(requisitante.getDataDoacao());
-            holder.tv_estado.setChipText("Requisitante");
+            holder.tv_data.setText(requisitante.getData());
+            holder.tv_estado.setChipText(MyUtils.REQUISITANTE);
         }
     }
 
@@ -80,7 +77,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
         }
     }
 
-
     class PostViewHolder extends RecyclerView.ViewHolder {
         MaterialLetterIcon mli_tipoSangue;
         TextView tv_nome, tv_data, tv_provincia, tv_id;
@@ -89,7 +85,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
    PostViewHolder(View itemView, final OnItemClickListener listener) {
             super(itemView);
 
-       tv_id = itemView.findViewById(R.id.tv_id);
+            tv_id = itemView.findViewById(R.id.tv_id);
             mli_tipoSangue = itemView.findViewById(R.id.mli_tipoSangue);
             tv_nome = itemView.findViewById(R.id.tv_nome);
             tv_data = itemView.findViewById(R.id.tv_data);

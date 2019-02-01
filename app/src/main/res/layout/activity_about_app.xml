@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/md_white_1000"
+    tools:context=".activities.AboutAppActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/md_white_1000">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_white_1000"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/bt_back_more_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/fui_transparent"
+                    android:drawableStart="@drawable/ic_back"
+                    android:textAlignment="center" />
+
+                <ImageView
+                    android:layout_width="139dp"
+                    android:layout_height="140dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_mais_vida_logo" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@color/vermelho_padrao" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.codesgood.views.JustifiedTextView
+                    android:id="@+id/tv_justified_paragraph"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:padding="10dp"
+                    android:text="O +vida, desenvolvido por estudantes e amantes de informática, é um aplicativo colaborativo cuja intenção é promover e incentivar a doação de sangue envolvendo a população moçambicana."
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:text="Versão"
+                android:textColor="@color/vermelho_padrao"
+                android:textSize="16sp" />
+
+
+            <Button
+                android:id="@+id/bt_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/fui_transparent"
+                android:drawableTop="@drawable/ic_exit"
+                android:fontFamily="@font/product_r"
+                android:text="Logout"
+                android:layout_marginStart="5dp"
+                android:textAllCaps="false"
+                android:textColor="@color/md_black_1000"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bt_help" />
+
+            <!--
+            <Button
+                android:id="@+id/bt_apagar_conta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/fui_transparent"
+                android:drawableTop="@drawable/ic_delete"
+                android:fontFamily="@font/product_r"
+                android:text="Apagar conta"
+                android:textAllCaps="false"
+                android:textColor="@color/md_black_1000"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bt_logout" />
+
+                -->
+
+        </LinearLayout>
+
+</FrameLayout>

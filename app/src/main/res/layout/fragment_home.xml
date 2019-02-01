@@ -6,7 +6,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.HomeFragment">
 
+
     <LinearLayout
+        android:background="@color/md_white_1000"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -15,7 +17,6 @@
             android:id="@+id/tl_donnor_reqq"
             android:layout_width="match_parent"
             android:layout_height="57dp"
-            android:layout_alignParentTop="true"
             android:background="@color/md_white_1000"
             app:tabGravity="center"
             app:tabIndicatorColor="@color/vermelho_padrao"
@@ -23,31 +24,30 @@
             app:tabTextColor="@color/md_black_1000">
 
             <android.support.design.widget.TabItem
-                android:id="@+id/tab_doador"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Doadores" />
 
             <android.support.design.widget.TabItem
-                android:id="@+id/tab_req"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Requisitantes" />
+                android:text="Requisições" />
 
-            <android.support.design.widget.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:icon="@drawable/ic_search" />
         </android.support.design.widget.TabLayout>
-
+        
+        <SearchView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:tooltipText="Tipo de usuario">
+        </SearchView>
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_posts"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentBottom="false"
             android:background="@color/md_white_1000"
             android:scrollbars="vertical"
-            android:visibility="gone"
+            android:visibility="visible"
             tools:listitem="@layout/anuncios_list">
 
         </android.support.v7.widget.RecyclerView>
@@ -59,13 +59,13 @@
             android:background="@color/md_grey_100"
             android:gravity="center"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <ImageView
-                android:id="@+id/iv_emptyImage"
                 android:layout_width="120dp"
                 android:layout_height="80dp"
-                android:src="@drawable/flag_angola" />
+                android:contentDescription="Vasio"
+                android:src="@drawable/ic_empty_box" />
 
             <TextView
                 android:id="@+id/tv_emptyInfo"
@@ -73,7 +73,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:fontFamily="@font/courgette"
-                android:text="Nenhum doador disponível."
                 android:textSize="18sp" />
         </LinearLayout>
 

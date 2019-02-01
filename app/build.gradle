@@ -31,18 +31,20 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     // Firebase
-    implementation 'com.google.firebase:firebase-auth:16.0.5'
+    implementation 'com.google.firebase:firebase-auth:16.1.0'
     implementation 'com.google.firebase:firebase-storage:16.0.5'
     implementation 'com.google.android.gms:play-services-auth:16.0.1'
     implementation 'com.firebaseui:firebase-ui-auth:3.3.1'
-    implementation 'com.google.firebase:firebase-database:16.0.5'
+    implementation 'com.google.firebase:firebase-database:16.0.6'
     implementation 'com.google.firebase:firebase-core:16.0.5'
 
     //Date picker
     implementation 'com.phlox.widget:android-date-picker:0.2.1'
     //ToggloButton
     implementation 'com.zcw:togglebutton-library:1.0.0'
-    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //Image retrieve
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
     //Button nav
     implementation 'com.hbb20:ccp:1.7.2'
     //Circle text
@@ -51,15 +53,23 @@ dependencies {
     implementation 'lib.kingja.switchbutton:switchbutton:1.1.7'
     //Special button
     implementation 'com.github.medyo:fancybuttons:1.9.0'
-    implementation 'com.codesgood:justifiedtextview:1.0.2'
     //Circle image view
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     //Chip chip
     implementation 'com.robertlevonyan.view:MaterialChipView:1.2.4'
     //call permission
     implementation 'com.karumi:dexter:5.0.0'
-    //Dialog
-    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+    //text justify
+    implementation 'com.codesgood:justifiedtextview:1.1.0'
+
+    //Dialog loading
+    implementation 'com.github.f0ris.sweetalert:library:1.5.1'
+    //swich
+    implementation 'com.github.GwonHyeok:StickySwitch:0.0.15'
+
+    //Toggle
+    implementation 'com.github.angads25:toggle:1.1.0'
+
 
 }
 configurations.all {
@@ -71,6 +81,12 @@ configurations.all {
             }
         }
 
+    }
+}
+android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 // ADD THIS AT THE BOTTOM

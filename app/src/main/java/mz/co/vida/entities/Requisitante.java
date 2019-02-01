@@ -2,15 +2,15 @@ package mz.co.vida.entities;
 
 public class Requisitante {
 
-    public String id;
-    public String nome;
-    public String provincia;
-    public String tipo_sangue;
-    public String estado;
-    public String contacto;
-    public String unidadeProxima;
+    private String user_id;
+    private String nome;
+    private String provincia;
+    private String tipo_sangue;
+    private String estado;
+    private String contacto;
+    private String unidadeProxima;
     private int quantSanguinea;
-    private String dataDoacao;
+    private String data;
     private String descricao;
 
 
@@ -18,16 +18,16 @@ public class Requisitante {
 
     }
 
-    public Requisitante(String estado, String nome, String telefone, String unidadeProxima, int quantSanguinea, String dataDoacao, String comentario, String localizacao, String id, String tipo_sangue) {
+    public Requisitante(String estado, String nome, String telefone, String unidadeProxima, int quantSanguinea, String data, String comentario, String localizacao, String user_id, String tipo_sangue) {
         this.estado = estado;
         this.nome = nome;
         this.contacto = telefone;
         this.unidadeProxima = unidadeProxima;
         this.quantSanguinea = quantSanguinea;
-        this.dataDoacao = dataDoacao;
+        this.data = data;
         this.descricao = comentario;
         this.provincia = localizacao;
-        this.id = id;
+        this.user_id = user_id;
         this.tipo_sangue = tipo_sangue;
     }
 
@@ -72,12 +72,12 @@ public class Requisitante {
         this.quantSanguinea = quantSanguinea;
     }
 
-    public String getDataDoacao() {
-        return dataDoacao;
+    public String getData() {
+        return data;
     }
 
-    public void setDataDoacao(String dataDoacao) {
-        this.dataDoacao = dataDoacao;
+    public void setData(String data) {
+        this.data = data;
     }
 
     public String getDescricao() {
@@ -97,11 +97,11 @@ public class Requisitante {
     }
 
     public String getId() {
-        return id;
+        return user_id;
     }
 
     public void setId(String id) {
-        this.id = id;
+        this.user_id = id;
     }
 
     public String getTipo_sangue() {

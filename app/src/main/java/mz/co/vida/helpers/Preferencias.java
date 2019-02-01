@@ -7,25 +7,31 @@ import android.content.SharedPreferences;
 //Grava o usuario no celular
 public class Preferencias {
 
-    private Context context;
     private SharedPreferences preferences;
-    private int MODE= 0;
     private SharedPreferences.Editor  editor;
 
     private final String CHAVE_IDENTIFICADOR= "identificarUsuarioNaApp";
     private final String CHAVE_NOME ="nomeUsuario";
 
-
     public Preferencias(Context context) {
 
-        this.context = context;
         String NOME_ARQUIVO = "VIDA.Preferencias";
-        preferences = context.getSharedPreferences(NOME_ARQUIVO,MODE);
+        int MODE = 0;
+        preferences = context.getSharedPreferences(NOME_ARQUIVO, MODE);
 
         editor = preferences.edit();
-        editor.commit();
+        editor.apply();
     }
 
+    public void delete_data(Context ctx){
+        String NOME_ARQUIVO = "VIDA.Preferencias";
+        int MODE = 0;
+        preferences = ctx.getSharedPreferences(NOME_ARQUIVO, MODE);
+        editor = preferences.edit();
+        editor.clear();
+        editor.apply();
+
+    }
 
     public void gravarUsuario(String identificarUsuarioNaApp, String nomeUsuario){
         editor.putString(CHAVE_IDENTIFICADOR, identificarUsuarioNaApp);

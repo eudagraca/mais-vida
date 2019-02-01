@@ -4,12 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/md_white_1000"
-    android:padding="10dp"
+    android:background="@color/vermelho_padrao"
     tools:context="mz.co.vida.activities.MainActivity"
     android:orientation="vertical">
-
-
 
 
     <LinearLayout
@@ -34,21 +31,22 @@
             android:layout_marginTop="20dp"
             android:textSize="40sp"
             android:textStyle="bold"
-            android:textColor="@color/vermelho_padrao"
+            android:textColor="@color/md_white_1000"
             android:fontFamily="@font/courgette"
             android:text="@string/palavra_doacao"/>
 
         <com.codesgood.views.JustifiedTextView
+            android:id="@+id/tv_justified_paragraph"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:textAlignment="center"
             android:fontFamily="@font/product_r"
-            android:padding="0.5sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:padding="10dp"
             android:text="@string/texto"
-            android:textColor="@color/md_black_1000"
+            android:textColor="@android:color/white"
             android:textSize="18sp" />
+
 
       <!--  <com.google.android.gms.common.SignInButton-->
           <!--  android:id="@+id/signInButton"-->
@@ -58,29 +56,13 @@
             <!--android:layout_marginTop="100dp" />-->
         <Button
             android:id="@+id/bt"
-            android:layout_width="20dp"
-            android:layout_height="36dp"
+            android:layout_width="22dp"
+            android:layout_height="38dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:background="@drawable/ic_next_1" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/product_r"
-            android:text="@string/seguinte"
-            android:textColor="@color/md_black_1000"
-            android:textSize="18sp"
-            android:layout_gravity="center"/>
+            android:background="@drawable/ic_next_1"
+            android:backgroundTint="@color/md_white_1000" />
 
     </LinearLayout>
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:visibility="gone"
-        />
 
 </android.support.constraint.ConstraintLayout>

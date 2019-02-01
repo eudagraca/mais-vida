@@ -14,7 +14,6 @@
         app:cardElevation="4dp">
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/vermelho_padrao"
@@ -34,7 +33,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:fontFamily="@font/courgette"
-                    android:drawableStart="@drawable/ic_back"
+                    android:drawableStart="@drawable/ic_back_white"
                     android:drawablePadding="16dp"
                     android:text="Stélio Braga"
                     android:textColor="@color/md_white_1000"

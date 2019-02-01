@@ -15,29 +15,40 @@ public class Anuncio {
     private String id;
     private String estado;
     private String tipo_sangue;
+    private String contacto;
+
 
 
     public Anuncio() {
     }
 
-    public void gravar(){
+    public boolean gravar(){
         DatabaseReference dbRef = ConfiguracaoFirebase.getFirebase();
-        dbRef.child("anuncios").child(String.valueOf(getId())).setValue(toMap());
+        return dbRef.child("anuncios").child(String.valueOf(getId())).setValue(toMap()).isSuccessful();
     }
 
     @Exclude
-    public Map<String, Object> toMap(){
+    private Map<String, Object> toMap(){
         HashMap<String, Object> hashMapUser = new HashMap<>();
 
         hashMapUser.put("nome", getNome());
         hashMapUser.put("data", getDataDoacao());
-        hashMapUser.put("quantidade", getQuantSanguinea());
+        hashMapUser.put("quantSanguinea", getQuantSanguinea());
         hashMapUser.put("descricao", getDescricao());
         hashMapUser.put("provincia", getProvincia());
         hashMapUser.put("estado", getEstado());
         hashMapUser.put("tipo_sangue", getTipo_sangue());
+        hashMapUser.put("contacto", getContacto());
 
         return hashMapUser;
+    }
+
+    private String getContacto() {
+        return contacto;
+    }
+
+    public void setContacto(String contacto) {
+        this.contacto = contacto;
     }
 
     public int getQuantSanguinea() {
@@ -60,11 +71,11 @@ public class Anuncio {
         return descricao;
     }
 
-    public void setDescricao(String comentario) {
+    public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
 
-    public String getNome() {
+    private String getNome() {
         return nome;
     }
 
@@ -72,7 +83,7 @@ public class Anuncio {
         this.nome = nome;
     }
 
-    public String getId() {
+    private String getId() {
         return id;
     }
 
@@ -80,7 +91,7 @@ public class Anuncio {
         this.id = id;
     }
 
-    public String getEstado() {
+    private String getEstado() {
         return estado;
     }
 
@@ -88,7 +99,7 @@ public class Anuncio {
         this.estado = estado;
     }
 
-    public String getProvincia() {
+    private String getProvincia() {
         return provincia;
     }
 
@@ -96,7 +107,7 @@ public class Anuncio {
         this.provincia = provincia;
     }
 
-    public String getTipo_sangue() {
+    private String getTipo_sangue() {
         return tipo_sangue;
     }
 

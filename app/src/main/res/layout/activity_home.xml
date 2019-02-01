@@ -11,7 +11,6 @@
         android:id="@+id/fl_framelayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/nav_main"
         android:layout_weight="1"
         android:background="@color/md_white_1000"
         app:layout_constraintBottom_toTopOf="@+id/nav_main"
@@ -19,10 +18,8 @@
         app:layout_constraintTop_toBottomOf="@+id/tl_donnor_reqq" />
 
     <View
-        android:id="@+id/view4"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_above="@id/nav_main"
         android:layout_weight="0"
         android:background="@color/md_red_A700"
         app:layout_constraintBottom_toTopOf="@+id/nav_main" />
@@ -31,7 +28,6 @@
         android:id="@+id/nav_main"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
         android:layout_weight="0"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -26,14 +26,12 @@ public class MainActivity extends AppCompatActivity /*implements GoogleApiClient
 
     private ProgressBar progressBar;*/
 
-    private FirebaseAuth mAuth;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mAuth = ConfiguracaoFirebase.getFirebaseAuth();
+        FirebaseAuth mAuth = ConfiguracaoFirebase.getFirebaseAuth();
 
         if (mAuth.getCurrentUser() != null) {
             // User is signed in (getCurrentUser() will be null if not signed in)

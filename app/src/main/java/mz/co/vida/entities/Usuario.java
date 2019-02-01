@@ -1,18 +1,24 @@
 package mz.co.vida.entities;
 
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Exclude;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import mz.co.vida.DAO.ConfiguracaoFirebase;
+import mz.co.vida.activities.Profile_UpdadeActivity;
+import mz.co.vida.utils.MyUtils;
 
 public class Usuario {
 
-    private String uidUser;
+    private String user_id;
     private String nome;
-
     private String contacto;
     private String sexo;
     private String email;
@@ -26,44 +32,58 @@ public class Usuario {
 
     public Usuario() { }
 
-    public Usuario(String uidUser, String nome, String telefone, String sexo, String email, String senha, String provincia, String unidadeProxima, String tipoSanguineo, String disponibilidade, String estado, String foto) {
-        this.uidUser = uidUser;
-        this.nome = nome;
-        this.contacto = telefone;
-        this.sexo = sexo;
-        this.email = email;
-        this.senha = senha;
-        this.provincia = provincia;
-        this.unidadeProxima = unidadeProxima;
-        this.tipo_sangue = tipoSanguineo;
-        this.disponibilidade = disponibilidade;
-        this.estado = estado;
-        this.foto = foto;
-    }
 
     public void gravar(){
         DatabaseReference dbRef = ConfiguracaoFirebase.getFirebase();
-        dbRef.child("Usuario").child(String.valueOf(getUidUser())).setValue(toMap());
-       // dbRef.child("foto de perfil").setValue(getFoto());
+        dbRef.child("Usuario").child(String.valueOf(getUser_id())).setValue(toMap());
+    }
+
+    private StorageReference storageReference;
+
+
+    public void update(String key){
+        DatabaseReference databaseReference = ConfiguracaoFirebase.getFirebase();
+        databaseReference.child("Usuario").child(key).updateChildren(toMapUpdate());
     }
 
     @Exclude
-    public Map <String, Object> toMap(){
+    private Map <String, Object> toMap(){
         HashMap<String, Object> hashMapUser = new HashMap<>();
-        hashMapUser.put("id", getUidUser());
+        hashMapUser.put("user_id", getUser_id());
         hashMapUser.put("nome", getNome());
         hashMapUser.put("email", getEmail());
+        hashMapUser.put("foto", getFoto());
         hashMapUser.put("senha", getSenha());
         hashMapUser.put("contacto", getContacto());
         hashMapUser.put("sexo", getSexo());
-        hashMapUser.put("localizacao", getProvincia());
+        hashMapUser.put("provincia", getProvincia());
         hashMapUser.put("unidadeProxima", getUnidadeProxima());
         hashMapUser.put("tipo_sangue", getTipo_sangue());
         hashMapUser.put("disponibilidade", getDisponibilidade());
         hashMapUser.put("estado", getEstado());
-        hashMapUser.put("fotoPerfil", getFoto());
         return hashMapUser;
     }
+
+    @Exclude
+    private Map <String, Object> toMapFoto(){
+        HashMap<String, Object> hashMapUser = new HashMap<>();
+        hashMapUser.put("foto", getFoto());
+        return hashMapUser;
+    }
+
+
+    @Exclude
+    private Map <String, Object> toMapUpdate(){
+        HashMap<String, Object> hashMapUser = new HashMap<>();
+        hashMapUser.put("contacto", getContacto());
+        hashMapUser.put("sexo", getSexo());
+        hashMapUser.put("provincia", getProvincia());
+        hashMapUser.put("unidadeProxima", getUnidadeProxima());
+        hashMapUser.put("disponibilidade", getDisponibilidade());
+        hashMapUser.put("estado", getEstado());
+        return hashMapUser;
+    }
+
 
     public String getEstado() {
         return estado;
@@ -73,12 +93,12 @@ public class Usuario {
         this.estado = estado;
     }
 
-    public String getUidUser() {
-        return uidUser;
+    private String getUser_id() {
+        return user_id;
     }
 
     public void setUidUser(String uidUser) {
-        this.uidUser = uidUser;
+        this.user_id = uidUser;
     }
 
     public String getNome() {

@@ -1,13 +1,10 @@
 <resources>
-    <string name="app_name">+Vida</string>
-    <string name="tipo_sangue">Tipo Sanguíneo</string>
+    <string name="app_name">+vida</string>
     <string name="nomedoador">Nome Completo </string>
-    <string name="eml">E-mail</string>
-    <string name="email">Nome de usuário</string>
+    <string name="email">email@exemplo.com</string>
     <string name="f_pass">Esqueceu a senha?</string>
-    <string name="apelidodoador">Nome </string>
     <string name="pergunta">Não tem uma conta?</string>
-    <string name="criar_conta">Crie uma</string>
+    <string name="criar_conta">Criar conta</string>
     <string name="sexo">Sexo:</string>
     <string name="sangue">Grupo Sanguíneo</string>
     <string name="uP">Unidade Mais Próxima</string>
@@ -17,14 +14,10 @@
     <string name="doacao">Doação</string>
     <string name="logo">Logotipo</string>
     <string name="disponibilidade">Disponibilidade para doar:</string>
-    <string name="contacto">Contacto Telefónico</string>
-    <string name="photo_perfil">Seleccione a foto de perfil</string>
+    <string name="contacto">Contacto</string>
     <string name="quant">Quantidade sanguínea: </string>
 
-    <string name="seguinte">Seguinte</string>
-
     <string name="prov">Províncias</string>
-    <string name="resgistado_com_sucesso">Registado com sucesso</string>
 
     <!--Province-->
     <string-array name="provincias">
@@ -60,23 +53,11 @@
     </array>
 
 
-    <string name="not_log_in">Não se pode iniciar sessão</string>
-    <string name="not_firebase_auth">Não se pode autenticar com Firebase</string>
-
-
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Senha</string>
-    <string name="action_sign_up">Regista-se</string>
     <string name="action_sign">Entrar</string>
     <string name="confirm_senha">Confirme a senha</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">A senha deve ter tamanho mínimo 8 </string>
-    <string name="error_incorrect_password">Esta senha é incorrecta</string>
-    <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
-    </string>
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="registar">Registar</string>
     <string name="outro">Outro</string>
@@ -84,32 +65,25 @@
     <string name="femenino">Femenino</string>
     <string name="enviar_requisi_o">Redefinir a senha</string>
     <string name="logotipo">Logotipo</string>
-    <string name="entrar">Entrar</string>
     <string name="palavra_doacao">Doação</string>
     <string name="redifinicao_senha">Nós precisamos do seu e-mail de registo para enviar as instruções de redefinição de senha</string>
 
 
-    <string name="redefinir_senha">Redefinir senha</string>
-    <string name="texto_redifinir_senha">Digite a sua senha abaixo, estamos apenas sendo mais seguros</string>
-    <string name="newPassword">Nova senha</string>
-
-    <string name="email_verification">Consulte a sua caixa de email para confirmar</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="meu_perfil">Meu Perfil</string>
-    <string name="sobre">Sobre</string>
-    <string name="anunciar">Anunciar</string>
-    <string name="pesquisa">Pesquisar</string>
+    <string name="Mais">Mais</string>
+    <string name="anunciar">Requisitar</string>
     <string name="informacao_pesoal">Informação Pessoal</string>
     <string name="endereco">Endereço</string>
-    <string name="editar">Editar</string>
-    <string name="notificacoes">Notificações</string>
     <string name="data_para_doacao">Data para doação</string>
     <string name="introduza_o_seu_email">Introduza o seu email</string>
-    <string name="meus_anuncios">Meus anúncios</string>
+
+    <string name="title_activity_app_describe">AppDescribeActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="title_activity_about_app">AboutAppActivity</string>
 </resources>

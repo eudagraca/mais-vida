@@ -4,24 +4,16 @@ public class Doador {
 
     public Doador(){}
 
-    public String uidUser;
-    public String nome;
-    public String provincia;
-    public String tipo_sangue;
+    private String user_id;
+    private String nome;
+    private String provincia;
+    private String tipo_sangue;
+    private String disponibilidade;
 
-    public Doador(String uidUser, String nome, String tipo_sangue, String provincia) {
-        this.uidUser = uidUser;
-        this.nome = nome;
-        this.tipo_sangue = tipo_sangue;
-        this.provincia = provincia;
-    }
 
-    public String getUidUser() {
-        return uidUser;
-    }
 
-    public void setUidUser(String uidUser) {
-        this.uidUser = uidUser;
+    public String getUser_id() {
+        return user_id;
     }
 
     public String getNome() {
@@ -44,7 +36,11 @@ public class Doador {
         return provincia;
     }
 
-    public void setProvincia(String provincia) {
-        this.provincia = provincia;
+    public String getDisponibilidade() {
+        return disponibilidade;
+    }
+
+    public void setDisponibilidade(String disponibilidade) {
+        this.disponibilidade = disponibilidade;
     }
 }
