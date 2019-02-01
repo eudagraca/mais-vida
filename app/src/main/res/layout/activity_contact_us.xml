@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/md_white_1000"
+    tools:context=".activities.ContactUsActivity">
+
+    <Button
+        android:id="@+id/back_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/fui_transparent"
+        android:drawableStart="@drawable/ic_back"
+        android:layout_margin="24dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+
+        <TextView
+            android:id="@+id/tv_call_to_vida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+25845395142"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_phone_contact"
+            android:layout_marginStart="24dp"
+            android:textSize="18sp"
+            android:textColor="@color/md_black_1000"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chambone 2, Maxixe, Inhambane"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_localizacao"
+            android:layout_marginStart="24dp"
+            android:textSize="18sp"
+            android:textColor="@color/md_black_1000"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_email_vida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="vida@info.com"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="20dp"
+            android:drawableStart="@drawable/ic_email"
+            android:layout_marginStart="24dp"
+            android:textSize="18sp"
+            android:textColor="@color/md_black_1000"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_web_vida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="vida.co.mz"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="10dp"
+            android:layout_marginStart="24dp"
+            android:textSize="18sp"
+            android:drawableStart="@drawable/ic_language"
+            android:textColor="@color/md_black_1000"
+            android:layout_marginBottom="5dp"/>
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="20dp"
+            android:padding="20dp"
+            android:hint="Mensagem"
+            android:background="@drawable/et"
+            android:textSize="18sp"
+            android:layout_marginBottom="20dp"
+            android:maxLength="250"
+            />
+
+        <Button
+            android:id="@+id/bt_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Submeter"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:textSize="16sp"
+            android:textColor="@color/md_white_1000"
+            android:background="@drawable/btn_shape"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+   </FrameLayout>
