@@ -16,9 +16,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecde633f-1f16-41d1-8f82-d48316318a8a" name="Default" comment="Update, more info, about us. etc">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ecde633f-1f16-41d1-8f82-d48316318a8a" name="Default" comment="Update, more info, about us. etc" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -2598,7 +2596,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="17" />
       <window_info anchor="bottom" id="TODO" order="15" />
@@ -2609,7 +2606,7 @@
       <window_info anchor="bottom" id="Event Log" order="19" side_tool="true" />
       <window_info anchor="right" id="Preview" order="3" visible="true" weight="0.32980332" />
       <window_info anchor="bottom" id="Run" order="9" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="21" visible="true" weight="0.5686275" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="21" visible="true" weight="0.28921568" />
       <window_info anchor="bottom" id="Terminal" order="18" />
       <window_info anchor="bottom" id="Logcat" order="20" />
       <window_info id="Captures" order="2" weight="0.25" />
