@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.HomeFragment">
 
 
     <LinearLayout
-        android:background="@color/md_white_1000"
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/md_white_1000"
+        android:orientation="vertical">
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tl_donnor_reqq"
@@ -32,15 +32,40 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Requisições" />
-
         </android.support.design.widget.TabLayout>
-        
-        <SearchView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:tooltipText="Tipo de usuario">
-        </SearchView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <com.isapanah.awesomespinner.AwesomeSpinner
+                android:id="@+id/my_spinner"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/et"
+                android:backgroundTint="@color/gray"
+                app:spinnerDirection="ltr"
+                app:spinnerHint="Escolhe a Província" />
+
+            <com.isapanah.awesomespinner.AwesomeSpinner
+                android:id="@+id/my_spinner_blood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et"
+                android:backgroundTint="@color/gray"
+                android:outlineSpotShadowColor="@color/vermelho_padrao"
+                app:spinnerDirection="ltr"
+                app:spinnerHint="Tipo Sanguíneo" />
+
+
+        </LinearLayout>
+
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_posts"
             android:layout_width="match_parent"
@@ -52,20 +77,21 @@
 
         </android.support.v7.widget.RecyclerView>
 
+
         <LinearLayout
             android:id="@+id/ll_emptyView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/md_grey_100"
+            android:background="@color/md_white_1000"
             android:gravity="center"
             android:orientation="vertical"
             android:visibility="gone">
 
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="80dp"
-                android:contentDescription="Vasio"
-                android:src="@drawable/ic_empty_box" />
+                android:id="@+id/img_empty_home"
+                android:layout_width="100dp"
+                android:layout_height="95dp"
+                android:contentDescription="Vazio" />
 
             <TextView
                 android:id="@+id/tv_emptyInfo"
@@ -73,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:fontFamily="@font/courgette"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
     </LinearLayout>

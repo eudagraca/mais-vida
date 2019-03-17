@@ -26,7 +26,7 @@
             android:layout_height="46dp"
             android:layout_gravity="center_vertical"
             app:mli_letter_color="@color/md_white_1000"
-            app:mli_letter_size="15"
+            app:mli_letter_size="20"
             app:mli_letters_number="3"
             app:mli_shape_color="@color/md_red_900" />
 
@@ -44,7 +44,7 @@
 
                 <TextView
                     android:id="@+id/tv_nome"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:fontFamily="@font/product"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

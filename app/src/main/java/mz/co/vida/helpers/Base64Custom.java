@@ -6,7 +6,7 @@ import java.io.UnsupportedEncodingException;
 
 class Base64Custom {
 
-    public static String codificarBase64(String strToEncode){
+    public static String codificarBase64(String strToEncode) {
         byte[] data = null;
         try {
             data = strToEncode.getBytes("UTF-8");
@@ -15,5 +15,5 @@ class Base64Custom {
         }
         return Base64.encodeToString(data, Base64.NO_WRAP);
 
-          }
+    }
 }

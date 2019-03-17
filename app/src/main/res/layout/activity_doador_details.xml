@@ -33,7 +33,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:fontFamily="@font/courgette"
-                    android:drawableStart="@drawable/ic_back_white"
+                    android:drawableStart="@drawable/ic_arrow_back_white_24dp"
                     android:drawablePadding="16dp"
                     android:drawableTint="@color/md_white_1000"
                     android:text="Stélio Braga"
@@ -46,16 +46,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tv_nome"
-                    android:layout_marginStart="25dp"
+                    android:layout_marginStart="30dp"
                     android:fontFamily="@font/montserrat"
                     android:text="Doador"
                     android:textColor="@color/md_white_1000"
-                    android:textSize="14sp" />
+                    android:textSize="18sp" />
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/iv_foto"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
                     android:layout_alignBottom="@+id/tv_estado"
                     android:layout_alignParentEnd="true"
                     android:src="@drawable/ic_user" />

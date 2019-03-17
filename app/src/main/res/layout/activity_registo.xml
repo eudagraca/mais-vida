@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:fancy="http://schemas.android.com/apk/res-auto"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="@color/md_white_1000"
-              android:gravity="center"
-              android:orientation="vertical"
-              tools:context=".activities.RegistoActivity">
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/md_white_1000"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".activities.RegistoActivity">
+
+    <Button
+        android:id="@+id/voltar_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:text="Login"
+        android:textSize="18sp"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/vermelho_padrao"
+        android:textAllCaps="false"
+        android:background="@color/fui_transparent"
+        android:drawableStart="@drawable/ic_arrow_back_red_24dp" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,20 +35,6 @@
             android:orientation="vertical"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp">
-
-            <Button
-                android:id="@+id/voltar_login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:layout_marginTop="10dp"
-                android:text="Login"
-                android:textSize="18sp"
-                android:textColor="@color/vermelho_padrao"
-                android:textAllCaps="false"
-                android:drawableTint="@color/vermelho_padrao"
-                android:background="@color/fui_transparent"
-                android:drawableStart="@drawable/ic_back" />
 
             <de.hdodenhof.circleimageview.CircleImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -58,38 +59,41 @@
                 fancy:textSize="14sp" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingTop="10dp">
+                android:layout_marginTop="10dp">
 
                 <EditText
                     android:id="@+id/et_nome"
-                    android:layout_width="170dp"
+                    android:layout_width="175dp"
                     android:layout_height="35dp"
                     android:background="@drawable/et"
-                    android:backgroundTint="#e9e9e9"
+                    android:backgroundTint="@color/gray"
                     android:ems="10"
                     android:fontFamily="@font/product_r"
                     android:hint="@string/nomedoador"
                     android:inputType="textPersonName"
-                    android:paddingStart="20dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
                     android:textSize="15sp" />
-
                 <EditText
-                    android:id="@+id/et_mail"
+                    android:id="@+id/et_Phone"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
-                    android:layout_marginStart="5dp"
                     android:background="@drawable/et"
-                    android:backgroundTint="#e9e9e9"
-                    android:ems="10"
-
+                    android:paddingEnd="10dp"
+                    android:backgroundTint="@color/gray"
+                    android:paddingStart="10dp"
+                    android:maxLength="9"
+                    android:layout_marginStart="5dp"
                     android:fontFamily="@font/product_r"
-                    android:hint="@string/email"
-                    android:inputType="textEmailAddress"
-                    android:paddingStart="20dp"
-                    android:textSize="15sp" />
+                    android:hint="@string/contacto"
+                    android:inputType="phone"
+                    android:textSize="15sp"/>
+
+
+
             </LinearLayout>
 
             <LinearLayout
@@ -98,71 +102,77 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="10dp">
 
+
                 <EditText
-                    android:id="@+id/et_Phone"
-                    android:layout_width="170dp"
+                    android:id="@+id/et_mail"
+                    android:layout_width="175dp"
                     android:layout_height="35dp"
                     android:background="@drawable/et"
-                    android:backgroundTint="#e9e9e9"
-                    android:paddingStart="20dp"
-                    android:maxLength="9"
+                    android:backgroundTint="@color/gray"
+                    android:ems="10"
                     android:fontFamily="@font/product_r"
-                    android:hint="@string/contacto"
-                    android:inputType="phone"
-                    android:textSize="15sp"
-                    android:paddingEnd="0dp"/>
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textSize="15sp" />
+
 
                 <EditText
                     android:id="@+id/et_password"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:background="@drawable/et"
-                    android:backgroundTint="#e9e9e9"
-                    android:paddingStart="20dp"
+                    android:backgroundTint="@color/gray"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
                     android:layout_marginStart="5dp"
                     android:fontFamily="@font/product_r"
                     android:textSize="15sp"
                     android:ems="10"
                     android:hint="@string/prompt_password"
                     android:inputType="textPassword" />
+
+
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginTop="10dp">
 
-                <EditText
-                    android:id="@+id/et_passwordConfirm"
-                    android:layout_width="173dp"
-                    android:layout_height="35dp"
-                    android:background="@drawable/et"
-                    android:backgroundTint="#e9e9e9"
-                    android:ems="10"
-                    android:fontFamily="@font/product_r"
-                    android:hint="@string/confirm_senha"
-                    android:inputType="textPassword"
-                    android:textSize="15sp"
-                    android:paddingStart="20dp"
-                    android:paddingEnd="0dp"/>
-
                 <Spinner
                     android:id="@+id/sp_provincias"
-                    android:layout_width="match_parent"
+                    android:layout_width="175dp"
                     android:layout_height="35dp"
-                    android:layout_marginStart="5dp"
                     android:background="@drawable/et"
-                    android:backgroundTint="#e9e9e9"
+                    android:backgroundTint="@color/gray"
                     android:ems="10"
                     android:entries="@array/provincias"
                     android:fontFamily="@font/product_r"
                     android:inputType="text"
-                    android:padding="7dp"
-                    android:paddingEnd="0dp"
+                    android:padding="5dp"
                     android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
                     android:prompt="@string/prov"
                     android:textSize="15sp" />
+
+
+                <EditText
+                    android:id="@+id/et_passwordConfirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/et"
+                    android:backgroundTint="@color/gray"
+                    android:ems="10"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/product_r"
+                    android:hint="@string/confirm_senha"
+                    android:inputType="textPassword"
+                    android:textSize="15sp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"/>
 
             </LinearLayout>
 
@@ -175,6 +185,7 @@
                 android:layout_marginTop="10dp"/>
 
             <RadioGroup
+                android:id="@+id/radio_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -222,6 +233,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
+                android:layout_marginTop="5dp"
                 fancy:selectedColor="@color/vermelho_padrao"
                 fancy:selectedTab="-1"
                 fancy:strokeRadius="8dp"
@@ -244,28 +256,33 @@
                     android:orientation="horizontal"
                     android:layout_marginTop="5dp">
 
-                <Switch
-                    android:id="@+id/stc_disponibilidade"
+
+                <com.github.angads25.toggle.widget.LabeledSwitch
+                    android:id="@+id/lbl_disponibilidade"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:theme="@style/SCBSwitch"
-                    android:checked="false"
-                    android:layout_marginEnd="10dp" />
+                    android:layout_height="35dp"
+                    android:baselineAligned="false"
+                    android:textSize="14sp"
+                    android:layout_marginEnd="10dp"
+                    app:colorBorder="@color/vermelho_padrao"
+                    app:colorOn="@color/vermelho_padrao"
+                    app:on="false"
+                    app:textOff="NÃO"
+                    app:textOn="SIM" />
 
                 <EditText
                     android:id="@+id/et_UnidadeProx"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:background="@drawable/et"
-                    android:backgroundTint="#e9e9e9"
-                    android:paddingStart="20dp"
+                    android:backgroundTint="@color/gray"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
                     android:ems="10"
                     android:fontFamily="@font/product_r"
                     android:hint="@string/uP"
                     android:inputType="text"
-                    android:textSize="15sp"
-                    android:paddingEnd="0dp"/>
+                    android:textSize="15sp"/>
             </LinearLayout>
 
             <android.support.v7.widget.AppCompatButton

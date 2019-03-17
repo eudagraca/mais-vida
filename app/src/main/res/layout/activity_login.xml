@@ -2,7 +2,6 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/md_white_1000"
@@ -12,7 +11,7 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
@@ -21,18 +20,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_mais_vida_logo" />
+        app:srcCompat="@drawable/ic_logo" />
 
     <EditText
         android:id="@+id/et_user"
         android:layout_width="0dp"
         android:layout_height="44dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/btn_shape"
-        android:backgroundTint="#fdfcfc"
+        android:background="@drawable/et"
         android:ems="10"
         android:fontFamily="@font/product_r"
         android:hint="@string/email"
+        android:backgroundTint="#e9e9e9"
         android:inputType="textEmailAddress"
         android:paddingStart="30dp"
         android:textSize="16sp"
@@ -47,7 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Lembre de mim"
+        android:text="Lembrar de mim"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_password" />
 
@@ -56,8 +55,8 @@
         android:layout_width="0dp"
         android:layout_height="44dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/btn_shape"
-        android:backgroundTint="#fdfcfc"
+        android:background="@drawable/et"
+        android:backgroundTint="#e9e9e9"
         android:drawablePadding="10dp"
         android:ems="10"
         android:fontFamily="@font/product_r"
@@ -112,7 +111,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="@drawable/shape"
+        android:background="@drawable/et"
         android:fontFamily="@font/product_r"
         android:text="@string/criar_conta"
         android:textAllCaps="false"

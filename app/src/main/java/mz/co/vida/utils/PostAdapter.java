@@ -8,18 +8,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import com.github.ivbaranov.mli.MaterialLetterIcon;
 import com.robertlevonyan.views.chip.Chip;
+
 import java.util.List;
+
 import mz.co.vida.R;
 import mz.co.vida.entities.Doador;
 import mz.co.vida.entities.Requisitante;
 
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder> {
 
-    private Context mContext;
     private List<Doador> mDoadorList;
     private List<Requisitante> mRequisitanteList;
+    private LayoutInflater inflater;
 
     private OnItemClickListener mListener;
 
@@ -27,19 +30,19 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
         void onItemClick(int position);
     }
 
-    public void setOnClickListener(OnItemClickListener listener){
+    public void setOnClickListener(OnItemClickListener listener) {
         mListener = listener;
     }
 
     public PostAdapter(Context context, @Nullable List<Doador> doadorList, @Nullable List<Requisitante> requisitanteList) {
-        mContext = context;
+        Context mContext = context;
         mDoadorList = doadorList;
         mRequisitanteList = requisitanteList;
+        inflater = LayoutInflater.from(mContext);
     }
 
     @Override
     public PostViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        LayoutInflater inflater = LayoutInflater.from(mContext);
         View view = inflater.inflate(R.layout.anuncios_list, viewGroup, false);
         return new PostViewHolder(view, mListener);
     }
@@ -49,16 +52,14 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
 
         if (mDoadorList != null && mDoadorList.size() > 0) {
             Doador doador = mDoadorList.get(position);
-
             holder.tv_id.setText(doador.getUser_id());
             holder.tv_nome.setText(doador.getNome());
             holder.tv_provincia.setText(doador.getProvincia());
             holder.mli_tipoSangue.setLetter(doador.getTipo_sangue());
             holder.tv_estado.setChipText(MyUtils.DOADOR);
 
-        } else if (mRequisitanteList != null && mRequisitanteList.size() > 0){
+        } else if (mRequisitanteList != null && mRequisitanteList.size() > 0) {
             Requisitante requisitante = mRequisitanteList.get(position);
-
             holder.tv_id.setText(requisitante.getId());
             holder.tv_nome.setText(requisitante.getNome());
             holder.tv_provincia.setText(requisitante.getProvincia());
@@ -70,7 +71,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
 
     @Override
     public int getItemCount() {
-        if (mDoadorList != null){
+        if (mDoadorList != null) {
             return mDoadorList.size();
         } else {
             return mRequisitanteList.size();
@@ -82,7 +83,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
         TextView tv_nome, tv_data, tv_provincia, tv_id;
         Chip tv_estado;
 
-   PostViewHolder(View itemView, final OnItemClickListener listener) {
+        PostViewHolder(View itemView, final OnItemClickListener listener) {
             super(itemView);
 
             tv_id = itemView.findViewById(R.id.tv_id);
@@ -92,17 +93,14 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
             tv_estado = itemView.findViewById(R.id.tv_estado);
             tv_provincia = itemView.findViewById(R.id.tv_provincia);
 
-           itemView.setOnClickListener(new View.OnClickListener() {
-               @Override
-               public void onClick(View view) {
-                   if (listener != null){
-                       int position = getAdapterPosition();
-                       if (position != RecyclerView.NO_POSITION) { // this check, is to prevent errors when clicking a card that has no position bound to it (for example, a card that we deleted seconds ago)
-                           listener.onItemClick(position);
-                       }
-                   }
-               }
-           });
+            itemView.setOnClickListener(view -> {
+                if (listener != null) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) { // this check, is to prevent errors when clicking a card that has no position bound to it (for example, a card that we deleted seconds ago)
+                        listener.onItemClick(position);
+                    }
+                }
+            });
         }
     }
 }

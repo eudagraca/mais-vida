@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_white_1000"
+    tools:context=".activities.DonnateDetailsActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/vermelho_padrao"
+            android:minHeight="?attr/actionBarSize"
+            app:contentInsetStart="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/vermelho_padrao"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tv_nome_hp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:fontFamily="@font/courgette"
+                    android:drawableStart="@drawable/ic_arrow_back_white_24dp"
+                    android:drawablePadding="16dp"
+                    android:drawableTint="@color/md_white_1000"
+                    android:text="Hospital Rural de Chicuque"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.v7.widget.CardView>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="32dp"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:paddingTop="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:text="ENDEREÇO DO LOCAL DA COLECTA"
+                android:textAllCaps="true"
+                android:textColor="@color/md_black_1000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <com.codesgood.views.JustifiedTextView
+                android:id="@+id/tv_local_doacao_endereco_prov"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="40dp"
+                android:drawablePadding="20dp"
+                android:drawableStart="@drawable/ic_localizacao"
+                android:text="Hospital Rural de Chicuque, Cidade da Maxixe, Perto do IFP"
+                android:textColor="@color/md_black_1000"
+                android:textSize="16sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/vermelho_padrao" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="24dp"
+                android:text="INICIATIVA"
+                android:textAllCaps="true"
+                android:textColor="@color/md_black_1000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_nome_local_coleta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:drawablePadding="20dp"
+                android:drawableStart="@drawable/ic_hospital"
+                android:text="Hospital de Maputo"
+                android:textColor="@color/md_black_1000"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/vermelho_padrao" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="24dp"
+                android:textStyle="bold"
+                android:text="DATA E HORAS DA DOAÇÃO"
+                android:textColor="@color/md_black_1000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_data_doacao_local"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="24dp"
+                android:drawablePadding="20dp"
+                android:drawableStart="@drawable/ic_calendar"
+                android:text="25/2/2019"
+                android:textColor="@color/md_black_1000"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/tv_hora_local"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:drawablePadding="20dp"
+                android:drawableStart="@drawable/ic_clock"
+                android:text="08 : 00"
+                android:textColor="@color/md_black_1000"
+                android:textSize="16sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/vermelho_padrao" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="24dp"
+                android:text="Contacto"
+                android:textAllCaps="true"
+                android:textColor="@color/md_black_1000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_telefone_local"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="24dp"
+                android:drawablePadding="20dp"
+                android:drawableStart="@drawable/ic_phone_contact"
+                android:text="840000001"
+                android:textColor="@color/md_black_1000"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

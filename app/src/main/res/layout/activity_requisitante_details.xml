@@ -33,7 +33,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:fontFamily="@font/courgette"
-                    android:drawableStart="@drawable/ic_back_white"
+                    android:drawableStart="@drawable/ic_arrow_back_white_24dp"
                     android:drawablePadding="16dp"
                     android:text="Stélio Braga"
                     android:textColor="@color/md_white_1000"
@@ -48,7 +48,7 @@
                     android:fontFamily="@font/montserrat"
                     android:text="Requisitação Sanguínea"
                     android:textColor="@color/md_white_1000"
-                    android:textSize="14sp" />
+                    android:textSize="18sp" />
 
 
             </RelativeLayout>
@@ -162,6 +162,18 @@
                 android:textColor="@color/md_black_1000"
                 android:textSize="16sp"
                 tools:text="Maputo" />
+
+            <TextView
+                android:id="@+id/tv_hp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="24dp"
+                android:drawablePadding="20dp"
+                android:drawableStart="@drawable/ic_hospital"
+                android:textColor="@color/md_black_1000"
+                android:textSize="16sp"
+                tools:text="HC J.M" />
 
 
             <View

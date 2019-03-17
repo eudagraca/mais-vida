@@ -1,9 +1,9 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">+vida</string>
     <string name="nomedoador">Nome Completo </string>
     <string name="email">email@exemplo.com</string>
     <string name="f_pass">Esqueceu a senha?</string>
-    <string name="pergunta">Não tem uma conta?</string>
+    <string name="pergunta" tools:keep="@string/pergunta">Não tem uma conta?</string>
     <string name="criar_conta">Criar conta</string>
     <string name="sexo">Sexo:</string>
     <string name="sangue">Grupo Sanguíneo</string>
@@ -13,15 +13,28 @@
     </string>
     <string name="doacao">Doação</string>
     <string name="logo">Logotipo</string>
-    <string name="disponibilidade">Disponibilidade para doar:</string>
+    <string name="disponibilidade">Disponibilidade para doar (Doador)</string>
     <string name="contacto">Contacto</string>
-    <string name="quant">Quantidade sanguínea: </string>
 
     <string name="prov">Províncias</string>
 
     <!--Province-->
     <string-array name="provincias">
         <item>Província</item>
+        <item>Cabo Delgado</item>
+        <item>Gaza</item>
+        <item>Inhambane</item>
+        <item>Maníca</item>
+        <item>Maputo</item>
+        <item>Maputo Cidade</item>
+        <item>Nampula</item>
+        <item>Niassa</item>
+        <item>Sofala</item>
+        <item>Tete</item>
+        <item>Zambézia</item>
+    </string-array>
+    <string-array name="provi_local">
+        <item>Todas</item>
         <item>Cabo Delgado</item>
         <item>Gaza</item>
         <item>Inhambane</item>
@@ -54,11 +67,10 @@
 
 
     <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
     <string name="prompt_password">Senha</string>
     <string name="action_sign">Entrar</string>
     <string name="confirm_senha">Confirme a senha</string>
-    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="title_activity_fullscreen">LoginActivity</string>
     <string name="registar">Registar</string>
     <string name="outro">Outro</string>
     <string name="masculino">Masculino</string>
@@ -78,12 +90,27 @@
     <string name="anunciar">Requisitar</string>
     <string name="informacao_pesoal">Informação Pessoal</string>
     <string name="endereco">Endereço</string>
-    <string name="data_para_doacao">Data para doação</string>
     <string name="introduza_o_seu_email">Introduza o seu email</string>
 
     <string name="title_activity_app_describe">AppDescribeActivity</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
 
     <string name="title_activity_about_app">AboutAppActivity</string>
+
+    <!--Eroors -->
+    <string name="wrong_name">Nome inválido</string>
+    <string name="wrong_pass_conf">Senha não compativel com a outra</string>
+    <string name="wrong_phone">Contacto inválido</string>
+    <string name="wrong_hosp">Não pode ser nome de um HP ou US</string>
+    <string name="wrong_prov">Selecione uma província</string>
+    <string name="wrong_blood">Seleccione um tipo sanguíneo</string>
+    <string name="wrong_user_type">Seleccione tipo de usuário DOADOR / REQUISITANTE</string>
+    <string name="wrong_gender">Seleccione o sexo</string>
+    <string name="wrong_disp">Marque a tua disponibilidade</string>
+    <string name="wrong_mail">Email inválido</string>
+    <string name="nenhum_doador">Nenhum doador disponível</string>
+    <string name="sem_requisicoes">Não há requisições</string>
+    <string name="connection_problem">Problemas de conexão com a internet</string>
+    <string name="coleta">Colecta</string>
+
+    <string name="google_maps_key">AIzaSyA08uNI9OfRQECuJ5yGloewYwTdeJl3bPQ</string>
 </resources>

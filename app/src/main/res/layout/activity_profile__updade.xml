@@ -15,18 +15,16 @@
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:layout_marginStart="20dp"
-        android:text="Perfil"
-        android:layout_marginTop="10dp"
         android:textSize="18sp"
         android:textColor="@color/vermelho_padrao"
         android:textAllCaps="false"
         android:background="@color/fui_transparent"
-        android:drawableStart="@drawable/ic_back" />
+        android:drawableStart="@drawable/ic_arrow_back_red_24dp" />
 
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_gravity="center">
 
         <LinearLayout
@@ -35,10 +33,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp">
-
 
             <de.hdodenhof.circleimageview.CircleImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -58,7 +54,7 @@
                 android:padding="10dp"
                 fancy:selectedColor="@color/vermelho_padrao"
                 fancy:selectedTab="-1"
-                fancy:strokeRadius="7dp"
+                fancy:strokeRadius="5dp"
                 fancy:switchTabs="@array/switch_tabs"
                 fancy:textSize="14sp" />
 
@@ -71,17 +67,18 @@
 
                 <EditText
                     android:id="@+id/et_phone_update"
-                    android:layout_width="170dp"
+                    android:layout_width="180dp"
                     android:layout_height="35dp"
                     android:background="@drawable/et"
-                    android:backgroundTint="#e9e9e9"
+                    android:backgroundTint="@color/gray"
                     android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
                     android:maxLength="9"
+                    android:padding="7dp"
                     android:fontFamily="@font/product_r"
                     android:hint="@string/contacto"
                     android:inputType="phone"
-                    android:textSize="15sp"
-                    android:paddingEnd="0dp"/>
+                    android:textSize="15sp"/>
 
                 <Spinner
                     android:id="@+id/sp_provincias_update"
@@ -89,7 +86,7 @@
                     android:layout_height="35dp"
                     android:layout_marginStart="5dp"
                     android:background="@drawable/et"
-                    android:backgroundTint="#e9e9e9"
+                    android:backgroundTint="@color/gray"
                     android:ems="10"
                     android:entries="@array/provincias"
                     android:fontFamily="@font/product_r"
@@ -171,6 +168,7 @@
                     app:colorOn="@color/vermelho_padrao"
                     app:on="false"
                     app:textOff="NÃO"
+                    android:layout_marginEnd="5dp"
                     app:textOn="SIM" />
 
                 <EditText
@@ -179,7 +177,7 @@
                     android:layout_height="35dp"
                     android:layout_marginStart="5dp"
                     android:background="@drawable/et"
-                    android:backgroundTint="#e9e9e9"
+                    android:backgroundTint="@color/gray"
                     android:ems="10"
                     android:fontFamily="@font/product_r"
                     android:hint="@string/uP"

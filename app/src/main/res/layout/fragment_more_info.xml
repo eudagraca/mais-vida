@@ -6,89 +6,88 @@
     android:layout_height="match_parent"
 
     tools:context=".fragments.MoreInfoFragment">
-    <!-- TODO: Update blank fragment layout -->
+  <!-- TODO: Update blank fragment layout -->
 
-    <ScrollView
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        android:layout_height="wrap_content">
 
 
-            <View
-                android:id="@+id/view"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="20dp"
-                android:background="@color/vermelho_padrao"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+      <View
+          android:id="@+id/view"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:layout_marginTop="20dp"
+          android:background="@color/vermelho_padrao"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
 
-            <Button
-                android:id="@+id/bt_contact"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:background="@color/fui_transparent"
-                android:drawableStart="@drawable/ic_contact"
-                android:drawablePadding="10dp"
-                android:fontFamily="@font/product_r"
-                android:text="Contacte nos"
-                android:textAllCaps="false"
-                android:textColor="@color/md_black_1000"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/view" />
+      <Button
+          android:id="@+id/bt_contact"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="20dp"
+          android:background="@color/fui_transparent"
+          android:drawableStart="@drawable/ic_contact"
+          android:drawablePadding="10dp"
+          android:fontFamily="@font/product_r"
+          android:text="Contacte nos"
+          android:textAllCaps="false"
+          android:textColor="@color/md_black_1000"
+          android:textSize="16sp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="@+id/view" />
 
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="8dp"
-                android:contentDescription="Logotipo +Vida"
-                android:src="@drawable/ic_mais_vida_logo"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="VectorDrawableCompat" />
+      <ImageView
+          android:id="@+id/imageView3"
+          android:layout_width="match_parent"
+          android:layout_height="150dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="30dp"
+          android:layout_marginEnd="8dp"
+          android:contentDescription="Logotipo +Vida"
+          android:src="@drawable/ic_logo"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          tools:ignore="VectorDrawableCompat" />
 
-            <Button
-                android:id="@+id/bt_about"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="8dp"
-                android:background="@color/fui_transparent"
-                android:drawableStart="@drawable/ic_info"
-                android:drawablePadding="10dp"
-                android:text="Sobre a aplicação"
-                android:textAllCaps="false"
-                android:textColor="@color/md_black_1000"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bt_contact" />
+      <Button
+          android:id="@+id/bt_about"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="20dp"
+          android:layout_marginTop="8dp"
+          android:background="@color/fui_transparent"
+          android:drawableStart="@drawable/ic_info"
+          android:drawablePadding="10dp"
+          android:text="Sobre a aplicação"
+          android:textAllCaps="false"
+          android:textColor="@color/md_black_1000"
+          android:textSize="16sp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/bt_contact" />
 
-            <Button
-                android:id="@+id/bt_help"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="8dp"
-                android:background="@color/fui_transparent"
-                android:drawableStart="@drawable/ic_help"
-                android:text="Ajuda"
-                android:textAllCaps="false"
-                android:textColor="@color/md_black_1000"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bt_about" />
-        </android.support.constraint.ConstraintLayout>
-    </ScrollView>
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="20dp"
+          android:layout_marginTop="8dp"
+          android:background="@color/fui_transparent"
+          android:drawableStart="@drawable/ic_help"
+          android:text="Ajuda"
+          android:textAllCaps="false"
+          android:textColor="@color/md_black_1000"
+          android:textSize="16sp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/bt_about" />
+    </android.support.constraint.ConstraintLayout>
+  </ScrollView>
 
 </FrameLayout>

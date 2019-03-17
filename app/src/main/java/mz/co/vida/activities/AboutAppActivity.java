@@ -1,5 +1,6 @@
 package mz.co.vida.activities;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -16,7 +17,7 @@ import mz.co.vida.R;
 public class AboutAppActivity extends AppCompatActivity {
 
     //Firebase
-    FirebaseAuth mAuth;
+    private FirebaseAuth mAuth;
 
     public AboutAppActivity() {
     }
@@ -29,49 +30,33 @@ public class AboutAppActivity extends AppCompatActivity {
         //Init Components
         Button bt_back_more_info = (Button) findViewById(R.id.bt_back_more_info);
         Button bt_logout         = (Button) findViewById(R.id.bt_logout);
+        Button settings         = (Button) findViewById(R.id.bt_add_hp);
 
+
+
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getBaseContext(), RegisterHospitalActivity.class));
+            }
+        });
 
         //Init FirebaseAuth
         mAuth = ConfiguracaoFirebase.getFirebaseAuth();
 
-        bt_back_more_info.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
+        bt_back_more_info.setOnClickListener(view -> onBackPressed());
 
+        bt_logout.setOnClickListener(v -> new SweetAlertDialog(getBaseContext(), SweetAlertDialog.WARNING_TYPE)
+                .setTitleText("Alerta!!")
+                .setContentText("Sair da aplicação")
+                .setConfirmText("Sim")
+                .setConfirmClickListener(sDialog -> {
 
-        bt_logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                new SweetAlertDialog(getBaseContext(), SweetAlertDialog.WARNING_TYPE)
-                        .setTitleText("Alerta!!")
-                        .setContentText("Sair da aplicação")
-                        .setConfirmText("Sim")
-                        .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                            @Override
-                            public void onClick(SweetAlertDialog sDialog) {
-
-                                mAuth.signOut();
-                                Intent intent = new Intent(getBaseContext(), MainActivity.class);
-                                startActivity(intent);
-
-                                sDialog.dismissWithAnimation();
-                            }
-                        }) .setCancelButton("Não", new SweetAlertDialog.OnSweetClickListener() {
-                    @Override
-                    public void onClick(SweetAlertDialog sDialog) {
-                        sDialog.dismiss();
-                    }
-                }).show();
-            }
-        });
-
-
-
-
+                    mAuth.signOut();
+                    Intent intent = new Intent(getBaseContext(), MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                    sDialog.dismissWithAnimation();
+                }).setCancelButton("Não", Dialog::dismiss).show());
     }
-
 }

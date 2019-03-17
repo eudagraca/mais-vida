@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/md_white_1000"
+    android:orientation="vertical"
     tools:context=".fragments.PerfilFragment">
 
 
@@ -19,9 +19,9 @@
         android:visibility="gone">
 
         <ImageView
-            android:layout_width="120dp"
-            android:layout_height="80dp"
-            android:src="@drawable/ic_empty_box" />
+            android:id="@+id/image_perfil_wifi"
+            android:layout_width="100dp"
+            android:layout_height="95dp" />
 
         <TextView
             android:id="@+id/tv_emptyInfo"
@@ -29,12 +29,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:fontFamily="@font/courgette"
-            android:text="É necessário estares conectado a internet"
-            android:textSize="18sp" />
+            android:text="Problemas de conexão"
+            android:textSize="24sp" />
     </LinearLayout>
 
 
     <android.support.v7.widget.CardView
+        android:id="@+id/cardview_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardElevation="4dp">
@@ -50,7 +51,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/vermelho_padrao"
-
                 android:padding="20dp">
 
                 <Button
@@ -58,7 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="34dp"
                     android:background="@color/fui_transparent"
-                    android:drawableStart="@drawable/ic_user_edit" />
+                    android:drawableStart="@drawable/ic_edit_user" />
 
                 <TextView
                     android:id="@+id/tv_nome"
@@ -73,14 +73,13 @@
                     android:textStyle="bold" />
 
 
-
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/iv_foto"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_alignBottom="@+id/tv_estado"
                     android:layout_alignParentEnd="true"
-                    android:src="@drawable/ic_user" />
+                    />
 
             </RelativeLayout>
 
@@ -99,16 +98,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingBottom="32dp"
-            android:paddingEnd="16dp"
             android:paddingStart="16dp"
-            android:paddingTop="32dp">
+            android:paddingTop="32dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="32dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
                 android:layout_marginStart="24dp"
+                android:layout_marginBottom="16dp"
                 android:text="O meu estado"
                 android:textAllCaps="true"
                 android:textColor="@color/md_black_1000"
@@ -120,14 +119,13 @@
                 android:id="@+id/smb_estado"
                 android:layout_width="289dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="24dp"
                 android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
                 android:padding="10dp"
                 app:selectedColor="@color/vermelho_padrao"
                 app:selectedTab="-1"
-                app:strokeRadius="8dp"
+                app:strokeRadius="5dp"
                 app:strokeWidth="1dp"
-
                 app:switchTabs="@array/switch_tabs"
                 app:textSize="14sp" />
 
@@ -135,57 +133,55 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginBottom="26dp"
                 android:layout_marginTop="26dp"
+                android:layout_marginBottom="26dp"
                 android:background="@color/vermelho_padrao" />
+
             <TextView
                 android:id="@+id/tv_disp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
                 android:layout_marginStart="24dp"
+                android:layout_marginBottom="16dp"
                 android:textAllCaps="true"
+                android:text="Disponibilidade para doar"
                 android:textColor="@color/md_black_1000"
                 android:textSize="14sp"
-                android:textStyle="bold"
-                android:text="Disponibilidade"/>
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginStart="24dp">
+                android:layout_marginStart="24dp"
+                android:orientation="horizontal">
 
 
-            <com.zcw.togglebutton.ToggleButton
-                android:id="@+id/tb_disponibilidade"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                />
-
-            <ImageView
-                android:id="@+id/iv_on_of"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:visibility="gone"
-                android:src="@drawable/ic_thumbs_up_hand_symbol"
-                android:contentDescription="TODO" />
+                <com.github.angads25.toggle.widget.LabeledSwitch
+                    android:id="@+id/lb_disponibilidade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:baselineAligned="false"
+                    android:textSize="14sp"
+                    app:colorBorder="@color/vermelho_padrao"
+                    app:colorOn="@color/vermelho_padrao"
+                    app:on="false"
+                    app:textOff="NÃO"
+                    app:textOn="SIM" />
             </LinearLayout>
 
             <View
                 android:id="@+id/view_disp"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginBottom="26dp"
                 android:layout_marginTop="26dp"
+                android:layout_marginBottom="26dp"
                 android:background="@color/vermelho_padrao" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
                 android:layout_marginStart="24dp"
+                android:layout_marginBottom="16dp"
                 android:text="@string/informacao_pesoal"
                 android:textAllCaps="true"
                 android:textColor="@color/md_black_1000"
@@ -196,11 +192,10 @@
                 android:id="@+id/tv_tiposanguineo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
                 android:layout_marginStart="20dp"
-                android:drawablePadding="20dp"
+                android:layout_marginBottom="12dp"
                 android:drawableStart="@drawable/ic_blood_drop"
-                android:text="O-"
+                android:drawablePadding="20dp"
                 android:textColor="@color/md_black_1000"
                 android:textSize="16sp" />
 
@@ -210,25 +205,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:drawablePadding="20dp"
                 android:drawableStart="@drawable/ic_genero"
-                android:text="Masculino"
+                android:drawablePadding="20dp"
                 android:textColor="@color/md_black_1000"
                 android:textSize="16sp" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginBottom="26dp"
                 android:layout_marginTop="26dp"
+                android:layout_marginBottom="26dp"
                 android:background="@color/vermelho_padrao" />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
                 android:layout_marginStart="24dp"
+                android:layout_marginBottom="16dp"
                 android:text="@string/endereco"
                 android:textAllCaps="true"
                 android:textColor="@color/md_black_1000"
@@ -239,11 +233,10 @@
                 android:id="@+id/tv_provincia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
                 android:layout_marginStart="24dp"
-                android:drawablePadding="20dp"
+                android:layout_marginBottom="12dp"
                 android:drawableStart="@drawable/ic_localizacao"
-                android:text="Maputo"
+                android:drawablePadding="20dp"
                 android:textColor="@color/md_black_1000"
                 android:textSize="16sp" />
 
@@ -253,25 +246,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:drawablePadding="20dp"
                 android:drawableStart="@drawable/ic_hospital"
-                android:text="Hospital de Maputo"
+                android:drawablePadding="20dp"
                 android:textColor="@color/md_black_1000"
                 android:textSize="16sp" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginBottom="26dp"
                 android:layout_marginTop="26dp"
+                android:layout_marginBottom="26dp"
                 android:background="@color/vermelho_padrao" />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
                 android:layout_marginStart="24dp"
+                android:layout_marginBottom="16dp"
                 android:text="@string/contacto"
                 android:textAllCaps="true"
                 android:textColor="@color/md_black_1000"
@@ -282,11 +274,10 @@
                 android:id="@+id/tv_contacto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
                 android:layout_marginStart="24dp"
-                android:drawablePadding="20dp"
+                android:layout_marginBottom="12dp"
                 android:drawableStart="@drawable/ic_phone_contact"
-                android:text="840000001"
+                android:drawablePadding="20dp"
                 android:textColor="@color/md_black_1000"
                 android:textSize="16sp" />
 

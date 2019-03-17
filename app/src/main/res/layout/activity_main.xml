@@ -36,16 +36,15 @@
             android:text="@string/palavra_doacao"/>
 
         <com.codesgood.views.JustifiedTextView
-            android:id="@+id/tv_justified_paragraph"
             android:layout_width="match_parent"
-            android:fontFamily="@font/product_r"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
+            android:fontFamily="@font/product_r"
             android:padding="10dp"
             android:text="@string/texto"
             android:textColor="@android:color/white"
-            android:textSize="18sp" />
+            android:textSize="15sp" />
 
 
       <!--  <com.google.android.gms.common.SignInButton-->
@@ -56,8 +55,8 @@
             <!--android:layout_marginTop="100dp" />-->
         <Button
             android:id="@+id/bt"
-            android:layout_width="22dp"
-            android:layout_height="38dp"
+            android:layout_width="20dp"
+            android:layout_height="35dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:background="@drawable/ic_next_1"

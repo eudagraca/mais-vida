@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.robertlevonyan.view:MaterialChipView-1.2.4">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/MaterialChipView-1.2.4.aar/dac1914995f82f6750baa00baabfd3f9/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/MaterialChipView-1.2.4.aar/dac1914995f82f6750baa00baabfd3f9/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.robertlevonyan.view/MaterialChipView/1.2.4/52eb70b2887f04e79855f24dfeae2b54f5d24191/MaterialChipView-1.2.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

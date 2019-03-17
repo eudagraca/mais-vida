@@ -8,8 +8,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.view.View;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -60,15 +58,8 @@ public class DoadorDetailsActivity extends AppCompatActivity {
         tv_sangue             = (TextView) findViewById(R.id.tv_tiposanguineo);
         civ_foto              = (CircleImageView) findViewById(R.id.iv_foto);
 
-
         // Go back
-        tv_nome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
-
+        tv_nome.setOnClickListener(view -> onBackPressed());
 
         // Read the doador details
         mdataRef.addValueEventListener(new ValueEventListener() {
@@ -77,12 +68,10 @@ public class DoadorDetailsActivity extends AppCompatActivity {
                 if (dataSnapshot.exists()) {
                     Usuario usuario = new Usuario();
 
-                    if (dataSnapshot.child("foto").exists()){
+                    if (dataSnapshot.child("foto").exists()) {
                         String foto = dataSnapshot.child("foto").getValue(String.class);
                         usuario.setFoto(foto);
                         Glide.with(context).load(foto).into(civ_foto);
-
-                        //Picasso.get().load(foto).placeholder(R.drawable.ic_user).into(civ_foto);
                     }
 
                     usuario.setTipo_sangue(dataSnapshot.child("tipo_sangue").getValue(String.class));
@@ -93,7 +82,6 @@ public class DoadorDetailsActivity extends AppCompatActivity {
                     usuario.setEstado(dataSnapshot.child("estado").getValue(String.class));
                     usuario.setContacto(dataSnapshot.child("contacto").getValue(String.class));
 
-
                     tv_sangue.setText(usuario.getTipo_sangue());
                     tv_nome.setText(usuario.getNome());
                     tv_contacto.setText(usuario.getContacto());
@@ -103,58 +91,43 @@ public class DoadorDetailsActivity extends AppCompatActivity {
                     tv_unidadeSanitaria.setText(usuario.getUnidadeProxima());
                 }
             }
+
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
             }
         });
 
-        tv_contacto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Dexter.withActivity(DoadorDetailsActivity.this)
-                        .withPermission(Manifest.permission.CALL_PHONE)
-                        .withListener(new PermissionListener() {
-                            @SuppressLint("MissingPermission")
-                            @Override
-                            public void onPermissionGranted(PermissionGrantedResponse response) {
+        tv_contacto.setOnClickListener(v -> Dexter.withActivity(DoadorDetailsActivity.this)
+                .withPermission(Manifest.permission.CALL_PHONE)
+                .withListener(new PermissionListener() {
+                    @SuppressLint("MissingPermission")
+                    @Override
+                    public void onPermissionGranted(PermissionGrantedResponse response) {
 
-                                new SweetAlertDialog(DoadorDetailsActivity.this, SweetAlertDialog.WARNING_TYPE)
-                                        .setTitleText("Alerta!!")
-                                        .setContentText("Pretende efectuar uma chamada para "+ tv_nome.getText().toString())
-                                        .setConfirmText("Sim!")
-                                        .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                                            @Override
-                                            public void onClick(SweetAlertDialog sDialog) {
+                        new SweetAlertDialog(DoadorDetailsActivity.this, SweetAlertDialog.WARNING_TYPE)
+                                .setContentText("Pretende efectuar uma chamada para " + tv_nome.getText().toString())
+                                .setConfirmText("Sim!")
+                                .setConfirmClickListener(sDialog -> {
 
-                                                Intent intent = new Intent(Intent.ACTION_DIAL);
-                                                intent.setData(Uri.parse("tel:"+tv_contacto.getText().toString()));
-                                                startActivity(intent);
-                                                sDialog.dismissWithAnimation();
-                                            }
-                                        })
-                                        .setCancelButton("Não", new SweetAlertDialog.OnSweetClickListener() {
-                                            @Override
-                                            public void onClick(SweetAlertDialog sDialog) {
-                                                sDialog.dismissWithAnimation();
-                                            }
-                                        })
-                                        .show();
-                            }
+                                    Intent intent = new Intent(Intent.ACTION_DIAL);
+                                    intent.setData(Uri.parse("tel:" + tv_contacto.getText().toString()));
+                                    startActivity(intent);
+                                    sDialog.dismissWithAnimation();
+                                })
+                                .setCancelButton("Não", SweetAlertDialog::dismissWithAnimation)
+                                .show();
+                    }
 
-                            @Override
-                            public void onPermissionDenied(PermissionDeniedResponse response) {
+                    @Override
+                    public void onPermissionDenied(PermissionDeniedResponse response) {
 
-                            }
+                    }
 
-                            @Override
-                            public void onPermissionRationaleShouldBeShown(PermissionRequest permission, PermissionToken token) {
+                    @Override
+                    public void onPermissionRationaleShouldBeShown(PermissionRequest permission, PermissionToken token) {
 
-                            }
-                        })
-                        .check();
-
-            }
-        });
-
+                    }
+                })
+                .check());
     }
 }

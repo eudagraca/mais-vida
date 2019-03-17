@@ -1,13 +1,10 @@
 package mz.co.vida.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.Button;
 
 import mz.co.vida.R;
-import mz.co.vida.fragments.MoreInfoFragment;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.

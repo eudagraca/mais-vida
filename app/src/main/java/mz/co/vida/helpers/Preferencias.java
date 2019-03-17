@@ -8,10 +8,10 @@ import android.content.SharedPreferences;
 public class Preferencias {
 
     private SharedPreferences preferences;
-    private SharedPreferences.Editor  editor;
+    private SharedPreferences.Editor editor;
 
-    private final String CHAVE_IDENTIFICADOR= "identificarUsuarioNaApp";
-    private final String CHAVE_NOME ="nomeUsuario";
+    private final String CHAVE_IDENTIFICADOR = "identificarUsuarioNaApp";
+    private final String CHAVE_NOME = "nomeUsuario";
 
     public Preferencias(Context context) {
 
@@ -23,7 +23,7 @@ public class Preferencias {
         editor.apply();
     }
 
-    public void delete_data(Context ctx){
+    public void delete_data(Context ctx) {
         String NOME_ARQUIVO = "VIDA.Preferencias";
         int MODE = 0;
         preferences = ctx.getSharedPreferences(NOME_ARQUIVO, MODE);
@@ -33,17 +33,17 @@ public class Preferencias {
 
     }
 
-    public void gravarUsuario(String identificarUsuarioNaApp, String nomeUsuario){
+    public void gravarUsuario(String identificarUsuarioNaApp, String nomeUsuario) {
         editor.putString(CHAVE_IDENTIFICADOR, identificarUsuarioNaApp);
         editor.putString(CHAVE_NOME, nomeUsuario);
         editor.commit();
     }
 
-    public String getIdentificador(){
+    public String getIdentificador() {
         return preferences.getString(CHAVE_IDENTIFICADOR, null);
     }
 
-    public String getNome(){
+    public String getNome() {
         return preferences.getString(CHAVE_NOME, null);
     }
 }

@@ -12,33 +12,9 @@ public class Requisitante {
     private int quantSanguinea;
     private String data;
     private String descricao;
+    private String unidade;
 
 
-    public Requisitante() {
-
-    }
-
-    public Requisitante(String estado, String nome, String telefone, String unidadeProxima, int quantSanguinea, String data, String comentario, String localizacao, String user_id, String tipo_sangue) {
-        this.estado = estado;
-        this.nome = nome;
-        this.contacto = telefone;
-        this.unidadeProxima = unidadeProxima;
-        this.quantSanguinea = quantSanguinea;
-        this.data = data;
-        this.descricao = comentario;
-        this.provincia = localizacao;
-        this.user_id = user_id;
-        this.tipo_sangue = tipo_sangue;
-    }
-
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
 
     public String getNome() {
         return nome;
@@ -60,16 +36,8 @@ public class Requisitante {
         return unidadeProxima;
     }
 
-    public void setUnidadeProxima(String unidadeProxima) {
-        this.unidadeProxima = unidadeProxima;
-    }
-
     public int getQuantSanguinea() {
         return quantSanguinea;
-    }
-
-    public void setQuantSanguinea(int quantSanguinea) {
-        this.quantSanguinea = quantSanguinea;
     }
 
     public String getData() {
@@ -82,10 +50,6 @@ public class Requisitante {
 
     public String getDescricao() {
         return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
     }
 
     public String getProvincia() {
@@ -108,7 +72,4 @@ public class Requisitante {
         return tipo_sangue;
     }
 
-    public void setTipo_sangue(String tipo_sangue) {
-        this.tipo_sangue = tipo_sangue;
-    }
 }

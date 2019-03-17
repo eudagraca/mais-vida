@@ -6,10 +6,32 @@
     tools:context=".fragments.AnuncioFragment">
 
 
-
-
-    <!-- TODO: Update blank fragment layout -->
     <LinearLayout
+        android:id="@+id/ll_empty_anuncico"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_100"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/image_anuncio"
+            android:layout_width="100dp"
+            android:layout_height="95dp" />
+
+        <TextView
+            android:id="@+id/tv_emptyInfo_anuncio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/courgette"
+            android:text="Problemas de conexão com internet"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_anuncio"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -17,7 +39,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="50dp"
             android:fontFamily="@font/courgette"
             android:paddingStart="26dp"
             android:paddingEnd="26dp"
@@ -46,10 +68,10 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:orientation="vertical"
                 android:paddingStart="26dp"
                 android:paddingEnd="26dp"
-                android:layout_marginTop="20dp"
                 android:paddingBottom="18dp">
 
 
@@ -57,9 +79,9 @@
                     android:id="@+id/tv_quantidade"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
                     android:fontFamily="@font/product_r"
                     android:textAlignment="textStart"
-                    android:layout_marginTop="30dp"
                     android:textColor="@color/md_black_1000"
                     android:textSize="16sp" />
 
@@ -68,8 +90,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:max="5"
-                    android:padding="10dp"
-                    android:progressTint="@color/md_red_900" />
+                    android:padding="5dp"
+                    android:progressBackgroundTint="@color/vermelho_padrao" />
 
                 <TextView
                     android:id="@id/tv_quantidade"
@@ -79,7 +101,6 @@
 
 
                 <TextView
-                    android:id="@+id/textView2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/product_r"
@@ -92,13 +113,13 @@
                     android:id="@+id/et_descricao"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:background="@drawable/et"
-                    android:backgroundTint="#e9e9e9"
-                    android:paddingStart="20dp"
-                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/gray"
                     android:fontFamily="@font/product_r"
                     android:hint="Pode ser um descricao ou descrição da sua situação"
                     android:maxLength="200"
+                    android:padding="10dp"
                     android:textSize="16sp">
 
                 </EditText>
@@ -109,27 +130,27 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/btnDate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:drawableStart="@drawable/ic_calendar"
-                    android:fontFamily="@font/product_r"
-                    android:background="@color/fui_transparent"
-                    android:textAllCaps="false"
-                    android:textColor="@color/md_white_1000"
-                    android:textSize="18sp"
-                    android:textStyle="normal" />
+                    <Button
+                        android:id="@+id/btnDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/fui_transparent"
+                        android:drawableStart="@drawable/ic_calendar"
+                        android:fontFamily="@font/product_r"
+                        android:textAllCaps="false"
+                        android:textColor="@color/md_white_1000"
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
 
-                <TextView
-                    android:id="@+id/tvSelectedDate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textColor="@color/md_black_1000"
-                    android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/tvSelectedDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/md_black_1000"
+                        android:textSize="18sp" />
                 </LinearLayout>
 
                 <Button
@@ -138,9 +159,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:layout_marginLeft="26dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginRight="26dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/btn_shape"
+                    android:background="@drawable/et"
                     android:fontFamily="@font/product_r"
                     android:paddingLeft="32dp"
                     android:paddingTop="10dp"
@@ -148,38 +170,32 @@
                     android:paddingBottom="10dp"
                     android:text="@string/anunciar"
                     android:textAllCaps="false"
-                    android:textColor="@color/md_white_1000"
+                    android:textColor="@color/vermelho_padrao"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
 
                     <Button
                         android:id="@+id/bt_update"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@color/fui_transparent"
                         android:layout_marginStart="80dp"
-                        android:drawableTint="@color/vermelho_padrao"
+                        android:background="@color/fui_transparent"
                         android:drawableStart="@drawable/ic_edit" />
 
                     <Button
                         android:id="@+id/bt_delete"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="50dp"
                         android:background="@color/fui_transparent"
-                        android:layout_marginStart="50dp"
-                        android:drawableStart="@drawable/ic_dustbin" />
-
+                        android:drawableEnd="@drawable/ic_dustbin" />
 
                 </LinearLayout>
-
-
-
-
-
 
             </LinearLayout>
         </ScrollView>

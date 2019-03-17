@@ -2,14 +2,14 @@ package mz.co.vida.entities;
 
 public class Doador {
 
-    public Doador(){}
+    public Doador() {
+    }
 
     private String user_id;
     private String nome;
     private String provincia;
     private String tipo_sangue;
     private String disponibilidade;
-
 
 
     public String getUser_id() {
